@@ -1,0 +1,200 @@
+USE PREVIOUS "units/Missiles.txt"
+
+
+[MISSILE] "Anti Ship Ballistic Missile Reentry Phase"
+  Tech "M_Anti_Ship_Ballistic_Missile"
+  RequiresPreciseTargeting No
+  CanBeUsedAgainst Naval
+  Icon "Units/Images/Missiles/ASBM.png"
+  Movie "Units/Images/Projectiles/ATGM.midx"
+  DrawSize 12
+  Sound 113 or 114 Volume 0.5
+  Explosion "Antiship3"
+  SingleAttack
+  Range 700
+  Speed 4500
+  CanBeIntercepted 0.2
+  Precision 1.0
+  CanBeLimited false
+
+  ImprovedBy "Stealth_Weapons" CanBeIntercepted 0.8
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30      
+
+  AffectedBy Unit "BM_Accuracy_Damage_Penalty" Complex Damage
+	Case Self "Advanced_Inertial_Guidance" Multiply 1
+	Case Self "Improved_Inertial_Guidance" Multiply 0.9
+	Default Multiply 0.7
+
+
+  ImprovedBy "Improved_Inertial_Guidance_Buffer" Set Precision 0.6 //Higher accuracy than nuclear for balance
+  ImprovedBy "Advanced_Inertial_Guidance_Buffer" Set Precision 0.3 //Higher accuracy than nuclear for balance
+  ImprovedBy "MARV_Buffer" CanBeIntercepted 0.70
+  ImprovedBy "MARV_Buffer" Precision 0.5
+
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
+
+  Trajectory
+
+
+[MISSILE] "Anti Ship Ballistic Missile"
+  Tech "M_Anti_Ship_Ballistic_Missile"
+  RequiresPreciseTargeting No
+  CanBeUsedAgainst Naval
+  Icon "Units/Images/Missiles/ASBM.png"
+  Movie "Units/Images/Projectiles/ATGM.midx"
+  DrawSize 12
+  Sound 113 or 114 Volume 0.5
+  Explosion "Antiship3"
+  Ballistic
+  SingleAttack
+  Elevation 250
+  Range 1700
+  Speed 3500
+  MinRange 200
+  CanBeIntercepted 0.3
+  Precision 1.0
+  CanBeLimited false
+  Heads 1 "Anti Ship Ballistic Missile Reentry Phase"
+
+  ImprovedBy "Stealth_Weapons" CanBeIntercepted 0.8
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30      
+
+  AffectedBy Unit "BM_Accuracy_Damage_Penalty" Complex Damage
+	Case Self "Advanced_Inertial_Guidance" Multiply 1
+	Case Self "Improved_Inertial_Guidance" Multiply 0.9
+	Default Multiply 0.7
+
+
+  ImprovedBy "Improved_Inertial_Guidance_Buffer" Set Precision 0.6 //Higher accuracy than nuclear for balance
+  ImprovedBy "Advanced_Inertial_Guidance_Buffer" Set Precision 0.3 //Higher accuracy than nuclear for balance
+  ImprovedBy "MARV_Buffer" CanBeIntercepted 0.70
+  ImprovedBy "MARV_Buffer" Precision 0.5
+
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
+
+  Trajectory MaxPoints 4 MaxLength 0.4 WidthMult 0.90
+
+
+
+
+[MISSILE] "ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "ALCM-N" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "Fusion ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+
+[MISSILE] "Small Arms" MODIFY
+  CanBeUsedAgainst "VIP"
+
+
+[MISSILE] "Pistol"
+  Tech "M_Pistol"
+  CanBeUsedAgainst "VIP"
+  Icon "Units/Images/Missiles/Glock.png" 
+  Movie "Units/Images/Projectiles/Tracer.midx"
+  DrawSize 2
+  Sound 71 Volume 0.3
+  Explosion "Gunfire_Spec_Ops"
+  Range 20
+  MaxElevation 5
+  Damage 100
+  Speed 3000
+  Precision 0.01
+
+  CanBeLimited false
+
+  
+[MISSILE] "Coastal Gun"
+  Tech "M_Coastal_Gun_Old"
+  CanBeUsedAgainst Naval
+  Icon "Units/Images/Missiles/SHIP_GUN.png"
+  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
+  DrawSize 6
+  Sound 71 Volume 0.5
+  Explosion "big_bomb_old"
+  RequiresPreciseTargeting No
+  Range 500
+  Speed 800
+  CanBeIntercepted 0.4
+  Precision 0.8
+  CanBeLimited false
+
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
+
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
+
+  AffectedBy Unit "Collateral_Damage_Modifier" Damage 800000 ///Medium Munition Damage
+  
+  DisablingTech "M_Coastal_Railgun"
+  
+  Trajectory MaxPoints 2 MaxLength 0.25 WidthMult 0.80
+  
+  AIHint CounterValue 0 //Default Conventional
+  AIHint CounterForce 1 //Default Conventional  
+  
+  
+[MISSILE] "Coastal Railgun"
+  Tech "M_Coastal_Railgun"
+  CanBeUsedAgainst Naval
+  RequiresPreciseTargeting No
+  Icon "Units/Images/Missiles/RAILGUN.png"
+  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
+  DrawSize 8
+  Sound 71 Volume 0.5
+  Explosion "Railgun_Hit"
+  Range 650
+  Speed 5000
+  CanBeIntercepted 0.05
+  Precision 0.70
+  CanBeLimited false
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
+
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Collateral_Damage_Modifier" Damage 2000 ///Heavy Munition Damage
+  Trajectory MaxPoints 5 MaxLength 50  
+  
+  
+  AIHint CounterValue 0
+  AIHint CounterForce 1
+
+[END]

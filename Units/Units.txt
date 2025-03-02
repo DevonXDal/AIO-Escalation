@@ -1,0 +1,1239 @@
+USE PREVIOUS "units/units.txt"
+
+[UNIT] "Maritime_Patrol_Aircraft"
+  Tech "U_Maritime_Patrol_Aircraft"
+  IconIDX 2
+    MaxElevation 30
+    Movie "Units/Images/Airborne/Topdown/Maritime_Patrol_Aircraft_1.midx"
+    AbstractMovie "Units/Images/Airborne/Abstract/Maritime_Patrol_Aircraft.midx"
+	Model "Units/Images/AIRBORNE/Maritime_Patrol_Aircraft_1.midx"
+    Icon "Units/Images/Icons/Airborne/Maritime_Patrol_Aircraft_1.png"
+  IconIDX 52
+  LaunchMePathIcon element "path/launch AWACS"
+  ModelDrawSize 24
+  DrawSize 24
+  AbstractDrawSize 20
+  LaunchMeSound 84
+  Size 0.075
+  Sound 136 Volume 0.4
+  Type Airborne
+  NoAutoDeploy
+  Slave
+  AutoReturn Yes
+  DoesNotTriggerWarWhenAttacked Yes
+  CanCrossBorderDuringPeaceTime No
+  Speed 400
+  TurnSpeed 3
+  Range 8000
+  CanPatrolPoint
+  Power 1.5
+
+	Weapon "Air-Dropped Torpedo" 6 Launch 2 Time 45 AutoEngage
+  ImprovedBy "Heavy_Airframe_1"
+	  Weapon "Air-Dropped Torpedo" 8 Launch 2 Time 45 AutoEngage
+  ImprovedBy "Heavy_Airframe_2"
+	  Weapon "Air-Dropped Torpedo" 10 Launch 2 Time 40 AutoEngage 
+  ImprovedBy "Heavy_Airframe_3"
+	  Weapon "Air-Dropped Torpedo" 12 Launch 4 Time 40 AutoEngage
+
+  Radar "AWACS Sonar"
+  Radar "STD Vision Air"
+  Radar "STD Short Wave"
+  ProductionCost 4.0
+  Crash "big_bomb"
+  
+    Modifier "EMP_Killable"
+	  ImprovedBy "EMP_Defence" delete Modifier "EMP_Killable"
+    Modifier "EMP_Defence_Mod_1"
+    Modifier "EMP_Defence_Mod_2"		  
+  
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  Modifier "Mega_Sonar"
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99  
+
+  ImprovedBy "Heavy_Airframe_1" 
+  {
+    Movie "Units/Images/Airborne/Topdown/Maritime_Patrol_Aircraft_2.midx" 
+    Icon "Units/Images/Icons/Airborne/Maritime_Patrol_Aircraft_2.png"
+	  Movie Model "Units/Images/AIRBORNE/Maritime_Patrol_Aircraft_2.fbx"
+    Set Speed 500
+	//Set Size 0.075
+    Set TurnSpeed 4.5
+    Set Range 12000
+	  Set Power 1.75
+  }
+
+  ImprovedBy "Heavy_Airframe_2" 
+  {
+    Movie "Units/Images/Airborne/Topdown/Maritime_Patrol_Aircraft_3.midx"
+    Icon "Units/Images/Icons/Airborne/Maritime_Patrol_Aircraft_3.png"
+	  Movie Model "Units/Images/AIRBORNE/Maritime_Patrol_Aircraft_3.fbx"
+    Set Speed 700
+	  Set Size 0.05
+    Set TurnSpeed 6
+    Set Range 16000
+	  Set Power 2.0
+  }
+
+  ImprovedBy "Heavy_Airframe_3" 
+  {
+    Movie "Units/Images/Airborne/Topdown/Maritime_Patrol_Aircraft_4.midx"
+    Icon "Units/Images/Icons/Airborne/Maritime_Patrol_Aircraft_4.png"
+	  Movie Model "Units/Images/AIRBORNE/Maritime_Patrol_Aircraft_4.fbx"
+    Set Speed 900
+	  Set Size 0.06
+    Set TurnSpeed 7.8
+    Set Range 20000
+	  Set Power 2.2
+  }
+
+
+[UNIT] "Naval_Airbase"
+  Tech "U_Naval_Airbase"
+  Movie "Units/Images/Ground/midlevel/Naval_Airbase.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/NAVAL_AIRBASE.midx"
+  Icon "Units/Images/Icons/Ground/Naval_Airbase.png"
+  Model "Units/Images/Ground/AIRBASE NAVAL.fbx"  
+  ModelDrawSize 35
+  DrawSize 35
+  AbstractDrawSize 35
+  DrawOrder 1
+  FixedRotationAngle true
+  Size 1.5
+  Sound 138 Volume 0.5
+  Type Ground
+  Class "UC_Building"
+
+  AttackerInPlanner
+  AlwaysVisibleOnEnemyTerritory Yes
+  Power 30
+  SelfDestructTime 45
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage Principal DefaultOff
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Airway Launch 2 Time 180 // in seconds in 1x time
+  Airway Launch 1 Time 300 // in seconds in 1x time
+  Airway Launch 1 Time 120 // in seconds in 1x time
+  CanHostAircrafts "Fighter" 10 Patrol 4
+  CanHostAircrafts airway 1 "Maritime_Patrol_Aircraft" 3 Patrol 2 AIAutoPatrol
+  CanHostAircrafts airway 1 "AWACS" 2 Patrol 1 AIAutoPatrol
+  CanHostAircrafts airway 2 "Navy_Helicopter" 12 Patrol 8
+  CanAccessGlobalStorage
+  Radar "STD Vision"
+  Radar "STD Long Wave"
+  ProductionCost 9.0
+  NoAutoAttack
+  
+  	Modifier "BM_Accuracy_Damage_Penalty" 
+  
+    Modifier "EMP_Defence_Mod_1"
+    Modifier "EMP_Defence_Mod_2"		
+
+
+[UNIT] "Battlecruiser"
+  Tech "U_Battlecruiser"
+  Movie "Units/Images/Naval/Topdown/Battlecruiser_4.midx"
+  AbstractMovie "Units/Images/Naval/Abstract/Battlecruiser.midx"
+  Model "Units/Images/Naval/Battlecruiser_4.fbx"
+  Icon "Units/Images/Icons/Naval/Battlecruiser_4.png"
+  DrawSize 44
+  AbstractDrawSize 40  
+  FollowRadius 39//34
+  Size 0.25
+  Sound 132 Volume 0.8
+  Type Naval
+  Speed 75
+  TurnSpeed 7.0
+  Power 60
+  SelfDestructTime 30
+  
+  AttackerInPlanner
+  TargetInPlanner Yes
+  
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+
+
+  Weapon "Ship Gun" 25000 Launch 2 Time 50 AutoEngage
+	Weapon "Railgun" 25000 Launch 2 Time 50 AutoEngage
+	Weapon "Anti Ship Missile" 25000 Launch 4 Time 150 AutoEngage
+  Weapon "Anti Ship Ballistic Missile" 25000 Launch 1 Time 220 AutoEngage
+	Weapon "SSM" 20000 Launch 4 Time 120 AutoEngage	
+  Weapon "AA Gun Old" 20000 Launch 2 Time 8 AutoEngage DefaultOff
+  Weapon "ASROC" 20000 Launch 4 Time 140 AutoEngage
+	Weapon "Nuclear Cruise Missile" 10000 Launch 2 Time 230 DefaultOff
+	Weapon "Fusion Cruise Missile" 10000 Launch 2 Time 230 DefaultOff
+  Weapon "SAM" 20000 Launch 3 Time 100 AutoEngage
+  Weapon "SAM MD" 20000 Launch 3 Time 100 AutoEngage
+  Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+  Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+  Weapon "ABM" 20000 Launch 1 Time 80 AutoEngage
+  Weapon "Terminal ABM" 20000 Launch 2 Time 50 AutoEngage
+  Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+  Weapon "ASAT" 3 DefaultOff
+
+  ImprovedBy "Experimental_Warships"
+  	Weapon "Ship Gun" 25000 Launch 2 Time 35 AutoEngage
+	  Weapon "Railgun" 25000 Launch 2 Time 35 AutoEngage
+	  Weapon "Anti Ship Missile" 25000 Launch 4 Time 120 AutoEngage
+    Weapon "Anti Ship Ballistic Missile" 25000 Launch 2 Time 180 AutoEngage
+	  Weapon "SSM" 20000 Launch 4 Time 100 AutoEngage	
+    Weapon "AA Gun Old" 20000 Launch 2 Time 8 AutoEngage DefaultOff
+    Weapon "ASROC" 20000 Launch 6 Time 100 AutoEngage
+	  Weapon "Nuclear Cruise Missile" 10000 Launch 3 Time 200 DefaultOff
+	  Weapon "Fusion Cruise Missile" 10000 Launch 3 Time 200 DefaultOff
+    Weapon "SAM" 20000 Launch 4 Time 80 AutoEngage
+    Weapon "SAM MD" 20000 Launch 4 Time 80 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "ABM" 20000 Launch 2 Time 60 AutoEngage
+    Weapon "Terminal ABM" 20000 Launch 3 Time 45 AutoEngage
+    Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    Weapon "ASAT" 3 DefaultOff
+
+  Airway Launch 2 Time 40 // in seconds in 1x time
+  Airway Launch 2 Time 100 // in seconds in 1x time
+  Airway Launch 1 Time 100 // in seconds in 1x time
+  CanHostAircrafts "Navy_Helicopter" 3 Patrol 1 AIAutoPatrol
+  CanHostAircrafts "Attack_Helicopter" 2 Patrol 1 AIAutoPatrol
+  CanHostAircrafts "Spec_Ops_Helicopter" 1 Patrol 1
+
+  Radar "STD Vision"
+  Radar "Sonar"
+  Radar "Fixed Long Wave"
+  Radar "Fixed Short Wave"
+  Radar "Naval_Over_Horizon" DefaultOff
+  Radar "Naval Space_Radar" DefaultOff
+
+
+
+  Modifier "Warship_Stealth_Bonus_Modifier_1"
+  Modifier "Warship_Stealth_Bonus_Modifier_2"
+
+  Modifier "BM_Accuracy_Damage_Penalty" 
+
+  Modifier "Terminal_ABM_No_Target_Decoy_Modifier"	
+  Modifier "Terminal_BM_Defence_Mk2_Modifier"
+  Modifier "Terminal_BM_Defence_Mk3_Modifier"  
+
+  CanAccessWeaponStockpile Yes
+  CanAccessUnitStockpile No
+  
+  
+  ProductionCost 67
+
+
+
+  ImprovedBy "Experimental_Warships"
+  {
+    Movie "Units/Images/Naval/Topdown/Battlecruiser_5.midx"
+    Icon "Units/Images/Icons/Naval/Battlecruiser_5.png"
+    Movie Model "Units/Images/Naval/Battlecruiser_5.fbx"
+    Set Speed 90
+    Set TurnSpeed 8.0
+    Set Power 75
+  }
+
+[UNIT] "Arsenal_Ship"
+  Tech "U_Arsenal_Ship"
+  Movie "Units/Images/Naval/Topdown/Arsenal_Ship_3.midx"
+  AbstractMovie "Units/Images/Naval/Abstract/Arsenal_Ship.midx"
+  Model "Units/Images/Naval/Arsenal_Ship_3.fbx"
+  Icon "Units/Images/Icons/Naval/Arsenal_Ship_3.png"
+  DrawSize 42
+  AbstractDrawSize 40  
+  FollowRadius 39//34
+  Size 0.25
+  Sound 132 Volume 0.7
+  Type Naval
+  Speed 50
+  TurnSpeed 5
+  Power 35
+  SelfDestructTime 30
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+
+
+  AttackerInPlanner
+  TargetInPlanner Yes
+
+  Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+  //Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+  Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+  //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+  Weapon "ABM" 20000 Launch 1 Time 120 AutoEngage
+  Weapon "Terminal ABM" 20000 Launch 2 Time 65 AutoEngage
+  //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+  //Weapon "ASAT" 4 DefaultOff
+
+
+  ImprovedBy "Enhanced_Warships"
+    Weapon "SAM" 20000 Launch 2 Time 35 AutoEngage
+    Weapon "SAM MD" 20000 Launch 2 Time 35 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "ABM" 20000 Launch 2 Time 90 AutoEngage
+    Weapon "Terminal ABM" 20000 Launch 2 Time 70 AutoEngage
+    //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    Weapon "ASAT" 2 DefaultOff
+  ImprovedBy "Advanced_Warships"
+    Weapon "SAM" 20000 Launch 3 Time 20 AutoEngage
+    Weapon "SAM MD" 20000 Launch 3 Time 20 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "ABM" 20000 Launch 2 Time 60 AutoEngage
+    Weapon "Terminal ABM" 20000 Launch 2 Time 55 AutoEngage
+    //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    Weapon "ASAT" 4 DefaultOff
+  ImprovedBy "Experimental_Warships"
+    Weapon "SAM" 20000 Launch 4 Time 15 AutoEngage
+    Weapon "SAM MD" 20000 Launch 4 Time 15 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "ABM" 20000 Launch 2 Time 45 AutoEngage
+    Weapon "Terminal ABM" 20000 Launch 3 Time 40 AutoEngage
+    Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    Weapon "ASAT" 6 DefaultOff
+
+  Radar "STD Vision"
+  Radar "Sonar"
+  Radar "Fixed Long Wave"
+  Radar "Fixed Short Wave"
+  Radar "Naval_Over_Horizon" DefaultOff
+  Radar "Naval Space_Radar" DefaultOff
+
+
+  Modifier "Debuffed_Sonar"
+
+  
+  Modifier "Warship_Stealth_Bonus_Modifier_1"
+  Modifier "Warship_Stealth_Bonus_Modifier_2"
+  
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  
+  Modifier "Terminal_ABM_No_Target_Decoy_Modifier"	
+  Modifier "Terminal_BM_Defence_Mk2_Modifier"
+  Modifier "Terminal_BM_Defence_Mk3_Modifier"  
+
+  CanAccessWeaponStockpile Yes
+  CanAccessUnitStockpile No
+  
+  ProductionCost 40
+  
+
+  ImprovedBy "Enhanced_Warships"
+  {
+    Set Speed 60
+    Set TurnSpeed 5.5
+    Set Power 40
+  }
+
+  
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 65
+    Set TurnSpeed 5.5
+    Set Power 45
+  }
+  
+  ImprovedBy "Experimental_Warships"
+  {
+    Movie "Units/Images/Naval/Topdown/Arsenal_Ship_5.midx"
+    Icon "Units/Images/Icons/Naval/Arsenal_Ship_5.png"
+  	Movie Model "Units/Images/Naval/Arsenal_Ship_5.fbx"
+    Set Speed 75
+    Set TurnSpeed 6.5
+    Set Power 50
+  }
+
+
+[UNIT] "VIP"
+  Tech "U_VIP"
+  Movie "UNITS/Images/Ground/Abstract/VIP_Protect.MIDX"
+  AbstractMovie "UNITS/Images/Ground/Abstract/VIP_Protect.MIDX"
+  Icon "UNITS/Images/Ground/Abstract/VIP_Protect.png"
+  DrawSize 10
+  AbstractDrawSize 30
+  FollowRadius 10
+  Size 0.1
+  Type Ground
+  Class "UC_Ground_Mobile"
+  CanBeBuilt 1
+  FixedRotationAngle true
+  Power 0.1
+  Speed 5
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+  Modifier "Covert_Unit"
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  DoesNotTriggerWarWhenAttacked Yes
+  DoesNotTriggerWarOnAttack Yes
+  ProductionCost 1
+  DestructionMessage None
+  Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
+  Weapon "Body Armor" 1
+	Weapon "Optics" 1
+
+
+
+
+
+[UNIT] "Air_Carrier"
+  Tech "U_Air_Carrier"
+  MaxElevation 20
+  Movie "Units/Images/Airborne/Topdown/Air_Carrier.midx"
+  AbstractMovie "Units/Images/Airborne/Abstract/Air_Carrier.midx"
+  Model "Units/Images/AIRBORNE/Air_Carrier.fbx"
+  Icon "Units/Images/Icons/Airborne/Air_Carrier.png"
+  ModelDrawSize 80
+  DrawSize 40
+  AbstractDrawSize 40
+  LaunchMeSound 84
+  Size 0.2
+  Sound 135 Volume 0.6
+  Type Airborne
+  NoAutoDeploy
+  Slave
+  Airway Launch 2 Time 60
+  Airway Launch 2 Time 40
+  Airway Launch 2 Time 500
+  CanHostAircrafts "Fighter" 20
+  CanHostAircrafts airway 1 "Attack" 20
+  CanHostAircrafts airway 2 "Air_Transport" 2
+
+  AutoReturn Yes
+  Speed 500
+  TurnSpeed 2
+  Power 30.0
+  ProductionCost 12
+  Crash "big_bomb"
+  CanPatrolPoint
+  Range 1000000
+  CanAccessWeaponStockpile true
+
+  AttackerInPlanner
+  TargetInPlanner Yes
+  Radar "AWACS Short Wave"
+  Radar "AWACS Long Wave"
+  Radar "AWACS_Over_Horizon"
+  Radar "AWACS Air Detection"
+  Radar "AWACS Air Targeting"
+
+  Modifier "EMP_Killable"
+	ImprovedBy "EMP_Defence" delete Modifier "EMP_Killable"
+
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99  
+  CheckTargeting BY "AAM" OR "SAM" Message Lock 2841 NoLock 2842
+
+
+[UNIT] "Carrier_Submarine"
+  Tech "U_Carrier_Submarine"
+  Movie "Units/Images/Naval/Topdown/Carrier_Submarine.midx"
+  AbstractMovie "Units/Images/Naval/Abstract/Carrier_Submarine.midx"  
+  Icon "Units/Images/Icons/Naval/Carrier_Submarine.png"
+  Model "Units/Images/Naval/Carrier_Submarine.fbx"
+  DrawSize 40
+  AbstractDrawSize 35  
+  FollowRadius 28//24
+  Size 0.3
+  Sound 133  Volume 0.75
+  Type Subwater
+  Class "UC_Naval"
+  AttackerInPlanner
+  Speed 60
+  TurnSpeed 6 // in angles per second
+  Power 12
+  SelfDestructTime 30
+  Config "SSGN"
+  Weapon "SSM" 20000 Launch 1 Time 150 AutoEngage	  
+  Weapon "Torpedo" 20000 AutoEngage
+  CanAccessWeaponStockpile true
+  Radar "Sonar"
+  //Radar "Periscope"
+  ProductionCost 12.5
+  NoAutoAttack No
+  NoAutoAttackSub No
+  HiddenFromAllies
+
+  Modifier "Advanced_Sonar"
+  Modifier "Submarine_Stealth_Weak"  
+  
+  Modifier "Sonar_Quieting_SSGN_1"
+  Modifier "Sonar_Quieting_SSGN_2"
+  Modifier "Sonar_Quieting_SSGN_3"
+  Modifier "Sonar_Quieting_SSGN_4"
+  Modifier "Sonar_Quieting_SSGN_5"  
+
+  HighState "Carrier_Submarine_Surfaced"
+  TimeToHighState 3.0 // 3 seconds to surface
+  HighStateStringIDX 2008
+  LowStateStringIDX 2447
+
+  AttackShift High
+  ToHighStateIcon "Units/images/go_up.png"
+
+[UNIT] "Carrier_Submarine_Surfaced" COPY "Carrier_Submarine"
+  Type Naval
+
+  delete AttackerInPlanner
+  delete NoAutoAttack
+  delete NoAutoAttackSub
+
+  Airway Launch 1 Time 80
+  Airway Launch 1 Time 80
+  Airway Launch 1 Time 140
+  CanHostAircrafts "Attack" 10 Patrol 4
+  CanHostAircrafts airway 1 "Fighter" 10 Patrol 4
+  CanHostAircrafts airway 2 "EW_Aircraft" 4 Patrol 2 AIAutoPatrol
+
+  Radar "Periscope"
+  Radar "Submarine Radar Mast"
+
+  HighState NULL
+  HighStateStringIDX 2009
+  LowState "Carrier_Submarine"
+  LowStateStringIDX 2040
+  TimeToLowState 3.0 // 3 seconds to submerge
+
+  SpecialState Yes
+  StateStringIDX 2010
+  StateIcon "Units/images/exclamation.png"
+  ToLowStateIcon "Units/images/go_down.png"
+
+  AttackShift None
+  RetreatShift Low
+//  DefenceShift Low
+  UnderIceShift Low
+  AutoOnRest None
+
+
+[UNIT] "Maintenance_Airbase"
+  Tech "U_Maintenance_Airbase"
+  Movie "Units/Images/Ground/midlevel/Maintenance_Airbase.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Maintenance_AIRBASE.midx"
+  Icon "Units/Images/Icons/Ground/Maintenance_Airbase.png"
+  Model "Units/Images/Ground/AIRBASE MAINTENANCE.fbx"  
+  ModelDrawSize 35
+  DrawSize 35
+  AbstractDrawSize 35
+  DrawOrder 1
+  FixedRotationAngle true
+  Size 1.5
+  Sound 138 Volume 0.5
+  Type Ground
+  Class "UC_Building"
+
+  AlwaysVisibleOnEnemyTerritory Yes
+  Power 30
+  SelfDestructTime 45
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage Principal DefaultOff
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Airway Launch 1 Time 400
+  Airway Launch 2 Time 180
+  CanHostAircrafts airway 1 "Air_Carrier" 1
+  CanHostAircrafts airway 1 "Attack_Helicopter" 4 Patrol 2 AIAutoPatrol
+  CanAccessGlobalStorage
+  Radar "STD Vision"
+  Radar "STD Long Wave"
+  ProductionCost 5
+  NoAutoAttack
+  
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"
+
+
+
+[UNIT] "Transfer_Airbase"
+  Tech "U_Transfer_Airbase"
+  Movie "Units/Images/Ground/midlevel/Transfer_Airbase.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Transfer_AIRBASE.midx"
+  Icon "Units/Images/Icons/Ground/Transfer_Airbase.png"
+  Model "Units/Images/Ground/AIRBASE Transfer.fbx"  
+  ModelDrawSize 35
+  DrawSize 35
+  AbstractDrawSize 35
+  DrawOrder 1
+  FixedRotationAngle true
+  Size 1.5
+  Sound 138 Volume 0.5
+  Type Ground
+  Class "UC_Building"
+  ProductionCost 17
+  AlwaysVisibleOnEnemyTerritory Yes
+  Power 30
+  SelfDestructTime 45
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage Principal DefaultOff
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+
+  HangarMaxLoad 5
+  CanCarryUnit "Fighter"
+  CanCarryUnit "Attack"
+  CanCarryUnit "Interceptor"
+  CanCarryUnit "Bomber"
+  CanCarryUnit "AWACS"
+  CanCarryUnit "Spec_Ops_Helicopter"
+  CanCarryUnit "Air_Transport"
+  CanCarryUnit "Attack_Helicopter"
+  CanCarryUnit "Spy_Plane"
+  CanCarryUnit "High_Speed_Bomber"
+  CanCarryUnit "Navy_Helicopter"
+  CanCarryUnit "Naval AWACS"
+  CanCarryUnit "EW_Aircraft"
+  CanCarryUnit "Maritime_Patrol_Aircraft"
+
+  CanAccessGlobalStorage
+  Radar "STD Vision"
+  Radar "STD Long Wave"
+  NoAutoAttack
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"
+
+[UNIT] "CRAM"
+  Tech "U_CRAM"
+  Movie "Units/Images/ground/midlevel/CRAM.midx"
+  AbstractMovie "Units/Images/ground/Abstract/CRAM.midx"
+  Model "Units/Images/ground/CRAM.midx"
+  Icon "Units/Images/Icons/ground/CRAM.png"
+  DrawSize 22
+  AbstractDrawSize 35
+  Size 0.2
+  AlwaysVisibleOnEnemyTerritory Yes
+  Type Ground
+  Class "UC_Ground"
+  Power 2.0
+  SelfDestructTime 5
+  ProductionCost 3.5
+  TargetInPlanner Yes
+ 
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+
+
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage
+
+  Radar "STD Short Wave"
+
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+
+[UNIT] "Missile_Container"
+  Tech "U_Missile_Container"
+  Movie "Units/Images/ground/midlevel/Missile_Container.midx"
+  AbstractMovie "Units/Images/ground/Abstract/Missile_Container.midx"
+  Model "Units/Images/ground/Missile_Container.midx"
+  Icon "Units/Images/Icons/ground/Missile_Container.png"
+  DrawSize 26
+  AbstractDrawSize 32
+  FixedRotationAngle true
+  Size 0.25
+  Type Ground
+  Class "UC_Ground"
+
+  Power 2.0
+  SelfDestructTime 15
+  AttackIfDestroyed
+
+  Weapon "SSM" 20000 Launch 2 Time 130 AutoEngage
+
+  Radar "STD Vision"
+  ProductionCost 10.0
+
+	Modifier "BM_Accuracy_Damage_Penalty"
+  
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+
+
+
+[UNIT] "LCAC"
+  Tech "U_LCAC"
+  Movie "Units/Images/Naval/Topdown/LCAC.midx"
+  AbstractMovie "Units/Images/Naval/Abstract/LCAC.midx"
+  Model "Units/Images/Naval/LCAC.midx"
+  Icon "Units/Images/Icons/Naval/LCAC.png"
+  DrawSize 20
+  AbstractDrawSize 40
+  FollowRadius 39//34
+  Size 0.25
+  Sound 132 Volume 0.5
+  Type Naval
+  AttackerInPlanner
+  Speed 90
+  TurnSpeed 9
+  Power 30
+  Range 5000
+  Crash "big_bomb"
+  NoAutoDeploy
+  Slave
+  SelfDestructTime 20
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+
+
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+  Weapon "Ship Gun" 25000 Launch 1 Time 70 AutoEngage Principal
+  //Weapon "Railgun" 25000 Launch 1 Time 70 AutoEngage
+  Weapon "CIWS" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Weapon "Laser CIWS" 25000 Launch 1 Time 20 AutoEngage DefaultOff
+  Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+  Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage DefaultOff //Mostly for show
+
+
+
+  ImprovedBy "Advanced_Warships"
+    Weapon "Ship Gun" 25000 Launch 1 Time 60 AutoEngage Principal
+    Weapon "Railgun" 25000 Launch 1 Time 60 AutoEngage
+    Weapon "CIWS" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 1 Time 20 AutoEngage DefaultOff
+    Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage
+    Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+    Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage DefaultOff //Mostly for show
+  ImprovedBy "Experimental_Warships"
+    Weapon "Ship Gun" 25000 Launch 1 Time 60 AutoEngage Principal
+    Weapon "Railgun" 25000 Launch 1 Time 60 AutoEngage
+    Weapon "CIWS" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 1 Time 20 AutoEngage DefaultOff
+    Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage
+    Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+    Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage DefaultOff //Mostly for show
+
+  CanCarryUnit "Army_Division"
+  CanCarryUnit "Combat_Engineers"  
+  CanCarryUnit "AA_Site_Old"
+  CanCarryUnit "Coastal"
+  CanCarryUnit "MOBILE_SAM"
+  CanCarryUnit "Mobile_SW_Radar"
+  CanCarryUnit "EW_MOBILE"
+  CanCarryUnit "Mobile_SRBM"
+  CanCarryUnit "Mobile_MRBM"
+  CanCarryUnit "Mobile_ICBM"
+  CanCarryUnit "Terminal_ABM"
+  CanCarryUnit "Mobile_ABM_Laser"
+
+  HangarMaxLoad 2
+
+
+
+  Radar "STD Vision"
+  Radar "STD Long Wave"
+  Radar "STD Short Wave"
+
+  Modifier "Warship_Stealth_Bonus_Modifier_1"
+  Modifier "Warship_Stealth_Bonus_Modifier_2"
+  
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  
+  CanAccessWeaponStockpile Yes
+  CanAccessUnitStockpile No
+  
+  ProductionCost 2.5
+  
+
+  
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 110
+    Set TurnSpeed 10
+    Set Power 35
+  }
+  
+  ImprovedBy "Experimental_Warships"
+  {
+    Set Speed 125
+    Set TurnSpeed 11
+    Set Power 40
+  }
+
+
+
+[UNIT] "LHA"
+  Tech "U_LHA"
+  Movie "Units/Images/Naval/Topdown/LHA.midx"
+  AbstractMovie "Units/Images/Naval/Abstract/LHA.midx"
+  Model "Units/Images/Naval/LHA.fbx"
+  Icon "Units/Images/Icons/Naval/LHA.png"
+  DrawSize 38
+  AbstractDrawSize 40  
+  FollowRadius 39//34
+  Size 0.25
+  Sound 132 Volume 0.7
+  Type Naval
+  AttackerInPlanner
+  Speed 60
+  TurnSpeed 6.5
+  Power 45
+  SelfDestructTime 30
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Mod_2"	
+  Modifier "ECM_Bonus_1"
+  Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+  Weapon "Light SAM" 20000 Launch 2 Time 60 AutoEngage DefaultOff
+  Weapon "Light SAM MD" 20000 Launch 2 Time 60 AutoEngage DefaultOff
+  Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+  Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+  //Weapon "Light_AShM" 20000 Launch 2 Time 120 AutoEngage
+	//Weapon "SSM" 20000 Launch 1 Time 160 AutoEngage
+
+  ImprovedBy "Advanced_Warships"
+    Weapon "Light SAM" 20000 Launch 2 Time 60 AutoEngage DefaultOff
+    Weapon "Light SAM MD" 20000 Launch 2 Time 60 AutoEngage DefaultOff
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "Light_AShM" 20000 Launch 2 Time 100 AutoEngage
+	  //Weapon "SSM" 20000 Launch 1 Time 130 AutoEngage
+  ImprovedBy "Experimental_Warships"
+    Weapon "Light SAM" 20000 Launch 2 Time 50 AutoEngage DefaultOff
+    Weapon "Light SAM MD" 20000 Launch 2 Time 50 AutoEngage DefaultOff
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "Light_AShM" 20000 Launch 3 Time 90 AutoEngage
+    Weapon "SSM" 20000 Launch 2 Time 130 AutoEngage
+  
+  
+
+  Airway Launch 2 Time 60 // in seconds in 1x time
+  Airway Launch 3 Time 120 // in seconds in 1x time
+  Airway Launch 1 Time 300 // in seconds in 1x time
+  CanHostAircrafts "Attack_Helicopter" 20 Patrol 6 AIAutoPatrol
+  CanHostAircrafts airway 1 "Navy_Helicopter" 8 Patrol 4 AIAutoPatrol
+  CanHostAircrafts airway 1 "Spec_Ops_Helicopter" 4 Patrol 2
+  CanHostAircrafts airway 2 "LCAC" 2
+
+  Radar "STD Vision"
+  Radar "STD Long Wave"
+  Radar "STD Short Wave"
+
+  Modifier "Warship_Stealth_Bonus_Modifier_1"
+  Modifier "Warship_Stealth_Bonus_Modifier_2"
+  
+  Modifier "BM_Accuracy_Damage_Penalty" 
+  
+  CanAccessWeaponStockpile Yes
+  CanAccessUnitStockpile No
+  
+  ProductionCost 10
+  
+
+  
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 70
+    Set TurnSpeed 7.5
+    Set Power 55
+  }
+  
+  ImprovedBy "Experimental_Warships"
+  {
+    Set Speed 80
+    Set TurnSpeed 8.5
+    Set Power 65
+  }
+
+
+
+[UNIT] "ABM_Site" MODIFY
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+[UNIT] "Over_Horizon_radar" MODIFY
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+[UNIT] "Fixed_Coastal_Gun" MODIFY
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+  Reset ImprovedBy
+  Reset Weapon
+  Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage DefaultOff
+  ImprovedBy "Missile_Warships"
+    Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage
+  ImprovedBy "Improved_Warships"
+    Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage
+  ImprovedBy "Enhanced_Warships"
+    Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage
+  ImprovedBy "Advanced_Warships"
+    Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage
+    Weapon "Coastal Railgun" 25000 Launch 1 Time 50 AutoEngage
+  ImprovedBy "Experimental_Warships"
+    Weapon "Coastal Gun" 25000 Launch 1 Time 50 AutoEngage
+    Weapon "Coastal Railgun" 25000 Launch 1 Time 45 AutoEngage
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+
+
+[UNIT] "Central_Command_Bunker" MODIFY
+  CanCarryUnit "VIP"
+  HangarMaxLoad 1
+
+  
+[UNIT] "Spec_Ops_Team" MODIFY
+  CanCarryUnit "VIP"
+  HangarMaxLoad 1
+
+[UNIT] "Bomb_Truck" MODIFY
+  DoesNotTriggerWarWhenAttacked Yes
+  DoesNotTriggerWarOnAttack Yes
+
+[UNIT] "Heavy_Bomb_Truck" MODIFY
+  DoesNotTriggerWarWhenAttacked Yes
+  DoesNotTriggerWarOnAttack Yes
+
+[UNIT] "Combat_Engineers" MODIFY
+  HangarMaxLoad 4
+  CanCarryUnit "CRAM"
+  CanCarryUnit "Missile_Container"
+  CanCarryUnit "ABM_Site"
+  CanCarryUnit "Fixed_Coastal_Gun"
+  CanCarryUnit "Over_Horizon_radar"
+
+
+
+[UNIT] "Air_Transport" MODIFY
+  CanCarryUnit "Heavy_Bomb_Truck"
+  CanCarryUnit "Bomb_Truck"
+  CanCarryUnit "Spec_Ops_Team"
+
+[UNIT] "Bomber" MODIFY
+  delete Config "Nuclear Cruise Missiles"
+  delete Config "Fusion Cruise Missiles"
+	Config "Nuclear Cruise Missiles" OnlyFull
+		Weapon "ALCM-N" 2 Launch 1 Time 60 AutoEngage
+		Weapon "ALCM" 2 Launch 1 Time 60 AutoEngage
+	Config "Fusion Cruise Missiles" OnlyFull
+		Weapon "Fusion ALCM" 2 Launch 1 Time 60 AutoEngage
+		Weapon "ALCM" 2 Launch 1 Time 60 AutoEngage 		
+
+  
+[UNIT] "Spy_Plane" MODIFY
+  Config "Air to Air" Default OnlyFull
+    ImprovedBy "Weaponized_Spy_Planes"
+      Weapon "LAAM" 2 Launch 2 Time 100 AutoEngage
+    ImprovedBy "Weaponized_Spy_Planes_2"
+      Weapon "LAAM" 4 Launch 2 Time 70 AutoEngage
+
+	Config "Nuclear AAM" OnlyFull
+    ImprovedBy "Weaponized_Spy_Planes"
+		  Weapon "Nuclear AAM" 1
+
+	Config "Pure Fusion AAM" OnlyFull
+    ImprovedBy "Weaponized_Spy_Planes"
+		  Weapon "Fusion AAM" 1
+  Config "Cruise Missiles"
+    ImprovedBy "Weaponized_Spy_Planes"
+		  Weapon "ALCM" 2 Launch 1 Time 20 AutoEngage
+    ImprovedBy "Weaponized_Spy_Planes_2"
+      Weapon "ALCM" 4 Launch 2 Time 20 AutoEngage
+
+	Config "Nuclear Cruise Missiles" OnlyFull
+    ImprovedBy "Weaponized_Spy_Planes"
+      Weapon "ALCM-N" 1 Launch 1 Time 20 AutoEngage
+    ImprovedBy "Weaponized_Spy_Planes_2"
+      Weapon "ALCM-N" 2 Launch 1 Time 20 AutoEngage
+      
+	Config "Fusion Cruise Missiles" OnlyFull
+    ImprovedBy "Weaponized_Spy_Planes"
+		  Weapon "Fusion ALCM" 1 Launch 1 Time 20 AutoEngage
+    ImprovedBy "Weaponized_Spy_Planes_2"
+		  Weapon "Fusion ALCM" 2 Launch 1 Time 20 AutoEngage
+
+  //Config "Missile Interception"
+  //  ImprovedBy "Weaponized_Spy_Planes"
+	//	  Weapon "ABM" 1 Launch 1 Time 60 AutoEngage
+  //  ImprovedBy "Weaponized_Spy_Planes_2"
+	//	  Weapon "ABM" 2 Launch 1 Time 60 AutoEngage
+
+  Modifier "Weaponized_Spy_Planes"
+  Modifier "Weaponized_Spy_Planes_2"
+
+
+[UNIT] "Airport" MODIFY
+  Airway Launch 1 Time 180 // in seconds in 1x time
+  CanHostAircrafts "Spec_Ops_Helicopter" 2 Patrol 2
+
+[UNIT] "Tactical_Airbase" MODIFY
+  Airway Launch 1 Time 180 // in seconds in 1x time
+  DELETE CanHostAircrafts "Attack"
+  CanHostAircrafts "Attack" 20 Patrol 10
+  CanHostAircrafts airway 2 "Attack_Helicopter" 6 Patrol 2 AIAutoPatrol
+  
+  
+[UNIT] "Specialized_Airport" MODIFY
+  DELETE CanHostAircrafts "Spy_Plane"
+  CanHostAircrafts "Spy_Plane" 4 Patrol 2
+
+
+
+
+[UNIT] "Naval_Monitoring_Station" MODIFY
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+[UNIT] "Resupply_Ship" MODIFY
+  CanCarryUnit "Naval_Monitoring_Station"
+  HangarMaxLoad 1
+  CanAccessUnitStockpile No
+
+[UNIT] "Carrier" MODIFY
+  Speed 40
+  TurnSpeed 5
+  ImprovedBy "Improved_Warships"
+  {
+    Set Speed 55
+    Set TurnSpeed 6.0
+  }
+ 
+  ImprovedBy "Enhanced_Warships"
+  {
+    Set Speed 60
+    Set TurnSpeed 6.5
+  }
+  
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 70
+    Set TurnSpeed 7.0
+  }
+  
+  ImprovedBy "Experimental_Warships"
+  {
+    Set Speed 80
+    Set TurnSpeed 7.5
+  }
+
+[UNIT] "Destroyer" MODIFY
+  Speed 50
+  TurnSpeed 4.5
+
+  Airway Launch 1 Time 180 // in seconds in 1x time
+  CanHostAircrafts "Navy_Helicopter" 1 Patrol 1 AIAutoPatrol
+
+  ImprovedBy "Missile_Warships"
+  {
+    Set Speed 60
+    Set TurnSpeed 5.5
+  } 
+
+  ImprovedBy "Improved_Warships"
+  {
+    Set Speed 65
+    Set TurnSpeed 6
+  }
+   
+  ImprovedBy "Enhanced_Warships"
+  {
+    Set Speed 75
+    Set TurnSpeed 6.5
+  }
+
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 85
+    Set TurnSpeed 7
+  }
+
+  ImprovedBy "Experimental_Warships"
+  {
+    Set Speed 95
+    Set TurnSpeed 7.5
+  }
+
+[UNIT] "Cruiser" MODIFY
+  Speed 45
+  TurnSpeed 5
+
+  Airway Launch 1 Time 180 // in seconds in 1x time
+  CanHostAircrafts "Navy_Helicopter" 2 Patrol 1 AIAutoPatrol
+  CanHostAircrafts "Attack_Helicopter" 1 Patrol 1 AIAutoPatrol
+
+  ImprovedBy "Missile_Warships"
+  {
+    Set Speed 50
+    Set TurnSpeed 5.5
+  }
+
+  ImprovedBy "Improved_Warships"
+  {
+    Set Speed 60
+    Set TurnSpeed 6.0
+  }
+ 
+  ImprovedBy "Enhanced_Warships"
+  {
+    Set Speed 65
+    Set TurnSpeed 6.5
+  }
+
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 75
+    Set TurnSpeed 7.0
+  }
+  
+  ImprovedBy "Experimental_Warships" 
+  {
+    Set Speed 85
+    Set TurnSpeed 7.5
+  }
+
+[UNIT] "Landing_Ship" MODIFY
+  Speed 45
+  TurnSpeed 5
+  CanCarryUnit "Heavy_Bomb_Truck"
+  CanCarryUnit "Bomb_Truck"
+  CanCarryUnit "Spec_Ops_Team"
+
+  ImprovedBy "Missile_Warships"
+  {
+  Set Speed 55
+  Set TurnSpeed 5.5
+  }
+
+  ImprovedBy "Improved_Warships"
+  {
+    Set Speed 60
+    Set TurnSpeed 6.0
+  }
+
+  ImprovedBy "Enhanced_Warships"
+  {
+    Set Speed 65
+    Set TurnSpeed 6.5
+  } 
+  
+  ImprovedBy "Advanced_Warships"
+  {
+    Set Speed 75
+    Set TurnSpeed 7.0
+  }  
+
+  ImprovedBy "Experimental_Warships"
+  {
+    Set Speed 85
+    Set TurnSpeed 7.5
+  }
+
+[UNIT] "Submarine" MODIFY
+  Speed 45
+  TurnSpeed 5
+  Power 5
+
+  CanCarryUnit "Bomb_Truck"
+
+  ImprovedBy "Nuclear_Submarine"
+	{
+	 Set Size 0.19
+	 Set Speed 50
+	}
+  
+	ImprovedBy "Improved_Submarines"
+	{
+	  Set Size 0.18
+	  Set Speed 55
+	}
+
+	ImprovedBy "Enhanced_Submarines"
+	{
+	  Set Size 0.17
+	  Set Speed 60
+	}	
+
+	ImprovedBy "Advanced_Submarines"
+	{
+	  Set Size 0.16
+	  Set Speed 70
+	}
+
+	ImprovedBy "Experimental_Submarines"
+	{
+	  Set Size 0.15
+	  Set Speed 75
+	}	
+[UNIT] "SSGN" MODIFY
+  Speed 35
+  TurnSpeed 5 // in angles per second
+  ProductionCost 13
+  ImprovedBy "Nuclear_Submarine"
+	{
+	  Set Speed 45
+	}
+
+	ImprovedBy "Improved_Submarines"
+	{
+	  Set Speed 50
+	}
+	
+	ImprovedBy "Enhanced_Submarines"
+	{
+	  Set Speed 55
+	}	
+
+	ImprovedBy "Advanced_Submarines"
+	{
+	  Set Speed 60
+	}
+	
+	ImprovedBy "Experimental_Submarines"
+	{
+	  Set Speed 65
+	}
+
+[END]

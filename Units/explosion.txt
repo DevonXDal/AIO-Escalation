@@ -1,0 +1,17 @@
+USE PREVIOUS "units/explosion.txt"
+
+[EXPLOSION] "Antiship3"
+  Movie "Images/Explosion/big_1.midx"
+  Sound 70 or 217 or 218 or 219
+  MuteLength 0.25
+  Damage 5.0
+
+  Range 0.1
+  FullEffectRange 0.02
+  DrawSize 8
+  TimeGrowing 0.4
+  TimeTotal 0.9
+  RandomAngle true
+  
+
+[END]

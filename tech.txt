@@ -1,0 +1,205 @@
+USE PREVIOUS "tech.txt"
+
+
+
+
+[TECHNOLOGY] "Advanced_Warships" MODIFY
+  LeadsTo "U_Battlecruiser"
+  LeadsTo "M_Anti_Ship_Ballistic_Missile"
+
+
+
+[TECHNOLOGY] "U_Battlecruiser"
+  Name "U_Battlecruiser_NAME"
+  Description "U_Battlecruiser_DESC"
+
+[TECHNOLOGY] "MRBM" MODIFY
+  LeadsTo "M_Anti_Ship_Ballistic_Missile"
+
+[TECHNOLOGY] "M_Anti_Ship_Ballistic_Missile"
+  Name "M_Anti_Ship_Ballistic_Missile_NAME"
+  Description "M_Anti_Ship_Ballistic_Missile_DESC"
+
+
+[TECHNOLOGY] "Arsenal_Ship"
+  Name "Arsenal_Ship_NAME"
+  Description "Arsenal_Ship_DESC"
+  Image "Images/Science/Arsenal_Ship.png"
+  Points 50
+  LeadsTo "U_Arsenal_Ship"
+  TechLevel 4
+  Type "Air and Missile Defence"
+  NoAutoUnlockTillLevel 5
+
+[TECHNOLOGY] "Improved_Warships" MODIFY
+  LeadsTo "U_Arsenal_Ship"
+
+[TECHNOLOGY] "Terminal_BM_Defence" MODIFY
+  LeadsTo "Arsenal_Ship"
+
+[TECHNOLOGY] "anti_ballistic_missile" MODIFY
+  LeadsTo "Arsenal_Ship"
+
+
+
+[TECHNOLOGY] "U_Arsenal_Ship"
+  Name "U_Arsenal_Ship_NAME"
+  Description "U_Arsenal_Ship_DESC"
+
+[TECHNOLOGY] "Weaponized_Spy_Planes"
+  Name "Weaponized_Spy_Planes_NAME"
+  Description "Weaponized_Spy_Planes_DESC"
+  Image "Images/Science/Weaponized_Spy_Planes.png"
+  Points 40
+  TechLevel 5
+  Type "Aircraft Technology"
+  NoAutoUnlockTillLevel 7
+  LeadsTo "Weaponized_Spy_Planes_2"
+
+[TECHNOLOGY] "Weaponized_Spy_Planes_2"
+  Name "Weaponized_Spy_Planes_NAME"
+  Description "Weaponized_Spy_Planes_DESC"
+
+[TECHNOLOGY] "Spy_Plane" MODIFY
+  LeadsTo "Weaponized_Spy_Planes"
+
+[TECHNOLOGY] "Generation_4_Aircraft" MODIFY
+  LeadsTo "Weaponized_Spy_Planes"
+
+[TECHNOLOGY] "Interceptor_aircraft" MODIFY
+  LeadsTo "Weaponized_Spy_Planes"
+
+[TECHNOLOGY] "Generation_4_Bomber" MODIFY
+  LeadsTo "Weaponized_Spy_Planes"
+
+[TECHNOLOGY] "Generation_6_Aircraft" MODIFY
+  LeadsTo "Weaponized_Spy_Planes_2"
+
+
+[TECHNOLOGY] "U_VIP"
+  Name "U_VIP_NAME"
+  Description "U_VIP_DESC"
+
+[TECHNOLOGY] "M_Pistol"
+  Name "M_Pistol_NAME"
+  Description "M_Pistol_DESC"
+
+[TECHNOLOGY] "Experimental_Submarines" MODIFY
+  LeadsTo "T_Carrier_Submarine"
+
+
+[TECHNOLOGY] "Generation_6_Aircraft" MODIFY
+  LeadsTo "T_Air_Carrier"
+[TECHNOLOGY] "Heavy_Airframe_3" MODIFY
+  LeadsTo "T_Air_Carrier"
+[TECHNOLOGY] "AWACS" MODIFY
+  LeadsTo "T_Air_Carrier"
+
+[TECHNOLOGY] "T_Carrier_Submarine"
+  Name "T_Carrier_Submarine_NAME"
+  Description "T_Carrier_Submarine_DESC"
+  Image "Images/Science/Carrier_Submarine.png"
+  Points 130
+  TechLevel 10
+  Type "Naval Technology"
+  NoAutoUnlockTillLevel 99
+  LeadsTo "U_Carrier_Submarine"
+
+[TECHNOLOGY] "T_Air_Carrier"
+  Name "T_Air_Carrier_NAME"
+  Description "T_Air_Carrier_DESC"
+  Image "Images/Science/Air_Carrier.png"
+  Points 120
+  TechLevel 10
+  Type "Aircraft Technology"
+  NoAutoUnlockTillLevel 99
+  LeadsTo "U_Air_Carrier"
+  LeadsTo "U_Maintenance_Airbase"
+
+
+[TECHNOLOGY] "U_Carrier_Submarine"
+  Name "U_Carrier_Submarine_NAME"
+  Description "U_Carrier_Submarine_DESC"
+
+[TECHNOLOGY] "U_Air_Carrier"
+  Name "U_Air_Carrier_NAME"
+  Description "U_Air_Carrier_DESC"
+
+[TECHNOLOGY] "U_Maintenance_Airbase"
+  Name "U_Maintenance_Airbase_NAME"
+  Description "U_Maintenance_Airbase_DESC"
+
+[TECHNOLOGY] "U_Transfer_Airbase"
+  Name "U_Transfer_Airbase_NAME"
+  Description "U_Transfer_Airbase_DESC"
+
+[TECHNOLOGY] "Counter_Rocket_Artillery_Mortar" MODIFY
+  LeadsTo "U_CRAM"
+
+[TECHNOLOGY] "U_CRAM"
+  Name "U_CRAM_NAME"
+  Description "U_CRAM_DESC"
+
+[TECHNOLOGY] "Railguns" MODIFY
+  LeadsTo "Coastal_Railguns"
+
+[TECHNOLOGY] "Advanced_Warships" MODIFY
+  LeadsTo "Coastal_Railguns"
+
+[TECHNOLOGY] "Coastal_Railguns"
+  Name "Coastal_Railguns_NAME"
+  Description "Coastal_Railguns_DESC"  
+  LeadsTo "M_Coastal_Railgun"
+
+[TECHNOLOGY] "M_Coastal_Railgun"
+  Name "M_Railgun_NAME"
+  Description "M_Railgun_DESC"
+
+
+[TECHNOLOGY] "T_Missile_Container"
+  Name "T_Missile_Container_NAME"
+  Description "T_Missile_Container_DESC"
+  Image "Images/Science/Missile_Container.png"
+  Points 30
+  TechLevel 4
+  Type "Smart Weapons"
+  NoAutoUnlockTillLevel 6
+  LeadsTo "U_Missile_Container"
+
+
+[TECHNOLOGY] "U_Missile_Container"
+  Name "U_Missile_Container_NAME"
+  Description "U_Missile_Container_DESC"
+
+[TECHNOLOGY] "Coastal_Defence" MODIFY
+  LeadsTo "T_Missile_Container"
+
+
+[TECHNOLOGY] "Enhanced_Warships" MODIFY
+  LeadsTo "U_LHA"
+  LeadsTo "U_LCAC"
+
+[TECHNOLOGY] "U_LHA"
+  Name "U_LHA_NAME"
+  Description "U_LHA_DESC"
+
+
+  
+[TECHNOLOGY] "U_LCAC"
+  Name "U_LCAC_NAME"
+  Description "U_LCAC_DESC"
+
+[TECHNOLOGY] "Guided_Torpedoes" MODIFY
+  LeadsTo "U_Maritime_Patrol_Aircraft"
+
+
+[TECHNOLOGY] "U_Maritime_Patrol_Aircraft"
+  Name "U_Maritime_Patrol_Aircraft_NAME"
+  Description "U_Maritime_Patrol_Aircraft_DESC"
+
+
+[TECHNOLOGY] "U_Naval_Airbase"
+  Name "U_Naval_Airbase_NAME"
+  Description "U_Naval_Airbase_DESC"
+
+[END]
