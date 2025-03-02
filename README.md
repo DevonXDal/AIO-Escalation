@@ -25,3 +25,6 @@ If anyone would like to volunteer please send a message to one of the contributo
 * Reworked Transport Ranges
 * ...And More.
 
+## Repository Rules
+Each contributor should make changes to their branch and another contributor should review it before allowing the changes to be merged into the main branch.
+
