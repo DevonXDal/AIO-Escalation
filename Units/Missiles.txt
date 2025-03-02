@@ -45,9 +45,6 @@ USE PREVIOUS "units/Missiles.txt"
   AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
   AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
 
-  Trajectory
-
-
 [MISSILE] "Anti Ship Ballistic Missile"
   Tech "M_Anti_Ship_Ballistic_Missile"
   RequiresPreciseTargeting No
@@ -98,29 +95,6 @@ USE PREVIOUS "units/Missiles.txt"
 
   Trajectory MaxPoints 4 MaxLength 0.4 WidthMult 0.90
 
-
-
-
-[MISSILE] "ALCM" MODIFY
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
-[MISSILE] "ALCM-N" MODIFY
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
-[MISSILE] "Fusion ALCM" MODIFY
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
-  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
-  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
-
-[MISSILE] "Small Arms" MODIFY
-  CanBeUsedAgainst "VIP"
-
-
 [MISSILE] "Pistol"
   Tech "M_Pistol"
   CanBeUsedAgainst "VIP"
@@ -129,9 +103,9 @@ USE PREVIOUS "units/Missiles.txt"
   DrawSize 2
   Sound 71 Volume 0.3
   Explosion "Gunfire_Spec_Ops"
-  Range 20
+
   MaxElevation 5
-  Damage 100
+  Range 20
   Speed 3000
   Precision 0.01
 
@@ -197,4 +171,25 @@ USE PREVIOUS "units/Missiles.txt"
   AIHint CounterValue 0
   AIHint CounterForce 1
 
+[MISSILE] "ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "ALCM-N" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "Fusion ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+
+[MISSILE] "Small Arms" MODIFY
+  CanBeUsedAgainst "VIP"
+
+
+=======
 [END]
