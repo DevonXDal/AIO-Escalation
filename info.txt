@@ -1,0 +1,16 @@
+ICBM MOD "THE MOD"
+
+Version "1.0"
+
+Description "This mod adds a lot and this is...
+
+im not writing an entire description rn somebody else do it.
+
+WIP
+WIP
+WIP
+WIP
+
+
+"
+ChangeLog "Initial Release."

@@ -1,0 +1,8 @@
+USE PREVIOUS "units/Radars.txt"
+
+[RADAR] "AWACS Sonar" MODIFY
+  Range 150
+  ImprovedBy Unit "Advanced_Sonar" Range 1.35
+  ImprovedBy Unit "Mega_Sonar" Range 1.45  
+
+[END]

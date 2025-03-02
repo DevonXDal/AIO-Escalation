@@ -1,0 +1,6 @@
+Model "units/images/AIRBORNE/Maritime_Patrol_Aircraft_1.fbx"
+
+ELEMENT "propeller_1" Axis z Speed 30.0
+ELEMENT "propeller_2" Axis z Speed 30.0
+ELEMENT "propeller_3" Axis z Speed -30.0
+ELEMENT "propeller_4" Axis z Speed -30.0

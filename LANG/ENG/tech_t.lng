@@ -1,0 +1,179 @@
+USE PREVIOUS "lang/Eng/tech_t.lng"
+
+
+"U_Battlecruiser_NAME" LANG "Battlecruiser"
+"U_Battlecruiser_DESC" LANG "Battlecruisers are extremely heavily armed surface warship.
++ Very Powerful cruise missile armament.
++ Extremely effective against enemy ships.
++ Good at attacking land targets.
++ Can be equiped with ASBMs.
++ Can carry nuclear cruise missiles.
++ Has basic midcourse and terminal missile defenses.
+- Vulnerable to submarines.
+- Very Expensive."
+
+"M_Anti_Ship_Ballistic_Missile_NAME" LANG "ASBM"
+"M_Anti_Ship_Ballistic_Missile_DESC" LANG "A ballistic missile designed to target and destroy surface ships. Used by Battlecruisers."
+
+"Advanced_Warships_DESC" LANG "Entirely new ship designs take a considerable amount of time to develop and then build, so in the interim before the first ultra-modern stealth ships came to be, older (but still extremely capable) ship designs would be gradually upgraded and modified to fill any capability gaps. These freshly upgraded ships also had the privilege of being the first ships to wield a suite of emerging new weapons, like railguns, high-powered lasers and anti-ballistic missile systems. Having these new tools at their disposal will allow warships to survive in an increasingly hostile battlespace, as threats like advanced anti-ship missiles and hypersonic weapons begin to proliferate, while also giving them renewed strategic importance as anti-satellite and missile defence platforms in the event of a nuclear war.
+Allows destroyers and cruisers to use railguns, laser CIWS, laser AA and terminal ABMs if they are available.
+Cruisers also gain the ability to launch basic ASAT weapons.
+Increases the speed and survivability of warships.
+
+Unlocks Battlecruisers, which are ships designed as an upgrade to Cruisers. It has Anti Ship Ballistic Missiles (ASBMs) which are versions of Anti Ship Missiles which are harder to intercept and heavier hitting."
+
+
+"Arsenal_Ship_NAME" LANG "Naval Based Missile Defense"
+"Arsenal_Ship_DESC" LANG "The widespread availability of nuclear weapons poses a significant threat to naval fleets and carrier strike groups, putting them at risk of nuclear attacks and necessitating the deployment of warships specifically designed for ballistic missile defense at sea.
+Unlocks Arsenal Ships, which are heavily armed naval vessels equipped with advanced integrated air defense systems and multi-layered missile interceptors capable of providing comprehensive fleet protection."
+
+"U_Arsenal_Ship_NAME" LANG "Arsenal Ship"
+"U_Arsenal_Ship_DESC" LANG "An Arsenal Ship is equipped with hundreds of Vertical Launch System (VLS) cells dedicated to air defense, with use cases ranging from fleet protection to the defense of coastal cities and other critical infrastructure.
++ Has Heavy Air Defenses.
++ Capable of intercepting ballistic missiles.
++ Can detect enemy units from long range.
+- Vulnerable to submarines.
+- No offensive options.
+- Expensive."
+
+
+"Weaponized_Spy_Planes_NAME" LANG "Weaponized Spy Planes"
+"Weaponized_Spy_Planes_DESC" LANG "Modern air defense systems have made it increasingly difficult for conventional bombers to penetrate enemy territory without interception. Spy planes, which were originally designed for deep reconnaissance missions, could potentially be modified to deliver missiles or tactical weapons into heavily defended airspace.
+Adds the ability to launch ALCMs and LAAMs from Spy Planes."
+
+"U_Spy_Plane_DESC" LANG "Spy planes are designed to perform high-altitude photo reconnaissance and identify the location of enemy strategic assets. They can only be engaged by long-range anti-air missiles like those fired by strategic SAM sites and combat aircraft. With the appropriate aircraft technology they can upgrade to supersonic models which are extremely difficult to intercept.
++ Can locate enemy units.
++ Immune to short-range SAMs and gunfire.
++ Undetectable by basic radar.
++ Can upgrade to high-speed variants.
++ Cheaper and more controllable than satellites.
++ With the appropriate upgrades it can carry LAAMs and ALCMs.
+- Requires a specialized airbase."
+
+"U_VIP_DESC" LANG "A unit perfect for roleplaying."
+
+"M_Pistol_NAME" LANG "Pistol"
+
+"T_Carrier_Submarine_NAME" LANG "Carrier Submarines"
+"T_Carrier_Submarine_DESC" LANG "As global challenges become more complex, naval warfare continues to evolve beyond conventional approaches. Carrier submarines represent a revolutionary capability, combining the force projection of a Carrier Strike Group (CSG) with the stealth and infiltration advantages of submarine operations. These vessels can penetrate contested waters undetected, launch aerial assets deep within enemy territory, and provide sustained presence in regions where surface carrier operations might be too risky. This versatility makes carrier submarines a potentially game-changing platform for both deterrence and tactical operations in an era of advancing naval warfare capabilities."
+
+"T_Air_Carrier_NAME" LANG "Air Carriers"
+"T_Air_Carrier_DESC" LANG "As the rapid deployment of forces across the world becomes more important, carriers need to take flight. These behemoth nuclear-powered flying fortresses, dwarfing even the largest conventional aircraft, serve as mobile airbases in the sky. Their massive frames house entire squadrons, ready to launch fighters and support craft from cruising altitude, redefining what it means to control the skies.
+Adds Air Carriers and their Maintenance Airbases."
+
+
+"U_Carrier_Submarine_NAME" LANG "Carrier Submarine"
+"U_Carrier_Submarine_DESC" LANG "Carrier Submarines allow for undetectable power projection everywhere in the world.
++ Can carry fighters and multirole aircraft.
++ Very stealthy.
++ Has limited SSM capabilities when surfaced.
+- Can only launch aircrafts when surfaced.
+- Limited personal defences.
+- Vulnerable to Torpedos.
+- Expensive."
+
+
+"U_Air_Carrier_NAME" LANG "Air Carrier"
+"U_Air_Carrier_DESC" LANG "Powered by a nuclear reactor Air Carriers are the fastest way to project power across the globe compared
++ Can carry fighters and multirole aircraft.
++ Can tow transport aircraft.
++ Nearly limitless range.
+- Limited personal defences.
+- Vulnerable to SAM.
+- Expensive."
+
+"U_Maintenance_Airbase_NAME" LANG "Maintenance Airbase"
+"U_Maintenance_Airbase_DESC" LANG "The Maintenance Airbase is the home of the Air Carrier and where it gets repaired and can get resupplied.
++ Can support a Air Carrier.
++ Can carry some attack helicopters.
+- Expensive to build.
+- Few personal defences."
+
+"U_Transfer_Airbase_NAME" LANG "Transfer Airbase"
+"U_Transfer_Airbase_DESC" LANG "Used to transfer aircraft, Transfer Airbases can support a lot of aircraft types.
++ Can support most aircraft types.
+- Limited storage for aicrafts.
+- Expensive to build.
+- Few personal defences."
+
+"U_CRAM_NAME" LANG "C-RAM"
+"U_CRAM_DESC" LANG "Counter Rocket Artillery Mortar that can engage enemy missiles at close range and defend nearby 
++ Effective against nearby enemy missiles.
++ Has built-in radar.
++ Cheap to build.
+- Ineffective against Airplanes.
+- Immobile and easy to hit.
+- Limited effective range."
+
+"U_DESTROYER_DESC" LANG "Although the exact terminology varies by navy, a destroyer is a large, fast and maneuverable surface warship designed to destroy other surface combatants. As naval warfare has evolved, the roles of a destroyer have changed to include air defence, anti-submarine warfare, anti-surface warfare and missile defence. Regardless of how it is defined, destroyers are often used on autonomous patrols or as escorts to defend and support larger warships, like carriers and cruisers.
++ Fast for a warship.
++ Heightened anti-submarine capability.
++ Good anti-air/anti-missile capabilities.
++ Has limited helicopter capabilities.
+- Limited firepower against enemy ships.
+- No nuclear weapon options."
+
+"U_CRUISER_DESC" LANG "A cruiser is a large, very heavily armed surface warship. After battleships became obsolete and aircraft carriers became the new standard for capital ships, cruisers were left as the next heaviest surface combatants and also the most capable that didn't rely on air power. The exact role and design of a cruiser varies from navy to navy, but cruisers generally carry large numbers of cruise missiles and heavy guns, giving them extensive anti-surface and land attack capabilities, making them very capable at defeating other warships and destroying ground targets further inland with massive saturation attacks.
++ Powerful cruise missile armament.
++ Very effective against enemy ships.
++ Good at attacking land targets.
++ Can carry nuclear cruise missiles.
++ Has some anti-missile capabilities.
++ Can carry multiple types of helicopters for special operations.
+- Vulnerable to submarines.
+- Expensive."
+
+"U_Missile_Container_NAME" LANG "SSM Launcher"
+"U_Missile_Container_DESC" LANG "A SSM Launcher is a container filled with VLS cells which host SSMs to attack ground targets.
++ Cheap to build.
++ Can launch SSMs.
++ Can be moved by Combat Engineers.
+- Very vulnerable without other defenses.
+- No built in radar.
+"
+"T_Missile_Container_NAME" LANG "Containerized SSM Launchers"
+"T_Missile_Container_DESC" LANG "Naval-launched surface-to-surface missiles have limited range from coastal positions, creating a need for mobile land-based launch systems that can adapt to dynamic front lines. By integrating vertical launch system cells into standardized containers, forces can readily transport and deploy these missile systems across land-based positions.
+Unlocks SSM Launchers, which can be moved by Combat Engineers."
+
+"U_LHA_NAME" LANG "LHA"
+"U_LHA_DESC" LANG "LHA (Landing Helicopter Assault) carrier 
++ Can carry attack, naval and special ops helicopters.
++ Has light anti ship capabilities.
++ Can attack land targets.
+- Vulnerable to submarines.
+- Expensive."
+
+
+"U_LCAC_NAME" LANG "LCAC"
+"U_LCAC_DESC" LANG "LCAC (Landing Craft Air Cushion)
++ Can carry armies and combat engineers.
++ Are carried by LHAs.
++ Can engage land units.
++ Very fast.
+- Limited Range.
+- No offensive weapons."
+
+"Improved_Warships_DESC" LANG "Making the transition from heavy guns to guided missiles came with some growing pains. With the increasing accuracy and lethality of guided anti-ship missiles, it became increasingly apparent that heavy armour wasn’t going to be enough to keep ships from sinking under enemy fire, and was in fact starting to become a hindrance. Instead, the focus began to shift towards superior firepower and sensors to gain an offensive edge, as well as active protection systems like CIWS to stop enemy missiles from hitting their mark. Reduced armour loads and increased engine power made ships faster and more responsive as well. War on the high seas would continue to get smarter and smarter.
+Improves the weapon loadouts of cruisers and destroyers.
+Adds LHA carrier, which carry a great amount of helicopters.
+Increases the speed, survivability and fire rates of surface ships."
+
+"U_Maritime_Patrol_Aircraft_NAME" LANG "MPA"
+"U_Maritime_Patrol_Aircraft_DESC" LANG "Maritime Patrol Aircraft are designed for anti-submarine warfare.
++ Can detect and engage submarines.
++ Stays in the air for a long time.
+- Vulnerable and easy to hit.
+- Relatively expensive."
+
+"U_Naval_Airbase_NAME" LANG "Naval Airbase"
+"U_Naval_Airbase_DESC" LANG "An airbase hosting Patrol Aircraft and Naval Helicopters, which can efficiently defend against enemy naval assets.
++ Supports Naval Helicopters.
++ Carries MPAs and AWACS.
++ Very effective at short to medium-range naval surveillance and defend.
++ Effective against nearby enemy naval assets.
++ Has built-in radar.
+- Immobile and easy to hit.
+- Limited effective range."
+
+
+END
