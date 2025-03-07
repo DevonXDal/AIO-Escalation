@@ -1,16 +1,20 @@
-ICBM MOD "THE MOD"
+ICBM MOD "Mutually Assured Overhaul"
 
-Version "1.0"
+Version "0.3"
 
-Description "This mod adds a lot and this is...
+Description "THIS IS A PRERELEASE VERSION THAT LACKS TWEAKS, UNITS, TECHS, DEFCON, ETC. PLEASE GIVE ANOTHER TWO WEEKS FOR THE FULL RELEASE.
+Version 0.6 will be released approximately one week from this release. It will include many new units, DEFCON, and related systems.
+Version 1.0 will likely include campaigns, optimizations, tweaks, etc.
 
-im not writing an entire description rn somebody else do it.
+This is effectively meant to be the largest mod for ICBM Escalation. Its AIO or all-in-one mod. Effectively overhauling the game in so many ways that it is as though the game had seen multiple major version releases.
 
-WIP
-WIP
-WIP
-WIP
+To briefly list what has been added: ~100 leader portraits; placeholder portraits with ids to make other mods with leader portraits easier to coordinate; a revised DEFCON system taken to a new level from its original mod; a noticeably overhauled economy system (optional with tiers of options); national focuses (optional but one max); unit specializations (which trade certain stats for others); more defensive structures; more ground units; more sound tracks; more campaigns; revised AI playstyle; capital cities; reworked existing units; an initial slowdown to reaching nuclear tech to make its entrance more impactful; etc.
 
+Want a single mod that almost every other player has, that has language files created for non-English speaking players, overhauls basically every area of the game, and massively increases how dynamic each game ends up playing out? This is the mod for you.
 
+Content from mit, Combat, badtatts, Schrodinger's Devon, and Honk.
+See the wiki as it developers to see documentation on mechanics, leaders, and attribution. 
+
+We hope you enjoy!
 "
-ChangeLog "Initial Release."
+ChangeLog "Pre-Release."
