@@ -918,7 +918,10 @@ USE PREVIOUS "units/units.txt"
   HangarSpaceRequired 1
   ReportAsHosted Yes
 
-
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "SAM_Mk3"
+  { Movie "Units/Images/Ground/Mid-Level/Fixed_SAM_Site_2.midx" Icon "Units/Images/Icons/Ground/Fixed_SAM_Site_2.png"
+	Movie Model "Units/Images/Ground/Fixed SAM Site 3.midx"}
 
 [UNIT] "Central_Command_Bunker" MODIFY
   CanCarryUnit "VIP"
