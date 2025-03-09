@@ -920,7 +920,7 @@ USE PREVIOUS "units/units.txt"
 
 [UNIT] "SAM_site" MODIFY
   ImprovedBy "SAM_Mk3"
-  { Movie "Units/Images/Ground/Mid-Level/Fixed_SAM_Site_2.midx" Icon "Units/Images/Icons/Ground/Fixed_SAM_Site_2.png"
+  { Movie "Units/Images/Ground/midlevel/Fixed_SAM_Site_3.midx" Icon "Units/Images/Icons/Ground/Fixed_SAM_Site_3.png"
 	Movie Model "Units/Images/Ground/Fixed SAM Site 3.midx"}
 
 [UNIT] "Central_Command_Bunker" MODIFY
