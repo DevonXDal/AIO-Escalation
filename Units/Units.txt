@@ -1,5 +1,9 @@
 USE PREVIOUS "units/units.txt"
 
+[UNIT] "VirtualCity" MODIFY
+  Produces "Construction_Team"
+  ProductionPlacementRadius 300
+
 [UNIT] "Maritime_Patrol_Aircraft"
   Tech "U_Maritime_Patrol_Aircraft"
   IconIDX 2
@@ -390,11 +394,28 @@ USE PREVIOUS "units/units.txt"
   Modifier "BM_Accuracy_Damage_Penalty" 
   DoesNotTriggerWarWhenAttacked Yes
   DoesNotTriggerWarOnAttack Yes
-  ProductionCost 1
+  ProductionCost 15
   DestructionMessage None
-  Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
-  Weapon "Body Armor" 1
-	Weapon "Optics" 1
+  Config "Unarmed" Default OnlyFull
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Pistol" OnlyFull
+    Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Manpad" OnlyFull
+    Weapon "MANPAD" 3 Launch 1 Time 150 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Air Defense" OnlyFull  
+    Weapon "Light SAM" 1 Launch 1 Time 350 DefaultOff
+    Weapon "Light SAM MD" 1 Launch 1 Time 350 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Land Attack" OnlyFull
+    Weapon "SSM" 1 Launch 1 Time 500 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
 
 
 
@@ -1019,9 +1040,7 @@ USE PREVIOUS "units/units.txt"
   CanHostAircrafts airway 2 "Attack_Helicopter" 6 Patrol 2 AIAutoPatrol
   
   
-[UNIT] "Specialized_Airport" MODIFY
-  DELETE CanHostAircrafts "Spy_Plane"
-  CanHostAircrafts "Spy_Plane" 4 Patrol 2
+//[UNIT] "Specialized_Airport" MODIFY
 
 
 
@@ -1238,5 +1257,203 @@ USE PREVIOUS "units/units.txt"
 	{
 	  Set Speed 65
 	}
+
+
+  //  [*]Army Factory
+  //  [*]Bio Factory
+  //  [*]Naval Shipyard
+  //  [*]Vehicle Factory
+  //  [*]Nuclear Factory
+  //  [*]Fixed Factory
+  //  [*]Construction Team 
+
+[UNIT] "Army_Factory"
+  Tech "U_Army_Factory"
+  Movie "Units/Images/Icons/Ground/Army_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Factory.midx"
+  Model "Units/Images/Ground/Army_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+
+[UNIT] "Bio_Factory"
+  Tech "U_Bio_Factory"
+  Movie "Units/Images/Icons/Ground/Bio_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Bio_Factory.midx"
+  Model "Units/Images/Ground/Bio_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+
+//[UNIT] "Navy_Factory"
+//  Tech "U_Navy_Factory"
+//  Movie "Units/Images/Icons/Ground/Navy_Factory.midx"
+//  AbstractMovie "Units/Images/Ground/Abstract/Navy_Factory.midx"
+//  Model "Units/Images/Ground/Navy_Factory.fbx"
+//  DrawSize 28
+//  AbstractDrawSize 30
+//  FixedRotationAngle true
+//  Size 0.1
+//  Type Ground
+//  Class "UC_Building"
+//
+//  Power 2
+//  SelfDestructTime 30
+//  Radar "STD Vision"
+//  ProductionCost 24
+//  //MaxNumberOnMap 1
+//	//MaxNumberToOrder 1
+
+[UNIT] "Vehicle_Factory"
+  Tech "U_Vehicle_Factory"
+  Movie "Units/Images/Icons/Ground/Vehicle_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Vehicle_Factory.midx"
+  Model "Units/Images/Ground/Vehicle_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+
+[UNIT] "Nuclear_Factory"
+  Tech "U_Nuclear_Factory"
+  Movie "Units/Images/Icons/Ground/Nuclear_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Nuclear_Factory.midx"
+  Model "Units/Images/Ground/Nuclear_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+
+[UNIT] "Fixed_Factory"
+  Tech "U_Fixed_Factory"
+  Movie "Units/Images/Icons/Ground/Fixed_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Fixed_Factory.midx"
+  Model "Units/Images/Ground/Fixed_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+
+[UNIT] "Construction_Team"
+  Tech "U_Construction_Team"
+  Movie "Units/Images/Ground/midlevel/Construction_Team.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Construction_Team.midx"
+  Model "Units/Images/Ground/Construction_Team.fbx"
+  Icon "Units/Images/Icons/Ground/Construction_Team.png"    
+  IconIDX 54
+  IconIDX 10
+  DrawSize 22
+  AbstractDrawSize 30
+  FollowRadius 39//34
+  Size 0.8
+  Sound 138 Volume 0.2
+  Type Ground
+  Class "UC_Ground_Mobile"
+  AutoRepair 0.60
+  Speed 20
+  TurnSpeed 4 // in angles per second
+  Power 20
+  SelfDestructTime 40
+  
+  AlwaysVisibleOnEnemyTerritory Yes
+  CanCrossBorderDuringPeaceTime No
+  
+  ////Same bonuses as army divisions
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+  
+    ProducedByAnotherUnit true
+    TargetInPlanner Yes
+  
+  ImprovedBy "Army_Mech_Mk2" Set Speed 40
+  ImprovedBy "Army_Mech_Mk3" Set Speed 45
+  ImprovedBy "Army_Mech_Mk4" Set Speed 50
+  ImprovedBy "Army_Mech_Mk5" Set Speed 60
+  ImprovedBy "Army_Mech_Mk2" Power 1.05
+  ImprovedBy "Army_Mech_Mk3" Power 1.05
+  ImprovedBy "Army_Mech_Mk4" Power 1.05
+  ImprovedBy "Army_Mech_Mk5" Power 1.05
+ 
+  ImprovedBy "Improved_Basic_Protection" Power 1.15
+  ImprovedBy "Basic_Body_Armor" Power 1.15
+  ImprovedBy "Improved_Body_Armor" Power 1.15
+  ImprovedBy "Advanced_Body_Armor" Power 1.15
+  ImprovedBy "Experimental_Body_Armor" Power 1.15 
+
+/////CBRN stuff/////
+
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+
+  Radar "STD Vision"
+  ProductionCost 12
+  CanAccessGlobalStorage No  
+
 
 [END]

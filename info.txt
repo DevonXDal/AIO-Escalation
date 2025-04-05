@@ -1,16 +1,64 @@
-ICBM MOD "THE MOD"
+ICBM MOD "JTO | Joint Task Overhaul"
 
 Version "1.0"
 
-Description "This mod adds a lot and this is...
+Description "[b]THIS IS A PRERELEASE VERSION THAT LACKS TWEAKS, UNITS, TECHS, DEFCON, ETC. PLEASE GIVE ANOTHER TWO WEEKS FOR THE FULL RELEASE.
+Version 0.6 will be released approximately one week from this release. It will include many new units, DEFCON, and related systems.
+Version 1.0 will likely include campaigns, optimizations, tweaks, etc.[/b]
 
-im not writing an entire description rn somebody else do it.
+[h1]Escalated: AIO Additions[/h1]
 
-WIP
-WIP
-WIP
-WIP
+Introducing "Escalated", a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
+All features this mod adds are designed to have as high quality as the base game.
 
 
-"
+
+[h2]Contributors[/h2]
+[list]
+    [*]badtatts
+    [*]Schrodinger's Devon
+    [*]Combat
+    [*]Honk
+    [*]mit
+[/list]
+
+[h2]How to help[/h2]
+If you want to add features to this mod or change existing features you can help develop this mod [url=github.com/DevonXDal/AIO-Escalation]here[/url].
+
+[h2]Features[/h2]
+[h3][/h3]
+[h3]Units[/h3]
+[list]
+    [*]CRAM
+    [*]Missile Container
+    [*]MPA
+    [*]Air Carrier
+    [*]Battlecruiser
+    [*]Arsenal Ship
+    [*]LHA
+    [*]LCAC
+    [*]Carrier Submarine (Planes need to be filled manually)
+    [*]Maintenance Airbase
+    [*]Transfer Airbase
+    [*]Naval Airbase
+    [*]Army Factory
+    [*]Bio Factory
+    [*]Naval Shipyard
+    [*]Vehicle Factory
+    [*]Nuclear Factory
+    [*]Fixed Factory
+    [*]Construction Team 
+    [*]VIP
+[/list]
+[h3]Changes[/h3]
+[list]
+    [*]Naval unit speed adjusted.
+    [*]Spy Planes can be equipped with weapons after unlocking a tech.
+    [*]Added Helicopters to cruisers and destroyers.
+    [*]Added some new models for existing units in certain tech eras.
+    [*]Combat engineneers can carry more units.
+[/list]
+
+
+[b]We hope you enjoy![/b]"
 ChangeLog "Initial Release."
