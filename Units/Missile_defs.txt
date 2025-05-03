@@ -1,0 +1,872 @@
+USE PREVIOUS "units/Missile_defs.txt"
+
+
+[MISSILE] "Anti Ship Ballistic Missile"
+  Tech "M_Anti_Ship_Ballistic_Missile"
+  RequiresPreciseTargeting No
+  CanBeUsedAgainst Naval
+  Icon "Units/Images/Missiles/ASBM.png"
+  Movie "Units/Images/Projectiles/ATGM.midx"
+  DrawSize 12
+  Sound 113 or 114 Volume 0.5
+  Explosion "Antiship3"
+  Elevation 250
+  Range 1700
+  Speed 3500
+  MinRange 200
+  CanBeIntercepted 0.3
+  Precision 1.0
+  CanBeLimited false
+  ImprovedBy "Stealth_Weapons" CanBeIntercepted 0.8
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
+  
+  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
+  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30      
+
+  AffectedBy Unit "BM_Accuracy_Damage_Penalty" Complex Damage
+	Case Self "Advanced_Inertial_Guidance" Multiply 1
+	Case Self "Improved_Inertial_Guidance" Multiply 0.9
+	Default Multiply 0.7
+
+
+  ImprovedBy "Improved_Inertial_Guidance_Buffer" Set Precision 0.6 //Higher accuracy than nuclear for balance
+  ImprovedBy "Advanced_Inertial_Guidance_Buffer" Set Precision 0.3 //Higher accuracy than nuclear for balance
+  ImprovedBy "MARV_Buffer" CanBeIntercepted 0.70
+  ImprovedBy "MARV_Buffer" Precision 0.5
+
+  
+  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
+  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
+
+  Trajectory MaxPoints 4 MaxLength 0.4 WidthMult 0.90
+
+[MISSILE] "Pistol"
+  Tech "M_Pistol"
+  CanBeUsedAgainst "VIP"
+  Icon "Units/Images/Missiles/Glock.png" 
+  Movie "Units/Images/Projectiles/Tracer.midx"
+  DrawSize 2
+  Sound 71 Volume 0.3
+  Explosion "Gunfire_Spec_Ops"
+
+  MaxElevation 5
+  Range 20
+  Speed 3000
+  Precision 0.01
+
+  CanBeLimited false
+
+
+
+
+[MISSILE] "AA Gun Old" MODIFY  
+  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
+  DrawSize 3.0 
+  Sound 201 Volume 1.5
+
+[MISSILE] "Nuclear Artillery" MODIFY
+  Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+  
+[MISSILE] "Fusion Artillery" MODIFY
+  Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+  
+  [MISSILE] "Mounted Light Weapons"
+  Tech "M_Light_Weapons"
+  Type "Default"
+  Icon "Units/Images/Missiles/Light_Weapons_1.png"
+  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
+  DrawSize 3
+  Sound 66 or 223 Volume 0.8
+  Explosion "Gunfire_Plane"
+  Range 120
+  MaxElevation 10
+  Speed 3500
+  Precision 0.6
+  
+  /////XM16 or AKM or FN FAL
+  ImprovedBy "Weapon_Modernization" Damage 1.15
+  ImprovedBy "Weapon_Modernization" Set Speed 3700
+  ImprovedBy "Weapon_Modernization" Movie Image "Units/Images/Missiles/Light_Weapons_2.png"
+
+////M16A2 or AK-74 or Galil
+  ImprovedBy "Improved_Army_Weapons" Damage 1.15
+  ImprovedBy "Improved_Army_Weapons" Set Speed 3900
+  ImprovedBy "Improved_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_3.png"
+
+///M16A4 or AN-94 or Howa Type 89
+  ImprovedBy "Enhanced_Army_Weapons" Damage 1.15
+  ImprovedBy "Enhanced_Army_Weapons" Set Speed 4200
+  ImprovedBy "Enhanced_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_4.png"
+
+///M4A1 or AK-12 or HK416 W/optics
+  ImprovedBy "Advanced_Army_Weapons" Damage 1.15
+  ImprovedBy "Advanced_Army_Weapons" Set Speed 4500
+  ImprovedBy "Advanced_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_5.png"
+
+///XM7 or XM8, or F90MBR
+  ImprovedBy "Experimental_Army_Weapons" Damage 1.15
+  ImprovedBy "Experimental_Army_Weapons" Set Speed 5000
+  ImprovedBy "Experimental_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_6.png"
+  
+  ImprovedBy "Portable_Electronic_Optics" Set Range 125
+  ImprovedBy "Tactical_Optics" Set Range 130
+  ImprovedBy "Advanced_Tactical_Optics" Set Range 135
+  ImprovedBy "Light_Unmanned_Vehicles" Set Range 140
+  ImprovedBy "Robotic_Infantry" Set Range 145
+    
+  ImprovedBy Unit "Static_Defender_Bonus" Precision 0.3
+ 
+ ////Accuracy damage bonuses (precision doesn't change anything at this level)
+  ImprovedBy "Portable_Electronic_Optics" Damage 1.025
+  ImprovedBy "Tactical_Optics_EntMod" Damage 1.025
+  ImprovedBy "Advanced_Tactical_Optics_Entmod" Damage 1.025
+  ImprovedBy "Light_Unmanned_Vehicles_EntMod" Damage 1.025
+  ImprovedBy "Robotic_Infantry_EntMod" Damage 1.025
+
+[MISSILE] "Artillery"
+  Tech "M_Artillery"
+  Type "LandAttack"
+  Icon "Units/Images/Missiles/Art_1.png"
+  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
+  DrawSize 6
+  Sound 113 or 114 Volume 1.00
+  Explosion "big_bomb_old"
+  Range 300
+  Ballistic
+  Speed 850
+  Precision 2.0
+  MaxElevation 10
+  SmokeSizeMult 0.8
+  SmokeSpeedMult 2.0
+  
+  ImprovedBy "Army_Mech_Mk2" Damage 1.05
+  ImprovedBy "Army_Mech_Mk2" Set Speed 870
+  ImprovedBy "Army_Mech_Mk2" Movie Image "Units/Images/Missiles/Art_2.png"
+  
+  ImprovedBy "Army_Mech_Mk3" Damage 1.05
+  ImprovedBy "Army_Mech_Mk3" Set Speed 890
+  ImprovedBy "Army_Mech_Mk3" Movie Image "Units/Images/Missiles/Art_3.png"
+  
+  ImprovedBy "Army_Mech_Mk4" Damage 1.025
+  ImprovedBy "Army_Mech_Mk4" Set Speed 910
+  ImprovedBy "Army_Mech_Mk4" Movie Image "Units/Images/Missiles/Art_4.png"
+  
+  ImprovedBy "Army_Mech_Mk5" Damage 1.025
+  ImprovedBy "Army_Mech_Mk2" Set Speed 930
+  ImprovedBy "Army_Mech_Mk5" Movie Image "Units/Images/Missiles/Art_5.png"
+  
+  
+  Delete ImprovedBy Unit "Static_Defender_Bonus"
+  
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 350
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 400
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 500
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 550
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 600
+  
+  //AffectedBy Unit "CBRN_Defence_0" Damage 0.5
+  AffectedBy Unit "CBRN_Defence_1" Damage 0.80
+  AffectedBy Unit "CBRN_Defence_2" Damage 0.80
+  AffectedBy Unit "CBRN_Defence_3" Damage 0.85
+  AffectedBy Unit "CBRN_Defence_4" Damage 0.85
+
+AffectedBy Unit "Survival_Boost_1" Damage 0.850
+AffectedBy Unit "Survival_Boost_2" Damage 0.850
+AffectedBy Unit "Survival_Boost_3" Damage 0.875
+AffectedBy Unit "Survival_Boost_4" Damage 0.900
+AffectedBy Unit "Survival_Boost_5" Damage 0.900
+AffectedBy Unit "Survival_Boost_6" Damage 0.900
+
+  AIHint CounterValue 0 //Chemical Weapon
+  AIHint CounterForce 0 //Chemical Weapon
+
+[MISSILE] "Land Forces" MODIFY
+  Tech "M_Land_Force_ARMY"
+  Type "Army"
+  Icon "Units/Images/Missiles/ARMORED_1.png"
+  Sound 202 or 203 or 204 or 205 Volume 0.8
+  Explosion "Gunfire_Army"
+  Range 125
+  Speed 1500
+  Precision 0.25
+  CanBeLimited false
+  Ballistic
+  Movie "Units/Images/Projectiles/Tracer.midx"
+  HideNumberOfMissiles true
+  CanBeLimited false
+  
+  ImprovedBy "Army_Mech_Mk2" Damage 1.05
+  ImprovedBy "Army_Mech_Mk2" Movie Image "Units/Images/Missiles/Armored_2.png"
+  ImprovedBy "Army_Mech_Mk3" Damage 1.05
+  ImprovedBy "Army_Mech_Mk3" Movie Image "Units/Images/Missiles/Armored_3.png"
+  ImprovedBy "Army_Mech_Mk4" Damage 1.025
+  ImprovedBy "Army_Mech_Mk4" Movie Image "Units/Images/Missiles/Armored_4.png"
+  ImprovedBy "Army_Mech_Mk5" Damage 1.025
+  ImprovedBy "Army_Mech_Mk5" Movie Image "Units/Images/Missiles/Armored_5.png"
+  
+  ImprovedBy "Weapon_Modernization" Damage 1.15 
+  ImprovedBy "Improved_Army_Weapons" Damage 1.15
+  ImprovedBy "Advanced_Army_Weapons" Damage 1.15
+  ImprovedBy "Enhanced_Army_Weapons" Damage 1.15
+  ImprovedBy "Experimental_Army_Weapons" Damage 1.15
+  
+  ImprovedBy "Portable_Electronic_Optics" Set Range 140
+  ImprovedBy "Tactical_Optics" Set Range 145
+  ImprovedBy "Advanced_Tactical_Optics" Set Range 150
+  ImprovedBy "Light_Unmanned_Vehicles" Set Range 155
+  ImprovedBy "Robotic_Infantry" Set Range 160
+  
+/////Thompson M1A1, or PPSH-41, or M3 Grease Gun
+[MISSILE] "Small Arms" MODIFY
+  Sound 206 or 207 or 208 Volume 0.3
+  Range 100
+
+  ImprovedBy "Portable_Electronic_Optics" Set Range 105
+  ImprovedBy "Tactical_Optics" Set Range 110
+  ImprovedBy "Advanced_Tactical_Optics" Set Range 115 
+  ImprovedBy "Light_Unmanned_Vehicles" Set Range 120
+  ImprovedBy "Robotic_Infantry" Set Range 125
+  
+  Delete ImprovedBy Unit "Static_Defender_Bonus"
+  
+  CanBeUsedAgainst "Armored_Division"
+  CanBeUsedAgainst "Artillery_Division"
+  CanBeUsedAgainst "Military_Outpost"
+
+
+[MISSILE] "Conventional MRBM" MODIFY
+  AIHint Specific "Armored_Division" 0 //Ineffective
+  AIHint Specific "Artillery_Division" 0 //Ineffective
+[MISSILE] "Conventional MRBM" MODIFY
+  AIHint Specific "Armored_Division" 0 //Ineffective
+  AIHint Specific "Artillery_Division" 0 //Ineffective
+[MISSILE] "Chemical Artillery" MODIFY
+  Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+[MISSILE] "Improved Chemical Artillery" MODIFY
+    Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+[MISSILE] "Advanced Chemical Artillery" MODIFY
+    Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+[MISSILE] "Experimental Chemical Artillery" MODIFY
+    Reset ImprovedBy
+  Range 200
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+
+
+  
+[MISSILE] "ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "ALCM-N" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+[MISSILE] "Fusion ALCM" MODIFY
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
+  ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Speed 4000
+  ImprovedBy Unit "Weaponized_Spy_Planes_2" Set Range 1300
+
+[MISSILE] "Small Arms" MODIFY
+  CanBeUsedAgainst "VIP"
+
+
+
+
+[MISSILE] "ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Co-Orbital ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Aircraft ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear ASAT" MODIFY
+  ProducedByAnotherUnit true
+
+
+
+[MISSILE] "Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_MIRV" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x Bioweapon_MIRV" MODIFY
+  ProducedByAnotherUnit true
+
+
+
+[MISSILE] "ALCM-N" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion ALCM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear Cruise Missile" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion Cruise Missile" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear AAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion AAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear SAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion SAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear ABM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion ABM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear Torpedo" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion Torpedo" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "SRBM-N" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion SRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M_Fusion_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Cobalt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Salt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM_EMP" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM_EMP_Super" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x100kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1M_Fusion_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Cobalt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Salt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "10M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "25M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "50M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Cobalt_Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Salted_Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Light Cobalt Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Light Salt Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Cobalt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Salt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM_EMP" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM_EMP_Super" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x100kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1MT_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (250kt Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (500kt Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (5M Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Fusion Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (500kt Heavy)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (5M Heavy)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (25M)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (50M Fusion)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Cobalt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Salt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Cobalt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Salt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Super EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Super EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x1M ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "12x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "12x1M ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x500kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1M Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+
+
+
+
+//[MISSILE] "Conventional MRBM" MODIFY
+//  AIHint Specific "Armored_Division" 0 //Ineffective
+//  AIHint Specific "Artillery_Division" 0 //Ineffective
+//[MISSILE] "Conventional MRBM" MODIFY
+//  AIHint Specific "Armored_Division" 0 //Ineffective
+//  AIHint Specific "Artillery_Division" 0 //Ineffective
+//[MISSILE] "Chemical Artillery" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  Reset ImprovedBy
+//  Range 200
+//  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+//  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+//  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+//  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+//  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved Chemical Artillery" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//    Reset ImprovedBy
+//  Range 200
+//  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+//  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+//  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+//  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+//  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced Chemical Artillery" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//    Reset ImprovedBy
+//  Range 200
+//  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+//  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+//  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+//  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+//  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Experimental Chemical Artillery" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//    Reset ImprovedBy
+//  Range 200
+//  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 220
+//  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 250
+//  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 270
+//  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 300
+//  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 320
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Chemical_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Chemical_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced_Chemical_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Experimental_Chemical_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Chemical_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Chemical_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced_Chemical_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Experimental_Chemical_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Bioweapon_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Bioweapon_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced_Bioweapon_bomb" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Bioweapon_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced_Bioweapon_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Bioweapon_ICBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Bioweapon_ICBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Engineered_Bioweapon_MRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Engineered_Bioweapon_ICBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Bioweapon_MIRV" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "8x Bioweapon_MIRV" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Chemical_SRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Improved_Chemical_SRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Advanced_Chemical_SRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+//[MISSILE] "Experimental_Chemical_SRBM" MODIFY
+//  CanBeUsedAgainst "Armored_Division"
+//  CanBeUsedAgainst "Artillery_Division"
+//  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+//  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ASAT
+Co-Orbital ASAT
+Aircraft ASAT
+Nuclear ASAT
+
+
+
+Bioweapon_bomb
+Improved_Bioweapon_bomb
+Advanced_Bioweapon_bomb
+Engineered_Bioweapon_bomb
+
+Bioweapon_MRBM
+Improved_Bioweapon_MRBM
+Advanced_Bioweapon_MRBM
+Engineered_Bioweapon_MRBM
+
+Bioweapon_ICBM
+Improved_Bioweapon_ICBM
+Advanced_Bioweapon_ICBM
+Engineered_Bioweapon_ICBM
+
+Bioweapon_MIRV
+8x Bioweapon_MIRV
+
+
+
+ALCM-N
+Fusion ALCM
+
+Nuclear Cruise Missile
+Fusion Cruise Missile
+
+Nuclear AAM
+Fusion AAM
+
+Nuclear SAM
+Fusion SAM
+
+Nuclear ABM
+Fusion ABM
+
+Nuclear Torpedo
+Fusion Torpedo
+
+SRBM-N
+Fusion SRBM
+
+100kt_SLBM
+250kt_SLBM
+500kt_SLBM
+1M_SLBM
+5M_Fusion_SLBM
+500kt_Cobalt_SLBM
+500kt_Salt_SLBM
+500kt_SLBM_EMP
+500kt_SLBM_EMP_Super
+3x100kt_SLBM
+3x250kt_SLBM
+6x250kt_SLBM
+6x500kt_SLBM
+8x500kt_SLBM
+8x1M_Fusion_SLBM
+100kt ALBM
+250kt ALBM
+500kt ALBM
+1M ALBM
+5M ALBM
+500kt Cobalt ALBM
+500kt Salt ALBM
+
+500kt nuke_heavy
+10M nuke_heavy
+25M nuke_heavy
+50M nuke_heavy
+100M nuke_heavy
+100kt_nuke_light
+250kt_nuke_light
+500kt nuke_light
+1M nuke_light
+5M nuke_light
+
+Cobalt_Bomb
+Salted_Bomb
+500kt Light Cobalt Bomb
+500kt Light Salt Bomb
+
+100kt_MRBM
+250kt_MRBM
+500kt_MRBM
+1M_MRBM
+5M_MRBM
+500kt_Cobalt_MRBM
+500kt_Salt_MRBM
+500kt_MRBM_EMP
+500kt_MRBM_EMP_Super
+
+3x100kt_MRBM
+3x250kt_MRBM
+6x250kt_MRBM
+6x500kt_MRBM
+8x500kt_MRBM
+8x1MT_MRBM
+
+ICBM (250kt Light)
+ICBM (500kt Light)
+ICBM (1M Light)
+ICBM (5M Light)
+ICBM (10M Fusion Light)
+
+ICBM (500kt Heavy)
+ICBM (5M Heavy)
+ICBM (10M)
+ICBM (25M)
+ICBM (50M Fusion)
+ICBM (1M Cobalt)
+ICBM (1M Salt)
+ICBM (10M Cobalt)
+ICBM (10M Salt)
+ICBM (1M EMP)
+ICBM (1M Super EMP)
+ICBM (10M Super EMP)
+
+3x250kt ICBM
+3x500kt ICBM
+6x500kt ICBM
+6x1M ICBM
+12x500kt ICBM
+12x1M ICBM
+
+3x250kt Light ICBM
+3x500kt Light ICBM
+8x500kt Light ICBM
+8x1M Light ICBM
+*/
+
+
+
+
+
+
+[END]

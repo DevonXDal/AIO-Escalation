@@ -1,10 +1,847 @@
 USE PREVIOUS "units/units.txt"
 
-<<<<<<< Updated upstream
+
+[UNIT] "Military_Outpost"
+  Tech "U_Military_Outpost"
+  Movie "Units/Images/Ground/Mid-Level/Military_Outpost.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Military_Outpost.midx"
+  Model "Units/Images/Ground/Military Outpost.fbx"
+  Icon "Units/Images/Icons/Ground/Military_Outpost.png"	
+  //HideAbstract Yes
+  DrawSize 25
+  AbstractDrawSize 30
+  DrawOrder 1
+  FixedRotationAngle true
+  Size 0.25
+  Type Ground
+  Class "UC_Ground"
+  
+  AutoRepair 0.5
+  Power 50
+  SelfDestructTime 5
+    Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage Principal
+    Weapon "Body Armor" 1
+    Weapon "Optics" 1
+  Radar "STD Vision"
+  Radar "Reconnaissance"
+  Modifier "Static_Defender_Bonus"
+  ProductionCost 10
 
 
-=======
->>>>>>> Stashed changes
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
+  ImprovedBy "Improved_Basic_Protection" Power 0.5
+  ImprovedBy "Basic_Body_Armor" Power 0.5
+  ImprovedBy "Improved_Body_Armor" Power 1.0
+  ImprovedBy "Advanced_Body_Armor" Power 1.0
+  ImprovedBy "Experimental_Body_Armor" Power 1.0
+
+
+[UNIT] "Artillery_Division"
+  Tech "U_Artillery"
+  Movie "Units/Images/Ground/mid-level/Art/Figure 1.midx"  
+  AbstractMovie "Units/Images/Ground/Abstract/Artillery_Division.midx"
+  Model "Units/Images/Ground/Artillery Division/Figure 1.midx"
+  Icon "Units/Images/Icons/Ground/Artillery Division/Figure 1.png"  
+  //IconIDX 54
+  IconIDX 10
+  DrawSize 32
+  AbstractDrawSize 35
+  FollowRadius 28
+  Size 1.0
+  Sound 138 Volume 0.3
+  Type Ground
+  Class "UC_Ground_Mobile"
+ // Slave
+  AutoRepair 0.0
+  OccupationRadius NULL
+  AlwaysVisibleOnEnemyTerritory Yes
+  Speed 30
+  TurnSpeed 4 // in angles per second
+  Power 50
+  SelfDestructTime 60
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+////Gets bonus from adv. decoys and laser blinding
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99 
+
+  Modifier "BM_Accuracy_Damage_Penalty"
+  
+    ProducedByAnotherUnit true
+	TargetInPlanner Yes
+	AttackerInPlanner
+  
+  ImprovedBy "Army_Mech_Mk2" Speed 1.3333
+  ImprovedBy "Army_Mech_Mk3" Speed 1.125
+  ImprovedBy "Army_Mech_Mk4" Speed 1.222
+  ImprovedBy "Army_Mech_Mk5" Speed 1.09
+  ImprovedBy "Army_Mech_Mk2" Power 0.20
+  ImprovedBy "Army_Mech_Mk3" Power 0.30
+  ImprovedBy "Army_Mech_Mk4" Power 0.40
+  ImprovedBy "Army_Mech_Mk5" Power 0.50
+ 
+  ImprovedBy "Improved_Basic_Protection" Power 1.15
+  ImprovedBy "Basic_Body_Armor" Power 1.15
+  ImprovedBy "Improved_Body_Armor" Power 1.15
+  ImprovedBy "Advanced_Body_Armor" Power 1.15
+  ImprovedBy "Experimental_Body_Armor" Power 1.15
+
+///Leopard 1
+	ImprovedBy "Army_Mech_Mk2"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 2.midx"  Icon "Units/Images/Icons/Ground/Artillery Division/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Artillery Division/Figure 2.midx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 3.midx"  Icon "Units/Images/Icons/Ground/Artillery Division/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Artillery Division/Figure 3.midx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 4.midx"  Icon "Units/Images/Icons/Ground/Artillery Division/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Artillery Division/Figure 4.midx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 5.midx"  Icon "Units/Images/Icons/Ground/Artillery Division/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Artillery Division/Figure 5.midx" 
+	} 
+
+
+
+/////CBRN stuff/////
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+ 
+
+///   Army DEFCON Boosts - Cost
+ ImprovedBy "DEFCON_4" ProductionCost 0.90 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_3" ProductionCost 0.85 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_2" ProductionCost 0.825 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_1" ProductionCost 0.80 //Army DEFCON Cost Boost
+
+
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+
+  Radar "STD Vision"
+  Radar "Reconnaissance"
+  //Radar "STD Short Wave"
+  ProductionCost 30
+  
+  AttackShift Low
+
+  HighState "Artillery_Mobile_Mode"
+  TimeToHighState 5 // 5 seconds to mobilize
+  LowState "Artillery_Entrenched"
+  TimeToLowState 5 // 5 seconds to entrench
+  
+  DefenceShift Low
+  FastMoveShift High
+  AutoOnRest Low
+  AutoOnRestDelay 30.0 // auto-entrenching after 30 seconds
+
+  HighStateStringIDX 2942
+  LowStateStringIDX 2943
+  ToLowStateProcessStringIDX 2944
+  ToLowStateIcon "Units/images/go_down.png"
+  ToHighStateIcon "Units/images/go_up.png"
+
+  /////Can't find Artillery_Entrenched, need to remove EMP effects
+   // Modifier "EMP_Defence_Mod_1"
+   // Modifier "EMP_Defence_Mod_2"	
+
+	//MoveToTarget "VirtualCity"
+
+[UNIT] "Artillery_Entrenched" COPY "Artillery_Division"
+  Tech "U_Artillery"
+  SpecialState Yes
+  Icon "Units/Images/Icons/Ground/Art Entrenched/Figure 1.png"  
+  Movie "Units/Images/Ground/mid-level/Art/Figure 1.midx"
+  Model "Units/Images/Ground/Artillery Entrenched/Figure 1.midx"    
+  FixedRotationAngle true
+  
+  delete ImprovedBy ALL Movie // - deletes all Movie modifiers, so we can assign the new ones
+
+	ImprovedBy "Army_Mech_Mk2"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 2.midx"  Icon "Units/Images/Icons/Ground/Art Entrenched/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Artillery Entrenched/Figure 2.fbx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 3.midx"  Icon "Units/Images/Icons/Ground/Art Entrenched/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Artillery Entrenched/Figure 3.fbx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 4.midx"  Icon "Units/Images/Icons/Ground/Art Entrenched/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Artillery Entrenched/Figure 4.fbx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+	Movie "Units/Images/Ground/mid-level/Art/Figure 5.midx"  Icon "Units/Images/Icons/Ground/Art Entrenched/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Artillery Entrenched/Figure 5.fbx" 
+	} 
+
+
+  Weapon "Body Armor" 1 LaunchPoint -1
+  Weapon "Optics" 1 LaunchPoint -1
+  Weapon "Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+  Weapon "Nuclear Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+  Weapon "Fusion Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+  Weapon "Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Improved Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Advanced Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Experimental Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  //Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage  LaunchPoint -1 DefaultOff
+  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage LaunchPoint -1 DefaultOff
+  Weapon "Small Arms" 20000 Launch 1 Time 5 AutoEngage
+  
+  ModelDrawSize 35
+
+  HighState "Artillery_Division"
+  LowState NULL
+  TimeToLowState 5 
+  StateStringIDX 2945
+  
+  HighStateStringIDX 2947
+  ToLowStateProcessStringIDX -1
+  ToHighStateIcon "Units/images/go_up.png"
+
+  AttackShift None
+  FastMoveShift High
+  DefenceShift None
+  AutoOnMoveShift High
+  AutoOnRest None
+
+  Modifier "Static_Defender_Bonus"
+  Modifier "Portable_Electronic_Optics_EntMod"
+  Modifier "Tactical_Optics_EntMod"
+  Modifier "Advanced_Tactical_Optics_EntMod"
+  Modifier "Light_Unmanned_Vehicles_EntMod"
+  Modifier "Robotic_Infantry_EntMod"
+  
+  DestructionMessage GroundMobile
+  Speed 0
+  Power 175
+  AutoRepair 0.70
+
+
+[UNIT] "Artillery_Mobile_Mode" COPY "Artillery_Division" 
+  Tech "U_Artillery"
+  SpecialState Yes
+  Icon "Units/Images/Icons/Ground/Art on march/Figure 1.png"  
+  Movie "Units/Images/Ground/Topdown/Art on March Topdown/Figure 1.midx"
+  Model "Units/Images/Ground/Artillery on March/On March 1.fbx"
+  Type Ground
+
+  CanCrossBorderDuringPeaceTime false
+  AlwaysVisibleOnEnemyTerritory true  
+  
+  delete ImprovedBy ALL Movie // - deletes all Movie modifiers, so we can assign the new ones
+
+	ImprovedBy "Army_Mech_Mk2"
+	{
+    Movie "Units/Images/Ground/Topdown/Art on March Topdown/Figure 2.midx" Icon "Units/Images/Icons/Ground/Art on march/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Artillery on March/On March 2.fbx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+    Movie "Units/Images/Ground/Topdown/Art on March Topdown/Figure 3.midx" Icon "Units/Images/Icons/Ground/Art on march/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Artillery on March/On March 3.fbx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+    Movie "Units/Images/Ground/Topdown/Art on March Topdown/Figure 4.midx" Icon "Units/Images/Icons/Ground/Art on march/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Artillery on March/On March 4.fbx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+    Movie "Units/Images/Ground/Topdown/Art on March Topdown/Figure 5.midx" Icon "Units/Images/Icons/Ground/Art on march/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Artillery on March/On March 5.fbx" 
+	} 
+  
+  ModelDrawSize 55
+
+  HighState NULL
+  LowState "Artillery_Division"
+  TimeToLowState 10  
+  StateStringIDX 2946
+  LowStateStringIDX 2947
+  ToLowStateProcessStringIDX -1
+  ToLowStateIcon "Units/images/go_down.png"
+
+  DefenceShift Low
+  FastMoveShift None
+  AttackShift Low
+  
+  AutoOnRest Low
+  AutoOnRestDelay 30.0 // auto-entrenching after 30 seconds
+
+  Speed 50 // in km per h
+  ImprovedBy "Army_Mech_Mk2" Set Speed 65
+  ImprovedBy "Army_Mech_Mk3" Set Speed 70
+  ImprovedBy "Army_Mech_Mk4" Set Speed 90
+  ImprovedBy "Army_Mech_Mk5" Set Speed 105
+  Power 100
+  
+ delete config "army weapons"
+  
+  AutoRepair 0.0
+
+
+[UNIT] "Army_Division" MODIFY
+  Tech "U_Mechanized"
+  Movie "Units/Images/Ground/mid-level/Figure 1.midx"  
+  //AbstractMovie "Units/Images/Ground/Abstract/Mechanized_Infantry_Division.midx" // just modified the army div abstract 
+  Model "Units/Images/Ground/Mechanized Infantry Division/Mechanized Infantry Division 1.midx"
+  Icon "Units/Images/Icons/Ground/Figure 1.png"
+  RoundIcon "Units/Images/Icons/Ground/Figure 1.png"
+  //IconIDX 54
+  IconIDX 10
+  DrawSize 24
+  AbstractDrawSize 35
+  
+  FollowRadius 18
+  Size 1.0
+  Sound 225 Volume 0.3
+  AutoRepair 0.0
+  OccupationRadius 35
+  Speed 35
+  TurnSpeed 4
+  Power 60
+
+  Reset ImprovedBy
+  Reset Weapon
+
+////Gets bonus from adv. decoys and laser blinding
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99 
+
+  Modifier "BM_Accuracy_Damage_Penalty"
+	TargetInPlanner Yes
+	AttackerInPlanner
+  ImprovedBy "Improved_Basic_Protection" Set Speed 40
+  ImprovedBy "Basic_Body_Armor" Set Speed 45
+  ImprovedBy "Improved_Body_Armor" Set Speed 50
+  ImprovedBy "Advanced_Body_Armor" Set Speed 55
+  ImprovedBy "Experimental_Body_Armor" Set Speed 60
+  ImprovedBy "Improved_Basic_Protection" Add Power 50
+  ImprovedBy "Basic_Body_Armor" Add Power 50
+  ImprovedBy "Improved_Body_Armor" Add Power 50
+  ImprovedBy "Advanced_Body_Armor" Add Power 50
+  ImprovedBy "Experimental_Body_Armor" Add Power 50
+
+///Leopard 1
+	ImprovedBy "Army_Mech_Mk2"
+	{
+	Movie "Units/Images/Ground/mid-level/Figure 2.midx"  Icon "Units/Images/Icons/Ground/Mech Division/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Mechanized Infantry Division/Mechanized Infantry Division 2.midx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+	Movie "Units/Images/Ground/mid-level/Figure 3.midx"  Icon "Units/Images/Icons/Ground/Mech Division/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Mechanized Infantry Division/Mechanized Infantry Division 3.midx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+	Movie "Units/Images/Ground/mid-level/Figure 4.midx"  Icon "Units/Images/Icons/Ground/Mech Division/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Mechanized Infantry Division/Mechanized Infantry Division 4.midx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+	Movie "Units/Images/Ground/mid-level/Figure 5.midx"  Icon "Units/Images/Icons/Ground/Mech Division/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Mechanized Infantry Division/Mechanized Infantry Division 5.midx" 
+	} 
+
+
+  Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage LaunchPoint 1
+  Weapon "Body Armor" 1 LaunchPoint -1
+  Weapon "Optics" 1 LaunchPoint -1
+  Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
+  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
+  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  Airway Launch 3 Time 180 // in seconds in 1x time
+
+
+
+/////CBRN stuff/////
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+ 
+
+///   Army DEFCON Boosts - Cost
+ ImprovedBy "DEFCON_4" ProductionCost 0.90 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_3" ProductionCost 0.85 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_2" ProductionCost 0.825 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_1" ProductionCost 0.80 //Army DEFCON Cost Boost
+
+
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+	
+
+  ProductionCost 20
+  
+  HighState "Army_Mobile_Mode"
+  TimeToHighState 5 // 5 seconds to mobilize
+  LowState "Army_Entrenched"
+  TimeToLowState 60.0 // 60 seconds to entrench
+  
+  DefenceShift Low
+  FastMoveShift High
+  AutoOnRest Low
+  AutoOnRestDelay 30.0 // auto-entrenching after 30 seconds
+
+  HighStateStringIDX 2942
+  LowStateStringIDX 2943 
+  ToLowStateIcon "Units/images/go_down.png"
+  ToHighStateIcon "Units/images/go_up.png"
+
+/////Can't find Mechanized_Entrenched, need to remove EMP effects
+   // Modifier "EMP_Defence_Mod_1"
+   // Modifier "EMP_Defence_Mod_2"	
+
+	//MoveToTarget "VirtualCity"
+
+[UNIT] "Army_Mobile_Mode" MODIFY
+  Tech "U_Mechanized"
+  SpecialState Yes
+  Icon "Units/Images/Icons/Ground/Mech on March/Figure 1.png"  
+  Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 1.midx"
+  Model "Units/Images/Ground/Mech on March/On March 1.fbx"    
+  
+  Reset ImprovedBy // - deletes all Movie modifiers, so we can assign the new ones - just delete all we need to make new Improvedby anyways 
+  
+ImprovedBy "Army_Mech_Mk2"
+	{
+    Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 2.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Mech on March/On March 2.fbx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+    Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 3.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Mech on March/On March 3.fbx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+    Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 4.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Mech on March/On March 4.fbx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+    Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 5.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Mech on March/On March 5.fbx" 
+	}
+  delete config "Army Weapons"
+  //Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage Principal
+  //Weapon "Land Forces Mobile" 20000 Launch 1 Time 100 AutoEngage Principal // need this for the AI
+  delete Weapon "Small Arms"
+  //Weapon "Body Armor" 1 LaunchPoint -1
+  //Weapon "Optics" 1 LaunchPoint -1
+  Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
+  //Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
+  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+
+  ModelDrawSize 55
+
+  HighState NULL
+  LowState "Army_Division"
+  TimeToLowState 10 
+  StateStringIDX 2945
+  
+  HighStateStringIDX 2947
+  ToLowStateProcessStringIDX -1
+  ToHighStateIcon "Units/images/go_up.png"
+
+  DefenceShift Low
+  FastMoveShift None
+  AttackShift Low
+  
+  AutoOnRest Low
+  AutoOnRestDelay 30.0 // auto-entrenching after 30 seconds
+  
+  DestructionMessage GroundMobile
+  Speed 50 // in km per h
+  ImprovedBy "Army_Mech_Mk2" Set Speed 65
+  ImprovedBy "Army_Mech_Mk3" Set Speed 70
+  ImprovedBy "Army_Mech_Mk4" Set Speed 90
+  ImprovedBy "Army_Mech_Mk5" Set Speed 105
+  Power 100
+  AutoRepair 0.0
+
+[UNIT] "Army_Entrenched" MODIFY
+  Tech "U_Mechanized"
+  SpecialState Yes
+  Icon "Units/Images/Icons/Ground/Mech Entrenched/Figure 1.png"  
+  Movie "Units/Images/Ground/mid-level/Figure 1.midx"
+  Model "Units/Images/Ground/Mech Entrenched/Entrenched 1.midx"    
+  FixedRotationAngle true
+  
+  delete ImprovedBy ALL Movie // - deletes all Movie modifiers, so we can assign the new ones
+
+	ImprovedBy "Army_Mech_Mk2"
+	{
+    Movie "Units/Images/Ground/mid-level/Figure 2.midx" Icon "Units/Images/Icons/Ground/Mech Entrenched/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 2.fbx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+    Movie "Units/Images/Ground/mid-level/Figure 3.midx" Icon "Units/Images/Icons/Ground/Mech Entrenched/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 3.fbx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+    Movie "Units/Images/Ground/mid-level/Figure 4.midx" Icon "Units/Images/Icons/Ground/Mech Entrenched/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 4.fbx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+    Movie "Units/Images/Ground/mid-level/Figure 5.midx" Icon "Units/Images/Icons/Ground/Mech Entrenched/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 5.fbx" 
+	}
+
+ Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage
+ Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
+  	Weapon "Body Armor" 1 LaunchPoint -1
+  	Weapon "Optics" 1 LaunchPoint -1
+  Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
+  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
+  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  Airway Launch 3 Time 180 // in seconds in 1x time
+delete config "Army Weapons"
+  
+  ModelDrawSize 45
+
+  HighState "Army_Division"
+  LowState NULL
+  TimeToLowState 5 
+  StateStringIDX 2945
+  
+  HighStateStringIDX 2947
+  ToLowStateProcessStringIDX -1
+  ToHighStateIcon "Units/images/go_up.png"
+
+  AttackShift High
+  FastMoveShift High
+  DefenceShift None
+  AutoOnMoveShift High
+  AutoOnRest None
+
+[UNIT] "Armored_Division"
+  Tech "U_Armored"
+  Movie "Units/Images/Ground/mid-level/Armored/Figure 1.midx"  
+  AbstractMovie "Units/Images/Ground/Abstract/Armored_Division.midx"
+  Model "Units/Images/Ground/Armored Division/Armored Division 1.midx"
+  Icon "Units/Images/Icons/Ground/Armored Division/Armored_Division_1.png"  
+  //IconIDX 54
+  IconIDX 10
+  
+  DrawSize 35
+  AbstractDrawSize 35
+  
+  FollowRadius 28
+  Size 1.0
+  Sound 138 Volume 0.3
+  Type Ground
+  Class "UC_Ground_Mobile"
+ // Slave
+  AutoRepair 0.35
+  OccupationRadius NULL
+    AlwaysVisibleOnEnemyTerritory Yes
+  Speed 30
+  TurnSpeed 4 // in angles per second
+  Power 150
+  SelfDestructTime 60
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+////Gets bonus from adv. decoys and laser blinding
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99 
+
+  Modifier "BM_Accuracy_Damage_Penalty"
+  
+    ProducedByAnotherUnit true
+	TargetInPlanner Yes
+	AttackerInPlanner
+	
+  ImprovedBy "Improved_Basic_Protection" Add Speed 5
+  ImprovedBy "Basic_Body_Armor" Add Speed 3
+  ImprovedBy "Improved_Body_Armor" Add Speed 2
+  ImprovedBy "Advanced_Body_Armor" Add Speed 3
+  ImprovedBy "Experimental_Body_Armor" Add Speed 7
+  ImprovedBy "Improved_Basic_Protection" Add Power 50
+  ImprovedBy "Basic_Body_Armor" Add Power 50
+  ImprovedBy "Improved_Body_Armor" Add Power 50
+  ImprovedBy "Advanced_Body_Armor" Add Power 50
+  ImprovedBy "Experimental_Body_Armor" Add Power 50
+  
+  ImprovedBy "Army_Mech_Mk2" Speed 1.3333
+  ImprovedBy "Army_Mech_Mk3" Speed 1.125
+  ImprovedBy "Army_Mech_Mk4" Speed 1.222
+  ImprovedBy "Army_Mech_Mk5" Speed 1.09
+  ImprovedBy "Army_Mech_Mk2" Power 1.2
+  ImprovedBy "Army_Mech_Mk3" Power 1.2
+  ImprovedBy "Army_Mech_Mk4" Power 1.2
+  ImprovedBy "Army_Mech_Mk5" Power 1.2
+  
+
+///Leopard 1
+	ImprovedBy "Army_Mech_Mk2"
+	{
+	Movie "Units/Images/Ground/mid-level/Armored/Figure 2.midx"  Icon "Units/Images/Icons/Ground/Armored Division/Armored_Division_2.png"  
+  	Movie Model "Units/Images/Ground/Armored Division/Armored Division 2.midx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+	Movie "Units/Images/Ground/mid-level/Armored/Figure 3.midx"  Icon "Units/Images/Icons/Ground/Armored Division/Armored_Division_3.png"  
+  	Movie Model "Units/Images/Ground/Armored Division/Armored Division 3.midx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+	Movie "Units/Images/Ground/mid-level/Armored/Figure 4.midx"  Icon "Units/Images/Icons/Ground/Armored Division/Armored_Division_4.png"  
+  	Movie Model "Units/Images/Ground/Armored Division/Armored Division 4.midx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+	Movie "Units/Images/Ground/mid-level/Armored/Figure 5.midx"  Icon "Units/Images/Icons/Ground/Armored Division/Armored_Division_5.png"  
+  	Movie Model "Units/Images/Ground/Armored Division/Armored Division 5.midx" 
+	} 
+
+
+  Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage Principal
+  Weapon "Small Arms" 20000 Launch 1 Time 5 AutoEngage
+  Weapon "Body Armor" 1 LaunchPoint -1
+  Weapon "Optics" 1 LaunchPoint -1
+  Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
+  //Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage  LaunchPoint -1 DefaultOff
+  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
+  
+
+/////CBRN stuff/////
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+ 
+
+///   Army DEFCON Boosts - Cost
+ ImprovedBy "DEFCON_4" ProductionCost 0.90 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_3" ProductionCost 0.85 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_2" ProductionCost 0.825 //Army DEFCON Cost Boost
+ ImprovedBy "DEFCON_1" ProductionCost 0.80 //Army DEFCON Cost Boost
+
+
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+
+  Radar "STD Vision"
+  Radar "Reconnaissance"
+  //Radar "STD Short Wave"
+  ProductionCost 25
+
+  HighState "Armored_Mobile_Mode"
+  TimeToHighState 5 // 5 seconds to mobilize
+  LowState NULL
+  TimeToLowState NULL
+  
+  DefenceShift Low
+  FastMoveShift High
+  AutoOnRest Low
+  AutoOnRestDelay NULL
+
+  HighStateStringIDX 2942
+  LowStateStringIDX 2943
+  ToLowStateProcessStringIDX 2944  
+  ToLowStateIcon "Units/images/go_down.png"
+  ToHighStateIcon "Units/images/go_up.png"
+
+
+/////Can't find Army_Entrenched, need to remove EMP effects
+   // Modifier "EMP_Defence_Mod_1"
+   // Modifier "EMP_Defence_Mod_2"	
+
+	//MoveToTarget "VirtualCity"
+
+[UNIT] "Armored_Mobile_Mode" COPY "Armored_Division" 
+  Tech "U_Armored"
+  SpecialState Yes
+  Icon "Units/Images/Icons/Ground/Armored on march/Figure 1.png"  
+  Movie "Units/Images/Ground/Topdown/Armored on March Topdown/Figure 1.midx"
+  Model "Units/Images/Ground/Armored on March/Figure 1.fbx"
+  Type Ground
+  
+  ModelDrawSize 55
+
+  CanCrossBorderDuringPeaceTime false
+  AlwaysVisibleOnEnemyTerritory true  
+  
+  delete ImprovedBy ALL Movie // - deletes all Movie modifiers, so we can assign the new ones
+
+	ImprovedBy "Army_Mech_Mk2"
+	{
+    Movie "Units/Images/Ground/Topdown/Armored on March Topdown/Figure 2.midx" Icon "Units/Images/Icons/Ground/Armored on march/Figure 2.png"  
+  	Movie Model "Units/Images/Ground/Armored on March/Figure 2.fbx" 
+	}
+	
+	////Leopard 2
+	ImprovedBy "Army_Mech_Mk3"
+	{
+    Movie "Units/Images/Ground/Topdown/Armored on March Topdown/Figure 3.midx" Icon "Units/Images/Icons/Ground/Armored on march/Figure 3.png"  
+  	Movie Model "Units/Images/Ground/Armored on March/Figure 3.fbx" 
+	}
+	
+	/////Leopard 2A7
+	ImprovedBy "Army_Mech_Mk4"
+	{
+    Movie "Units/Images/Ground/Topdown/Armored on March Topdown/Figure 4.midx" Icon "Units/Images/Icons/Ground/Armored on march/Figure 4.png"  
+  	Movie Model "Units/Images/Ground/Armored on March/Figure 4.fbx" 
+	}	
+
+	////KF-51
+	ImprovedBy "Army_Mech_Mk5"
+	{
+    Movie "Units/Images/Ground/Topdown/Armored on March Topdown/Figure 5.midx" Icon "Units/Images/Icons/Ground/Armored on march/Figure 5.png"  
+  	Movie Model "Units/Images/Ground/Armored on March/Figure 5.fbx" 
+	}
+  
+
+  HighState NULL
+  LowState "Armored_Division"
+  TimeToLowState 10  
+  StateStringIDX 2946
+  LowStateStringIDX 2947
+  ToLowStateProcessStringIDX -1
+  ToLowStateIcon "Units/images/go_down.png"
+
+  DefenceShift Low
+  FastMoveShift None
+  AttackShift Low
+  
+  AutoOnRest Low
+  AutoOnRestDelay 30.0 // auto-entrenching after 30 seconds
+
+  Speed 50 // in km per h
+  ImprovedBy "Army_Mech_Mk2" Set Speed 65
+  ImprovedBy "Army_Mech_Mk3" Set Speed 70
+  ImprovedBy "Army_Mech_Mk4" Set Speed 90
+  ImprovedBy "Army_Mech_Mk5" Set Speed 105
+  Power 100
+	  
+  AutoRepair 0.0
+  
+  delete weapon "Land Forces"
+  delete weapon "Massacre Civilians"
+  delete weapon "Optics"
+  delete weapon "Body Armor"
+  
+
 [UNIT] "Maritime_Patrol_Aircraft"
   Tech "U_Maritime_Patrol_Aircraft"
   IconIDX 2
@@ -858,6 +1695,8 @@ USE PREVIOUS "units/units.txt"
   CanCarryUnit "Heavy_Bomb_Truck"
   CanCarryUnit "Bomb_Truck"
   CanCarryUnit "Spec_Ops_Team"
+  CanCarryUnit "Armored_Division"
+  CanCarryUnit "Artillery_Division"
 
   HangarMaxLoad 2
 
@@ -1042,11 +1881,46 @@ USE PREVIOUS "units/units.txt"
   CanCarryUnit "ABM_Site"
 
 
+[UNIT] "Navy_Helicopter" MODIFY
+  Sound 224 Volume 0.4
+
+[UNIT] "Spec_Ops_Helicopter" MODIFY
+  Sound 224 Volume 0.4
+
+[UNIT] "Attack_Helicopter" MODIFY
+  Sound 224 Volume 0.4
+
+[UNIT] "Spec_Ops_Team" MODIFY
+  Movie "Units/Images/Ground/Mid-Level/Spec Ops/Figure 1.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Spec_Ops.midx"
+  Model "Units/Images/Ground/Spec Ops/Spec Ops 1.fbx"
+  Icon "Units/Images/Icons/Ground/Spec Ops/Figure 1.png"
+  RoundIcon "Units/Images/Icons/Ground/Spec Ops/Figure 1.png"
+  DrawSize 13.5
+  ImprovedBy "Army_Mech_Mk2" Set Speed 7
+  ImprovedBy "Army_Mech_Mk3" Set Speed 85
+  ImprovedBy "Army_Mech_Mk3" Power 1.05
+  ImprovedBy "Army_Mech_Mk3" 
+	{
+	  Movie "Units/Images/Ground/Mid-Level/Spec Ops/Figure 2.midx"  Icon "Units/Images/Icons/Ground/Spec Ops/Figure 2.png"
+	  Model "Units/Images/Ground/Spec Ops/Spec Ops 2.fbx"
+	}  
+  ImprovedBy "Army_Mech_Mk4" Set Speed 100
+  ImprovedBy "Army_Mech_Mk5" Set Speed 110
+  ImprovedBy "Army_Mech_Mk5" Power 1.05
+  ImprovedBy "Army_Mech_Mk5"
+	{
+	  Movie "Units/Images/Ground/Mid-Level/Spec Ops/Figure 3.midx"  Icon "Units/Images/Icons/Ground/Spec Ops/Figure 3.png"
+	  Model "Units/Images/Ground/Spec Ops/Spec Ops 3.fbx"
+	}    
+
 
 [UNIT] "Air_Transport" MODIFY
   CanCarryUnit "Heavy_Bomb_Truck"
   CanCarryUnit "Bomb_Truck"
   CanCarryUnit "Spec_Ops_Team"
+  CanCarryUnit "Armored_Division"
+  CanCarryUnit "Artillery_Division"
 
 [UNIT] "Bomber" MODIFY
   delete Config "Nuclear Cruise Missiles"
@@ -1234,6 +2108,8 @@ USE PREVIOUS "units/units.txt"
   CanCarryUnit "Heavy_Bomb_Truck"
   CanCarryUnit "Bomb_Truck"
   CanCarryUnit "Spec_Ops_Team"
+  CanCarryUnit "Armored_Division"
+  CanCarryUnit "Artillery_Division"
 
   ImprovedBy "Missile_Warships"
   {
@@ -1331,6 +2207,8 @@ USE PREVIOUS "units/units.txt"
 	}
 
 
+[UNIT] "Military_Outpost" MODIFY
+  ProducedByAnotherUnit true
 [UNIT] "Transfer_Airbase" MODIFY
   ProducedByAnotherUnit true
 [UNIT] "Maintenance_Airbase" MODIFY
@@ -1457,6 +2335,8 @@ USE PREVIOUS "units/units.txt"
   Class "UC_Building"
   ProducedByAnotherUnit true
   Power 2
+  Produces "Armored_Division"
+  Produces "Artillery_Division"
   SelfDestructTime 30
   Radar "STD Vision"
   ProductionCost 24
@@ -1756,6 +2636,7 @@ USE PREVIOUS "units/units.txt"
   Produces "Space_radar"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
+  Proudces "Military_Outpost"
   ProductionPlacementRadius 70
 
   AlwaysVisibleOnEnemyTerritory Yes
@@ -1836,6 +2717,6 @@ USE PREVIOUS "units/units.txt"
 [UNIT] "VirtualCity" MODIFY
   Produces "Construction_Team"
   Produces "VIP"
-  ProductionPlacementRadius 80
+  ProductionPlacementRadius 60
 
 [END]
