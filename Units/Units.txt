@@ -1797,25 +1797,6 @@ USE PREVIOUS "units/units.txt"
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
 
-[UNIT] "Capital"
-  Tech "U_Capital"
-  Movie "Units/Images/Ground/Abstract/Capital.midx"
-  DrawSize 28
-  AbstractDrawSize 30
-  FixedRotationAngle true
-  Size 0.1
-  Type Ground
-  Class "UC_Building"
-  Power 100000
-  Produces "Construction_Team"
-  Produces "VIP"
-  ProductionPlacementRadius 130
-  SelfDestructTime 1000000000
-  Radar "STD Vision"
-  ProductionCost 0.0001
-  MaxNumberOnMap 1
-	MaxNumberToOrder 1
-
 [UNIT] "Construction_Team"
   Tech "U_Construction_Team"
   Movie "Units/Images/Ground/midlevel/Construction_Team.midx"
