@@ -1,5 +1,10 @@
 USE PREVIOUS "units/units.txt"
 
+<<<<<<< Updated upstream
+
+
+=======
+>>>>>>> Stashed changes
 [UNIT] "Maritime_Patrol_Aircraft"
   Tech "U_Maritime_Patrol_Aircraft"
   IconIDX 2
@@ -279,6 +284,117 @@ USE PREVIOUS "units/units.txt"
   AttackerInPlanner
   TargetInPlanner Yes
 
+<<<<<<< Updated upstream
+  Config "Conventional ABM" Default
+    Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+    //Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "ABM" 20000 Launch 1 Time 120 AutoEngage Principal
+    Weapon "Terminal ABM" 20000 Launch 2 Time 65 AutoEngage
+    //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    //Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Enhanced_Warships"
+      Weapon "SAM" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "SAM MD" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "ABM" 20000 Launch 2 Time 90 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 70 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 2 DefaultOff
+    ImprovedBy "Advanced_Warships"
+      Weapon "SAM" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "SAM MD" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "ABM" 20000 Launch 2 Time 60 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 55 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Experimental_Warships"
+      Weapon "SAM" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "SAM MD" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "ABM" 20000 Launch 2 Time 45 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 3 Time 40 AutoEngage
+      Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 6 DefaultOff
+
+  Config "Heavy ABM"
+    Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+    //Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "Nuclear ABM" 1 Launch 1 Time 150 AutoEngage Principal
+    Weapon "Terminal ABM" 20000 Launch 2 Time 65 AutoEngage
+    //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    //Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Enhanced_Warships"
+      Weapon "SAM" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "SAM MD" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Nuclear ABM" 1 Launch 1 Time 90 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 70 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 2 DefaultOff
+    ImprovedBy "Advanced_Warships"
+      Weapon "SAM" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "SAM MD" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Nuclear ABM" 1 Launch 1 Time 70 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 55 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Experimental_Warships"
+      Weapon "SAM" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "SAM MD" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Nuclear ABM" 1 Launch 2 Time 70 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 3 Time 40 AutoEngage
+      Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 6 DefaultOff
+  Config "Fusion ABM"
+    Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+    //Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+    Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+    //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+    Weapon "Fusion ABM" 1 Launch 1 Time 150 AutoEngage Principal
+    Weapon "Terminal ABM" 20000 Launch 2 Time 65 AutoEngage
+    //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+    //Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Enhanced_Warships"
+      Weapon "SAM" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "SAM MD" 20000 Launch 2 Time 35 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Fusion ABM" 1 Launch 1 Time 90 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 70 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 2 DefaultOff
+    ImprovedBy "Advanced_Warships"
+      Weapon "SAM" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "SAM MD" 20000 Launch 3 Time 20 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      //Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Fusion ABM" 1 Launch 1 Time 70 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 2 Time 55 AutoEngage
+      //Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 4 DefaultOff
+    ImprovedBy "Experimental_Warships"
+      Weapon "SAM" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "SAM MD" 20000 Launch 4 Time 15 AutoEngage
+      Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
+      Weapon "Laser CIWS" 25000 Launch 2 Time 20 AutoEngage DefaultOff
+      Weapon "Fusion ABM" 1 Launch 2 Time 70 AutoEngage Principal
+      Weapon "Terminal ABM" 20000 Launch 3 Time 40 AutoEngage
+      Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
+      Weapon "ASAT" 6 DefaultOff
+=======
   Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
   //Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
   Weapon "CIWS" 25000 Launch 2 Time 5 AutoEngage DefaultOff
@@ -316,6 +432,7 @@ USE PREVIOUS "units/units.txt"
     Weapon "Terminal ABM" 20000 Launch 3 Time 40 AutoEngage
     Weapon "Terminal ABM Laser" 20000 Launch 1 Time 12 AutoEngage
     Weapon "ASAT" 6 DefaultOff
+>>>>>>> Stashed changes
 
   Radar "STD Vision"
   Radar "Sonar"
@@ -390,11 +507,36 @@ USE PREVIOUS "units/units.txt"
   Modifier "BM_Accuracy_Damage_Penalty" 
   DoesNotTriggerWarWhenAttacked Yes
   DoesNotTriggerWarOnAttack Yes
+<<<<<<< Updated upstream
+  ProductionCost 15
+  DestructionMessage None
+  Config "Unarmed" Default OnlyFull
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Pistol" OnlyFull
+    Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Manpad" OnlyFull
+    Weapon "MANPAD" 3 Launch 1 Time 150 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Air Defense" OnlyFull  
+    Weapon "Light SAM" 1 Launch 1 Time 350 DefaultOff
+    Weapon "Light SAM MD" 1 Launch 1 Time 350 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+  Config "Land Attack" OnlyFull
+    Weapon "SSM" 1 Launch 1 Time 500 DefaultOff
+    Weapon "Body Armor" 1
+	  Weapon "Optics" 1
+=======
   ProductionCost 1
   DestructionMessage None
   Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
   Weapon "Body Armor" 1
 	Weapon "Optics" 1
+>>>>>>> Stashed changes
 
 
 
@@ -761,6 +903,12 @@ USE PREVIOUS "units/units.txt"
   CanCarryUnit "Mobile_ICBM"
   CanCarryUnit "Terminal_ABM"
   CanCarryUnit "Mobile_ABM_Laser"
+<<<<<<< Updated upstream
+  CanCarryUnit "Heavy_Bomb_Truck"
+  CanCarryUnit "Bomb_Truck"
+  CanCarryUnit "Spec_Ops_Team"
+=======
+>>>>>>> Stashed changes
 
   HangarMaxLoad 2
 
@@ -902,6 +1050,26 @@ USE PREVIOUS "units/units.txt"
   ReportAsHosted Yes
   Reset ImprovedBy
   Reset Weapon
+<<<<<<< Updated upstream
+  Weapon "Coastal Gun Old" 30000 Launch 2 Time 300 AutoEngage
+  ImprovedBy "Missile_Warships"
+    Weapon "Coastal Gun Old" 30000 Launch 2 Time 260 AutoEngage
+  ImprovedBy "Improved_Warships"
+    Weapon "Coastal Gun Old" 30000 Launch 3 Time 240 AutoEngage
+  ImprovedBy "Enhanced_Warships"
+    Weapon "Coastal Gun Old" 30000 Launch 3 Time 200 AutoEngage
+  ImprovedBy "Advanced_Warships"
+    Weapon "Coastal Gun Old" 30000 Launch 4 Time 180 AutoEngage
+  ImprovedBy "Experimental_Warships"
+    Weapon "Coastal Gun Old" 30000 Launch 6 Time 150 AutoEngage
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "SAM_Mk3"
+  { Movie "Units/Images/Ground/midlevel/Fixed_SAM_Site_3.midx" Icon "Units/Images/Icons/Ground/Fixed_SAM_Site_3.png"
+	Movie Model "Units/Images/Ground/Fixed SAM Site 3.midx"}
+=======
   Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage DefaultOff
   ImprovedBy "Missile_Warships"
     Weapon "Coastal Gun" 25000 Launch 1 Time 60 AutoEngage
@@ -919,6 +1087,7 @@ USE PREVIOUS "units/units.txt"
   ReportAsHosted Yes
 
 
+>>>>>>> Stashed changes
 
 [UNIT] "Central_Command_Bunker" MODIFY
   CanCarryUnit "VIP"
@@ -942,8 +1111,11 @@ USE PREVIOUS "units/units.txt"
   CanCarryUnit "CRAM"
   CanCarryUnit "Missile_Container"
   CanCarryUnit "ABM_Site"
+<<<<<<< Updated upstream
+=======
   CanCarryUnit "Fixed_Coastal_Gun"
   CanCarryUnit "Over_Horizon_radar"
+>>>>>>> Stashed changes
 
 
 
@@ -1016,9 +1188,13 @@ USE PREVIOUS "units/units.txt"
   CanHostAircrafts airway 2 "Attack_Helicopter" 6 Patrol 2 AIAutoPatrol
   
   
+<<<<<<< Updated upstream
+//[UNIT] "Specialized_Airport" MODIFY
+=======
 [UNIT] "Specialized_Airport" MODIFY
   DELETE CanHostAircrafts "Spy_Plane"
   CanHostAircrafts "Spy_Plane" 4 Patrol 2
+>>>>>>> Stashed changes
 
 
 
@@ -1029,7 +1205,11 @@ USE PREVIOUS "units/units.txt"
 
 [UNIT] "Resupply_Ship" MODIFY
   CanCarryUnit "Naval_Monitoring_Station"
+<<<<<<< Updated upstream
+  HangarMaxLoad 2
+=======
   HangarMaxLoad 1
+>>>>>>> Stashed changes
   CanAccessUnitStockpile No
 
 [UNIT] "Carrier" MODIFY
@@ -1236,4 +1416,534 @@ USE PREVIOUS "units/units.txt"
 	  Set Speed 65
 	}
 
+<<<<<<< Updated upstream
+
+[UNIT] "Transfer_Airbase" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Maintenance_Airbase" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Naval_Airbase" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Army_Base" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Army_Division" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Airport" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Specialized_Airport" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Tactical_Airbase" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Missile_Silo" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Central_Command_Bunker" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Research_Center" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Intelligence_Center" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Missile_Silo" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "ICBM_Launchpad" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Over_Horizon_radar" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Fixed_Coastal_Gun" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Laser_Defence_Complex" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Space_radar" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Space_Operations_Center" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Satellite_Relay_Station" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Security_Checkpoint" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Forward_Operating_Base" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Improvised_Airbase" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "CRAM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Missile_Container" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Fixed_LW_radar" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "SAM_site" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Fixed_Coastal_Gun" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Coastal" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "LHA" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Battlecruiser" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Destroyer" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Cruiser" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Carrier" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Landing_Ship" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Resupply_Ship" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Arsenal_Ship" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Carrier_Submarine" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Submarine" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "SSBN" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "SSGN" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "LCAC" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Naval_Monitoring_Station" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Heavy_Bomb_Truck" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Bomb_Truck" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Spec_Ops_Team" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "AA_Site_Old" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Coastal" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "MOBILE_SAM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Mobile_SW_Radar" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "EW_MOBILE" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Mobile_SRBM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Mobile_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Mobile_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Terminal_ABM" MODIFY
+  ProducedByAnotherUnit true
+[UNIT] "Mobile_ABM_Laser" MODIFY
+  ProducedByAnotherUnit true
+
+[UNIT] "Army_Factory"
+  Tech "U_Army_Factory"
+  Movie "Units/Images/Icons/Ground/Army_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Army_Factory.midx"
+  Model "Units/Images/Ground/Army_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+[UNIT] "Bio_Factory"
+  Tech "U_Bio_Factory"
+  Movie "Units/Images/Icons/Ground/Bio_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Bio_Factory.midx"
+  Model "Units/Images/Ground/Bio_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Power 2
+
+  Produces "Bioweapon_bomb"
+  Produces "Improved_Bioweapon_bomb"
+  Produces "Advanced_Bioweapon_bomb"
+  Produces "Engineered_Bioweapon_bomb"
+  Produces "Bioweapon_MRBM"
+  Produces "Improved_Bioweapon_MRBM"
+  Produces "Advanced_Bioweapon_MRBM"
+  Produces "Engineered_Bioweapon_MRBM"
+  Produces "Bioweapon_ICBM"
+  Produces "Improved_Bioweapon_ICBM"
+  Produces "Advanced_Bioweapon_ICBM"
+  Produces "Engineered_Bioweapon_ICBM"
+  Produces "Bioweapon_MIRV"
+  Produces "8x Bioweapon_MIRV"
+  ProductionPlacementRadius 1000
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+[UNIT] "Navy_Factory"
+  Tech "U_Navy_Factory"
+  Movie "Units/Images/Icons/Ground/Navy_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Navy_Factory.midx"
+  Model "Units/Images/Ground/Navy_Factory.fbx"
+  DrawSize 40
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Produces "LHA"
+  Produces "Battlecruiser"
+  Produces "Destroyer"
+  Produces "Cruiser"
+  Produces "Carrier"
+  Produces "Landing_Ship"
+  Produces "Resupply_Ship"
+  Produces "Arsenal_Ship"
+  Produces "Carrier_Submarine"
+  Produces "Submarine"
+  Produces "SSBN"
+  Produces "SSGN"
+  Produces "LCAC"
+  Produces "Naval_Monitoring_Station"
+  ProductionPlacementRadius 100
+  Power 2
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+[UNIT] "Vehicle_Factory"
+  Tech "U_Vehicle_Factory"
+  Movie "Units/Images/Icons/Ground/Vehicle_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Vehicle_Factory.midx"
+  Model "Units/Images/Ground/Vehicle_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Power 2
+  Produces "AA_Site_Old"
+  Produces "Coastal"
+  Produces "MOBILE_SAM"
+  Produces "Mobile_SW_Radar"
+  Produces "EW_MOBILE"
+  Produces "Mobile_SRBM"
+  Produces "Mobile_MRBM"
+  Produces "Mobile_ICBM"
+  Produces "Terminal_ABM"
+  Produces "Mobile_ABM_Laser"
+  ProductionPlacementRadius 100
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+
+[UNIT] "Nuclear_Factory"
+  Tech "U_Nuclear_Factory"
+  Movie "Units/Images/Icons/Ground/Nuclear_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Nuclear_Factory.midx"
+  Model "Units/Images/Ground/Nuclear_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Sound 138 Volume 0.5
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Power 10000
+  Produces "ALCM-N"
+  Produces "Fusion ALCM"
+  Produces "Nuclear Cruise Missile"
+  Produces "Fusion Cruise Missile"
+  Produces "Nuclear AAM"
+  Produces "Fusion AAM"
+  Produces "Nuclear SAM"
+  Produces "Fusion SAM"
+  Produces "Nuclear ABM"
+  Produces "Fusion ABM"
+  Produces "Nuclear Torpedo"
+  Produces "Fusion Torpedo"
+  Produces "SRBM-N"
+  Produces "Fusion SRBM"
+  Produces "100kt_SLBM"
+  Produces "250kt_SLBM"
+  Produces "500kt_SLBM"
+  Produces "1M_SLBM"
+  Produces "5M_Fusion_SLBM"
+  Produces "500kt_Cobalt_SLBM"
+  Produces "500kt_Salt_SLBM"
+  Produces "500kt_SLBM_EMP"
+  Produces "500kt_SLBM_EMP_Super"
+  Produces "3x100kt_SLBM"
+  Produces "3x250kt_SLBM"
+  Produces "6x250kt_SLBM"
+  Produces "6x500kt_SLBM"
+  Produces "8x500kt_SLBM"
+  Produces "8x1M_Fusion_SLBM"
+  Produces "100kt ALBM"
+  Produces "250kt ALBM"
+  Produces "500kt ALBM"
+  Produces "1M ALBM"
+  Produces "5M ALBM"
+  Produces "500kt Cobalt ALBM"
+  Produces "500kt Salt ALBM"
+  Produces "500kt nuke_heavy"
+  Produces "10M nuke_heavy"
+  Produces "25M nuke_heavy"
+  Produces "50M nuke_heavy"
+  Produces "100M nuke_heavy"
+  Produces "100kt_nuke_light"
+  Produces "250kt_nuke_light"
+  Produces "500kt nuke_light"
+  Produces "1M nuke_light"
+  Produces "5M nuke_light"
+  Produces "Cobalt_Bomb"
+  Produces "Salted_Bomb"
+  Produces "500kt Light Cobalt Bomb"
+  Produces "500kt Light Salt Bomb"
+  Produces "100kt_MRBM"
+  Produces "250kt_MRBM"
+  Produces "500kt_MRBM"
+  Produces "1M_MRBM"
+  Produces "5M_MRBM"
+  Produces "500kt_Cobalt_MRBM"
+  Produces "500kt_Salt_MRBM"
+  Produces "500kt_MRBM_EMP"
+  Produces "500kt_MRBM_EMP_Super"
+  Produces "3x100kt_MRBM"
+  Produces "3x250kt_MRBM"
+  Produces "6x250kt_MRBM"
+  Produces "6x500kt_MRBM"
+  Produces "8x500kt_MRBM"
+  Produces "8x1MT_MRBM"
+  Produces "ICBM (250kt Light)"
+  Produces "ICBM (500kt Light)"
+  Produces "ICBM (1M Light)"
+  Produces "ICBM (5M Light)"
+  Produces "ICBM (10M Fusion Light)"
+  Produces "ICBM (500kt Heavy)"
+  Produces "ICBM (5M Heavy)"
+  Produces "ICBM (10M)"
+  Produces "ICBM (25M)"
+  Produces "ICBM (50M Fusion)"
+  Produces "ICBM (1M Cobalt)"
+  Produces "ICBM (1M Salt)"
+  Produces "ICBM (10M Cobalt)"
+  Produces "ICBM (10M Salt)"
+  Produces "ICBM (1M EMP)"
+  Produces "ICBM (1M Super EMP)"
+  Produces "ICBM (10M Super EMP)"
+  Produces "3x250kt ICBM"
+  Produces "3x500kt ICBM"
+  Produces "6x500kt ICBM"
+  Produces "6x1M ICBM"
+  Produces "12x500kt ICBM"
+  Produces "12x1M ICBM"
+  Produces "3x250kt Light ICBM"
+  Produces "3x500kt Light ICBM"
+  Produces "8x500kt Light ICBM"
+  Produces "8x1M Light ICBM"
+  ProductionPlacementRadius 1000
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+[UNIT] "Fixed_Factory"
+  Tech "U_Fixed_Factory"
+  Movie "Units/Images/Icons/Ground/Fixed_Factory.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Fixed_Factory.midx"
+  Model "Units/Images/Ground/Fixed_Factory.fbx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  ProducedByAnotherUnit true
+  Power 2
+  Produces "Security_Checkpoint"
+  Produces "Forward_Operating_Base"
+  Produces "Improvised_Airbase"
+  Produces "CRAM"
+  Produces "Missile_Container"
+  Produces "Fixed_LW_radar"
+  Produces "SAM_site"
+  Produces "Fixed_Coastal_Gun"
+  ProductionPlacementRadius 100
+  SelfDestructTime 30
+  Radar "STD Vision"
+  ProductionCost 24
+  //MaxNumberOnMap 1
+	//MaxNumberToOrder 1
+  TargetInPlanner Yes
+
+[UNIT] "Capital"
+  Tech "U_Capital"
+  Movie "Units/Images/Ground/Abstract/Capital.midx"
+  DrawSize 28
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+  Power 100000
+  Produces "Construction_Team"
+  Produces "VIP"
+  ProductionPlacementRadius 130
+  SelfDestructTime 1000000000
+  Radar "STD Vision"
+  ProductionCost 0.0001
+  MaxNumberOnMap 1
+	MaxNumberToOrder 1
+
+[UNIT] "Construction_Team"
+  Tech "U_Construction_Team"
+  Movie "Units/Images/Ground/midlevel/Construction_Team.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Construction_Team.midx"
+  Model "Units/Images/Ground/Construction_Team.fbx"
+  Icon "Units/Images/Icons/Ground/Construction_Team.png"    
+  IconIDX 54
+  IconIDX 10
+  DrawSize 22
+  AbstractDrawSize 30
+  FollowRadius 39//34
+  Size 0.8
+  Sound 138 Volume 0.2
+  Type Ground
+  Class "UC_Ground_Mobile"
+  AutoRepair 0.60
+  Speed 20
+  TurnSpeed 4 // in angles per second
+  Power 20
+  SelfDestructTime 40
+  Produces "Army_Factory"
+  Produces "Bio_Factory"
+  Produces "Navy_Factory"
+  Produces "Nuclear_Factory"
+  Produces "Vehicle_Factory"
+  Produces "Fixed_Factory"
+  Produces "Transfer_Airbase"
+  Produces "Maintenance_Airbase"
+  Produces "Naval_Airbase"
+  Produces "Army_Base"
+  Produces "Army_Division"
+  Produces "Airport"
+  Produces "Specialized_Airport"
+  Produces "Tactical_Airbase"
+  Produces "Missile_Silo"
+  Produces "Central_Command_Bunker"
+  Produces "Research_Center"
+  Produces "Intelligence_Center"
+  Produces "Missile_Silo"
+  Produces "ICBM_Launchpad"
+  Produces "Over_Horizon_radar"
+  Produces "Fixed_Coastal_Gun"
+  Produces "Laser_Defence_Complex"
+  Produces "Space_radar"
+  Produces "Space_Operations_Center"
+  Produces "Satellite_Relay_Station"
+  ProductionPlacementRadius 70
+
+  AlwaysVisibleOnEnemyTerritory Yes
+  CanCrossBorderDuringPeaceTime No
+  
+  ////Same bonuses as army divisions
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+  
+  ProducedByAnotherUnit true
+  TargetInPlanner Yes
+  
+  ImprovedBy "Army_Mech_Mk2" Set Speed 40
+  ImprovedBy "Army_Mech_Mk3" Set Speed 45
+  ImprovedBy "Army_Mech_Mk4" Set Speed 50
+  ImprovedBy "Army_Mech_Mk5" Set Speed 60
+  ImprovedBy "Army_Mech_Mk2" Power 1.05
+  ImprovedBy "Army_Mech_Mk3" Power 1.05
+  ImprovedBy "Army_Mech_Mk4" Power 1.05
+  ImprovedBy "Army_Mech_Mk5" Power 1.05
+ 
+  ImprovedBy "Improved_Basic_Protection" Power 1.15
+  ImprovedBy "Basic_Body_Armor" Power 1.15
+  ImprovedBy "Improved_Body_Armor" Power 1.15
+  ImprovedBy "Advanced_Body_Armor" Power 1.15
+  ImprovedBy "Experimental_Body_Armor" Power 1.15 
+
+/////CBRN stuff/////
+
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+
+  Radar "STD Vision"
+  ProductionCost 12
+  CanAccessGlobalStorage No  
+
+
+[UNIT] "Intelligence_Center" MODIFY
+  Produces "Heavy_Bomb_Truck"
+  Produces "Bomb_Truck"
+  Produces "Spec_Ops_Team"
+  ProductionPlacementRadius 70
+
+[UNIT] "Space_Operations_Center" MODIFY
+  Produces "ASAT"
+  Produces "Co-Orbital ASAT"
+  Produces "Aircraft ASAT"
+  Produces "Nuclear ASAT"
+  ProductionPlacementRadius 300
+
+[UNIT] "LCAC" MODIFY
+  CanCarryUnit "Construction_Team"
+
+
+[UNIT] "Landing_Ship" MODIFY
+  CanCarryUnit "Construction_Team"
+
+
+[UNIT] "VirtualCity" MODIFY
+  Produces "Construction_Team"
+  Produces "VIP"
+  ProductionPlacementRadius 80
+
+=======
+>>>>>>> Stashed changes
 [END]

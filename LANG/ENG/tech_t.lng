@@ -176,4 +176,47 @@ Increases the speed, survivability and fire rates of surface ships."
 - Limited effective range."
 
 
+
+"U_Nuclear_Factory_NAME" LANG "Nuclear Facility"
+"U_Nuclear_Factory_DESC" LANG "A highly secure manufacturing center utilized to increase the concentration of the uranium-235 isotope in uranium, a process crucial for both nuclear power and weapons, with weapons-grade material requiring significantly higher enrichment levels than fuel for nuclear reactors.
++ Allows for the production of nuclear and fusion weapons."
+
+
+
+"U_Bio_Factory_NAME" LANG "Bio Lab"
+"U_Bio_Factory_DESC" LANG "A specialized labaratory center with a primary focus on research development, production, and testing of weapons involving pathogens and living organisms, disease-causing agents used for warfare. 
++ Allows for the production of chemical and biological weapons."
+
+
+
+"U_Army_Factory_NAME" LANG "Army Factory"
+"U_Army_Factory_DESC" LANG "An organized facility with resources that provides a government, particularly the Department of Defense, with materials, products, and services for defense purposes that supply its major armed forces.
++ Allows for the production of all high-grade military vehicles needed for warfare."
+
+
+
+"U_Navy_Factory_NAME" LANG "Shipyard"
+"U_Navy_Factory_DESC" LANG "A port facility or harbor where warships are built, repaired, altered, docked, converted, and fitted out, and is staffed by civilian engineers and workers.
++ Allows for the production of all naval ships and submarines"
+
+
+
+"U_Vehicle_Factory_NAME" LANG "Vehicle Assembly"
+"U_Vehicle_Factory_DESC" LANG "A military business that designs, manufactures, and distributes motor vehicles, playing a crucial role in the automotive industry specific to the military.
++ Allows for the production of all non-weaponized military vehicles."
+
+
+
+"U_Fixed_Factory_NAME" LANG "Construction Plant"
+"U_Fixed_Factory_DESC" LANG "A military factory that builds most non permanent structures such as SAMs, radars and much more.
++ Allows for the production of all fixed structures."
+
+"U_Capital_NAME" LANG "Capital"
+"U_Capital_DESC" LANG "The capital of your faction it cant be destroyed and is used as a starting point for your Construction Teams.
++ Allows for the building of Construction Teams."
+
+"U_Construction_Team_NAME" LANG "Construction Team"
+"U_Construction_Team_DESC" LANG "A militarized construction crew often part of the military corps responsible for building and maintaining military facilities, infrastructure, and structures, both domestically and internationally, including everything from bases to missile silos.
++ Allows for the building of permanent structures."
+
 END

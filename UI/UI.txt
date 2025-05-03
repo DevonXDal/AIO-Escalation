@@ -1,0 +1,1004 @@
+Source "UI/UI_2048.png"
+ 
+//  Element Name, x, y, sx, sy
+
+Element    Info_Top, 0, 0, 614, 60
+Element    Info_Bottom, 0, 188, 614, 214
+Element    Info_Middle, 0, 60, 614, 60
+Element    Info_Middle_Background, 16, 125, 16, 4
+Element    Info_Middle_Background_Full, 0, 122, 614, 12
+Element    Info_UnitFrame, 669, 194, 194, 154
+Element    Info_UnitWConfigFrame, 784, 19, 194, 148,
+Element    Info_UnitConfigFrame, 228, 412, 194, 93
+Element    Info_UnitConfigNuclearFrame, 661, 370, 194, 93
+Element    Info_UnitConfigDisabledFrame, 15, 412, 194, 93
+//Element    Info_HealthFrame, 552, 506, 194, 20
+//Element    Info_HealthBarStart, 556, 479, 6, 14
+//Element    Info_HealthBarEnd, 736, 479, 6, 14
+//Element    Info_HealthBarMiddle, 562, 479, 174, 14
+Element    Info_MissileFrame, 553, 590, 75, 71
+Element    Info_MissileFrameCheck, 553, 664, 75, 71
+Element    Info_MissileFrameNuclearCheck, 765, 477, 75, 71
+Element    Info_MissileFrameNuclear, 534, 404, 75, 71
+Element    Info_MissileFrameDisabled, 577, 834, 75, 71
+Element    Info_HostedFrame, 704, 580, 131, 131
+Element    Info_HostedActiveFrame, 1504, 0, 131, 131
+Element    Info_HostedDisabledFrame, 873, 200, 131, 131
+Element    Info_HostedConfigFrame, 707, 822, 131, 93
+Element    Info_HostedNuclearConfigFrame, 707, 727, 131, 93
+Element    Info_HostedDisabledConfigFrame, 707, 918, 131, 93
+Element    Info_HostedHangarFrame, 563, 916, 131, 93
+Element    Info_ButtonFrame, 484, 748, 203, 70
+Element    Info_ButtonFrame_Left, 484, 748, 20, 70
+Element    Info_ButtonFrame_Center, 504, 748, 163, 70
+Element    Info_ButtonFrame_Right, 667, 748, 20, 70
+Element    Info_ButtonFramePressed, 266, 835, 203, 70
+Element    Info_ButtonFramePressed_Left, 266, 835, 20, 70
+Element    Info_ButtonFramePressed_Center, 286, 835, 163, 70
+Element    Info_ButtonFramePressed_Right, 449, 835, 20, 70
+Element    Info_DisabledButtonFrame, 261, 921, 203, 70
+Element    Info_SmallButtonFrame, 459, 423, 68, 70
+Element    Info_SmallButtonFramePressed, 483, 835, 68, 70
+Element    Info_SmallDisabledButtonFrame, 485, 923, 68, 70
+Element    Info_MoveIcon, 23, 845, 58, 58
+Element    Info_FollowIcon, 98, 844, 58, 58
+Element    Info_AttackIcon, 179, 843, 58, 58
+Element    Info_RefillIcon, 483, 598, 58, 58
+Element    Info_ReplenishIcon, 483, 668, 58, 58
+Element    Info_SurfaceIcon, 175, 910, 58, 58
+Element    Info_SubmergeIcon, 100, 910, 58, 58
+Element    Info_CancelOrdersIcon, 26, 910, 58, 58
+Element    Info_StateUpIcon, 490, 528, 58, 58
+Element    Info_StateDownIcon, 555, 528, 58, 58
+Element    Info_AdditionalFrame_Top_Left, 22, 530, 64, 52
+Element    Info_AdditionalFrame_Top_Center, 86, 530, 322, 52
+Element    Info_AdditionalFrame_Top_Right, 408, 530, 64, 52
+Element    Info_AdditionalFrame_Top_Red_Left, 821, 1245, 64, 52
+Element    Info_AdditionalFrame_Top_Red_Center, 885, 1245, 322, 52
+Element    Info_AdditionalFrame_Top_Red_Right, 1207, 1245, 64, 52
+Element    Info_AdditionalFrame_Bottom_Left, 22, 766, 64, 20
+Element    Info_AdditionalFrame_Bottom_Center, 86, 766, 322, 20
+Element    Info_AdditionalFrame_Bottom_Right, 408, 766, 64, 20
+Element    Info_AdditionalFrame_Middle_Left, 22, 582, 64, 184
+Element    Info_AdditionalFrame_Middle_Center, 86, 582, 322, 184
+Element    Info_AdditionalFrame_Middle_Right, 408, 582, 64, 184
+
+Element    Info_Button_Top_Left, 484, 748, 16, 16
+Element    Info_Button_Top_Mid, 500, 748, 171, 16
+Element    Info_Button_Top_Right, 671, 748, 16, 16
+Element    Info_Button_Center_Left, 484, 764, 16, 38
+Element    Info_Button_Center_Mid, 500, 764, 171, 38
+Element    Info_Button_Center_Right, 671, 764, 16, 38
+Element    Info_Button_Bottom_Left, 484, 802, 16, 16
+Element    Info_Button_Bottom_Mid, 500, 802, 171, 16
+Element    Info_Button_Bottom_Right, 671, 802, 16, 16
+
+Element    Info_Button_Hi_Top_Left, 266, 835, 16, 16
+Element    Info_Button_Hi_Top_Mid, 282, 835, 171, 16
+Element    Info_Button_Hi_Top_Right, 453, 835, 16, 16
+Element    Info_Button_Hi_Center_Left, 266, 851, 16, 38
+Element    Info_Button_Hi_Center_Mid, 282, 851, 171, 38
+Element    Info_Button_Hi_Center_Right, 453, 851, 16, 38
+Element    Info_Button_Hi_Bottom_Left, 266, 889, 16, 16
+Element    Info_Button_Hi_Bottom_Mid, 282, 889, 171, 16
+Element    Info_Button_Hi_Bottom_Right, 453, 889, 16, 16
+
+Element    Info_Button_Filler_Top_Left, 638, 590, 16, 16
+Element    Info_Button_Filler_Top_Mid, 654, 590, 16, 16
+Element    Info_Button_Filler_Top_Right, 670, 590, 16, 16
+Element    Info_Button_Filler_Center_Left, 638, 606, 16, 16
+Element    Info_Button_Filler_Center_Mid, 654, 606, 16, 16
+Element    Info_Button_Filler_Center_Right, 670, 606, 16, 16
+Element    Info_Button_Filler_Bottom_Left, 638, 622, 16, 16
+Element    Info_Button_Filler_Bottom_Mid, 654, 622, 16, 16
+Element    Info_Button_Filler_Bottom_Right, 670, 622, 16, 16
+
+Element    Clock_Backround, 1448, 664, 600, 360
+Element    Clock_Backround_Bottom, 1220, 956, 228, 68
+Element    Clock_Background_Circle, 1597, 1098, 451, 451
+Element    Clock_Blue, 1676, 271, 370, 370
+Element    Clock_Green, 912, 342, 370, 370
+Element    Clock_Red, 1305, 271, 370, 370
+Element    Clock_Pause, 1017, 12, 134, 138
+Element    Clock_Play, 1032, 158, 150, 148
+Element    Clock_Ticks, 1207, 0, 321, 324
+Element    Clock_Ticks_High, 0, 995, 341, 344
+Element    Clock_Runner, 1294, 708, 32, 179
+Element    Clock_Pause_Frame, 1214, 1033, 407, 58
+Element    Clock_Pause_Filler, 1634, 1033, 407, 58
+
+Element    Missile_Bar_Top, 291, 1000, 108, 150
+Element    Missile_Bar_Middle, 399, 1000, 74, 150
+Element    Missile_Bar_Bottom, 473, 1000, 52, 150
+Element    Missile_Frame, 545, 1015, 117, 117
+
+Element    Unit_Bar_Top, 0, 1438, 176, 128
+Element    Unit_Bar_Middle, 0, 1351, 176, 97
+Element    Unit_Bar_Bottom, 0, 1281, 176, 60
+Element    Unit_Bar_Top_Mask, 325, 1442, 176, 128
+Element    Unit_Bar_Middle_Mask, 325, 1351, 176, 97
+Element    Unit_Bar_Bottom_Mask, 325, 1281, 176, 60
+Element    Unit_Frame, 179, 1285, 136, 136
+Element    Unit_FrameDisabled, 179, 1424, 136, 136
+Element    Unit_Scroll_Background_Top, 514, 1292, 16, 8
+Element    Unit_Scroll_Background_Middle, 514, 1300, 16, 32
+Element    Unit_Scroll_Background_Bottom, 514, 1332, 16, 8
+Element    Unit_Scroll_Handler_Top, 533, 1292, 16, 8
+Element    Unit_Scroll_Handler_Middle, 533, 1300, 16, 32
+Element    Unit_Scroll_Handler_Bottom, 533, 1332, 16, 8
+
+Element    Settings_Scroll_Background_Top, 1319, 1099, 16, 29
+Element    Settings_Scroll_Background_Middle, 1335, 1099, 32, 29
+Element    Settings_Scroll_Background_Bottom, 1367, 1099, 16, 29
+Element    Settings_Scroll_Filler_Top, 1252, 1099, 16, 29
+Element    Settings_Scroll_Filler_Middle, 1268, 1099, 32, 29
+Element    Settings_Scroll_Filler_Bottom, 1300, 1099, 16, 29
+Element    Settings_Scroll_Handler, 1215, 1096, 35, 34
+
+Element    Construction_Unit_Bar_Top, 560, 1287, 174, 128
+Element    Construction_Unit_Bar_Middle, 560, 1415, 174, 87
+Element    Construction_Unit_Bar_Bottom, 560, 1502, 174, 60
+Element    Construction_Unit_Frame, 1062, 761, 141, 141
+Element    Construction_Category_Ground_High, 913, 1673, 148, 132
+Element    Construction_Category_Naval_High, 916, 1805, 148, 105
+Element    Construction_Category_Satellite_High, 910, 1415, 148, 132
+Element    Construction_Category_Airborne_High, 913, 1545, 148, 132
+Element    Construction_Category_Missile_High, 913, 1299, 148, 132
+Element    Construction_Category_Ground, 762, 1673, 148, 132
+Element    Construction_Category_Naval, 765, 1805, 148, 105
+Element    Construction_Category_Satellite, 759, 1415, 148, 132
+Element    Construction_Category_Airborne, 762, 1545, 148, 132
+Element    Construction_Category_Missile, 762, 1299, 148, 132
+Element    Construction_Category_Frame_Top, 0, 1586, 155 162
+Element    Construction_Category_Frame_Mid, 0, 1748, 155, 162
+
+
+Element    Pollution_Frame, 870, 737, 184, 184
+Element    Score_Frame_Top_Left, 1690, 0, 29, 28
+Element    Score_Frame_Top_Mid, 1719, 0, 300, 28
+Element    Score_Frame_Top_Right, 2019, 0, 29, 28
+Element    Score_Frame_Center_Left, 1690, 28, 29, 160
+Element    Score_Frame_Center_Mid, 1719, 28, 300, 160
+Element    Score_Frame_Center_Right, 2019, 28, 29, 160
+Element    Score_Frame_Bottom_Left, 1690, 188, 29, 29
+Element    Score_Frame_Bottom_Mid, 1719, 188, 300, 29
+Element    Score_Frame_Bottom_Right, 2019, 188, 29, 29
+
+Element    Main_Button_Bar_Background, 303, 1164, 500, 106
+Element    Main_Button_Globe, 667, 1030, 92, 92
+Element    Main_Button_Radar, 786, 1030, 92, 92
+Element    Main_Button_Splitter, 903, 1030, 92, 92
+Element    Main_Button_Diplomacy, 1003, 1030, 92, 92
+Element    Main_Button_Territory, 1116, 1030, 92, 92
+Element    Main_Button_Globe_Pressed, 815, 1143, 92, 92
+Element    Main_Button_Radar_Pressed, 934, 1143, 92, 92
+Element    Main_Button_Splitter_Pressed, 1051, 1143, 92, 92
+Element    Main_Button_Territory_Pressed, 1150, 1143, 92, 92
+Element    Main_Button_Diplomacy_Pressed, 1257, 1143, 92, 92
+
+Element    CES_Tech_Frame_Blue, 1091, 1312, 194, 192
+Element    CES_Tech_Frame_Blue_Selected, 1324, 1312, 194, 192
+Element    CES_Tech_Frame_Green, 1091, 1512, 194, 192
+Element    CES_Tech_Frame_Green_Selected, 1324, 1512, 194, 192
+Element    CES_Tech_Frame_Gray, 1091, 1712, 194, 192
+Element    CES_Tech_Frame_Gray_Selected, 1324, 1712, 194, 192
+Element    CES_Tech_Frame_Small, 1092, 910, 107, 107
+
+Element    Journal_Open_Button, 1539, 1573, 85, 147
+Element    Journal_Open_Button_Selected, 1649, 1573, 85, 147
+Element    Journal_Close_Button, 1539, 1744, 85, 147
+Element    Journal_Close_Button_Selected, 1649, 1744, 85, 147
+Element    Journal_CloseAndContinue_Button, 190, 1604, 358, 68
+Element    Journal_CloseAndContinue_Button_Left, 190, 1604, 32, 68
+Element    Journal_CloseAndContinue_Button_Mid, 222, 1604, 294, 68
+Element    Journal_CloseAndContinue_Button_Right, 516, 1604, 32, 68
+Element    Journal_CloseAndContinue_Button_Selected, 190, 1684, 358, 68
+Element    Journal_CloseAndContinue_Button_Selected_Left, 190, 1684, 32, 68
+Element    Journal_CloseAndContinue_Button_Selected_Mid, 222, 1684, 294, 68
+Element    Journal_CloseAndContinue_Button_Selected_Right, 516, 1684, 32, 68
+Element    Journal_BlueBackround_Left, 1755, 1571, 20, 160
+Element    Journal_BlueBackround_Mid, 1775, 1571, 32, 160
+Element    Journal_BlueBackround_Right, 1807, 1571, 76, 160
+Element    Journal_Background_Top_Left, 1755, 1745, 20, 20
+Element    Journal_Background_Top_Mid, 1775, 1745, 32, 20
+Element    Journal_Background_Top_Right, 1807, 1745, 20, 20
+Element    Journal_Background_Center_Left, 1755, 1765, 20, 104
+Element    Journal_Background_Center_Mid, 1775, 1765, 32, 104
+Element    Journal_Background_Center_Right, 1807, 1765, 20, 104
+Element    Journal_Background_Bottom_Left, 1755, 1869, 20, 20
+Element    Journal_Background_Bottom_Mid, 1775, 1869, 32, 20
+Element    Journal_Background_Bottom_Right, 1807, 1869, 20, 20
+
+Element    Message_Button_Left, 190, 1604, 40, 68
+Element    Message_Button_Center, 230, 1604, 278, 68
+Element    Message_Button_Right, 508, 1604, 40, 68
+Element    Message_Button_Selected_Left, 190, 1684, 40, 68
+Element    Message_Button_Selected_Center, 230, 1684, 278, 68
+Element    Message_Button_Selected_Right, 508, 1684, 40, 68
+Element    Message_Button_Blue_Left, 340, 1819, 40, 68
+Element    Message_Button_Blue_Center, 380, 1819, 131, 68
+Element    Message_Button_Blue_Right, 511, 1819, 40, 68
+
+Element    Chat_Edit_Left, 190, 1604, 20, 68
+Element    Chat_Edit_Mid, 210, 1604, 318, 68
+Element    Chat_Edit_Right, 528, 1604, 20, 68
+Element    Chat_Edit_Selected_Left, 190, 1684, 20, 68
+Element    Chat_Edit_Selected_Mid, 210, 1684, 318, 68
+Element    Chat_Edit_Selected_Right, 528, 1684, 20, 68
+
+Element    Win_Back_Top_Left, 553, 1570, 42, 42
+Element    Win_Back_Top_Mid, 595, 1570, 42, 42
+Element    Win_Back_Top_Right, 637, 1570, 42, 42
+Element    Win_Back_Center_Left, 553, 1612, 42, 42
+Element    Win_Back_Center_Mid, 595, 1612, 42, 42
+Element    Win_Back_Center_Right, 637, 1612, 42, 42
+Element    Win_Back_Bottom_Left, 553, 1654, 42, 42
+Element    Win_Back_Bottom_Mid, 595, 1654, 42, 42
+Element    Win_Back_Bottom_Right, 637, 1654, 42, 42
+
+Element    Blue_Win_Back_Top_Left, 553, 1740, 42, 42
+Element    Blue_Win_Back_Top_Mid, 595, 1740, 42, 42
+Element    Blue_Win_Back_Top_Right, 637, 1740, 42, 42
+Element    Blue_Win_Back_Center_Left, 553, 1782, 42, 42
+Element    Blue_Win_Back_Center_Mid, 595, 1782, 42, 42
+Element    Blue_Win_Back_Center_Right, 637, 1782, 42, 42
+Element    Blue_Win_Back_Bottom_Left, 553, 1824, 42, 42
+Element    Blue_Win_Back_Bottom_Mid, 595, 1824, 42, 42
+Element    Blue_Win_Back_Bottom_Right, 637, 1824, 42, 42
+
+Element    Blue_Back_Left, 553, 1699, 42, 31
+Element    Blue_Back_Mid, 595, 1699, 42, 31
+Element    Blue_Back_Right, 637, 1699, 42, 31
+
+Element    Small_Check_Blue_Win, 680, 1570, 61, 60
+Element    Share_Science_Icon, 680, 1630, 61, 60
+Element    Share_Radar_Icon, 680, 1690, 61, 60
+Element    Share_Nuclear_Icon, 680, 1750, 61, 60
+Element    Share_Science_Disabled_Icon, 680, 1810, 61, 60
+Element    Share_Radar_Disabled_Icon, 680, 1870, 61, 60
+Element    Share_Nuclear_Disabled_Icon, 690, 1930, 61, 60
+
+Element    Red_Join_Button, 191, 1755, 209, 61
+
+Element    Black_Team_Button_Top_Left, 401, 1758, 7, 7
+Element    Black_Team_Button_Top_Mid, 408, 1758, 103, 7
+Element    Black_Team_Button_Top_Right, 511, 1758, 7, 7
+Element    Black_Team_Button_Center_Left, 401, 1765, 7, 44
+Element    Black_Team_Button_Center_Mid, 408, 1765, 103, 44
+Element    Black_Team_Button_Center_Right, 511, 1765, 7, 44
+Element    Black_Team_Button_Bottom_Left, 401, 1809, 7, 7
+Element    Black_Team_Button_Bottom_Mid, 408, 1809, 103, 7
+Element    Black_Team_Button_Bottom_Right, 511, 1809, 7, 7
+
+Element    Green_Line_Left, 0, 1908, 8, 69
+Element    Green_Line_Mid, 8, 1908, 64, 69
+Element    Green_Line_Right, 72, 1908, 8, 69
+
+Element    Transp_Line_Left, 82, 1908, 8, 69
+Element    Transp_Line_Mid, 90, 1908, 64, 69
+Element    Transp_Line_Right, 154, 1908, 8, 69
+
+Element    Blue_Line_Left, 164, 1908, 8, 69
+Element    Blue_Line_Mid, 172, 1908, 64, 69
+Element    Blue_Line_Right, 236, 1908, 8, 69
+
+Element    Disabled_Line, 0, 1979, 682, 69
+
+Element    Up_Mark, 298, 1825, 33, 22
+Element    Down_Mark, 168, 1825, 33, 22
+Element    Cancel_Mark, 159, 1851, 51, 51
+Element    Accept_Mark, 212, 1851, 51, 51
+
+Element    Blue_Box, 247, 1908, 69, 69
+Element    Transp_Box, 328, 1908, 69, 69
+
+Element    Ready_Mark, 401, 1908, 19, 69
+Element    NotReady_Mark, 421, 1908, 19, 69
+
+Element    City_Name_Frame_Top_Left, 891, 1959, 8, 8
+Element    City_Name_Frame_Top_Mid, 899, 1959, 49, 8
+Element    City_Name_Frame_Top_Right, 948, 1959, 8, 8
+Element    City_Name_Frame_Center_Left, 891, 1967, 8, 4
+Element    City_Name_Frame_Center_Mid, 899, 1967, 49, 4
+Element    City_Name_Frame_Center_Right, 948, 1967, 8, 4
+Element    City_Name_Frame_Bottom_Left, 891, 1971, 8, 8
+Element    City_Name_Frame_Bottom_Mid, 899, 1971, 49, 8
+Element    City_Name_Frame_Bottom_Right, 948, 1971, 8, 8
+
+Element    Signal_TranspGreen, 767, 2002, 19, 20
+Element    Signal_NoBombers, 792, 2002, 19, 20
+Element    Signal_NoWarheads, 817, 2002, 19, 20
+Element    Signal_RedWarning, 842, 2002, 19, 20
+Element    Signal_Red, 867, 2002, 19, 20
+Element    Signal_Green, 892, 2002, 19, 20
+Element    Signal_YellowWarning, 917, 2002, 19, 20
+Element    Signal_YellowHourglasses, 942, 2002, 19, 20
+Element    Signal_ExclamationSign, 963, 1921, 32, 29
+Element    Signal_Waiting, 963, 1953, 28, 22
+
+Element    Planner_Icon_Background_Selected, 1544, 1933, 115, 115
+Element    Planner_Icon_Nuclear, 1023, 1978, 60, 70
+Element    Planner_Icon_Beta, 1093, 1978, 60, 70
+Element    Planner_Icon_Alpha, 1165, 1978, 60, 70
+Element    Planner_Icon_Upsilon, 1237, 1978, 60, 70
+Element    Planner_Icon_Omega, 1320, 1978, 60, 70
+Element    Planner_Icon_Psi, 1390, 1978, 60, 70
+Element    Planner_Icon_Delta, 1462, 1978, 60, 70
+Element    Planner_Icon_Carrier, 1021, 1914, 60, 70
+Element    Planner_Icon_Bomber, 1097, 1914, 60, 70
+Element    Planner_Icon_Sub, 1167, 1914, 60, 70
+Element    Planner_Icon_Bomb, 1242, 1908, 60, 70
+Element    Planner_Icon_Silo, 1319, 1911, 60, 70
+Element    Planner_Icon_ICBM, 1397, 1911, 60, 70
+
+//  Offset Name, x, y
+
+Offset    Offset_Info, 10, 10 // Where to draw the info window (from Left, from Bottom)
+Offset    Info_Middle_Background, 360, 0 // the length of the backround for the Right panel items
+Offset    Offset_Info_VerticalSpace, 0, 60 // before scaling the Middle section
+Offset    Info_UnitFrame, 32, 72 // Info_Top
+Offset    Info_UnitConfigFrame, 0, 118 // Info_UnitWConfigFrame
+Offset    Offset_Info_UnitConfigActiveFrame, 0, 34 // Info_UnitConfigFrame
+Offset    Offset_Info_UnitConfigFrameStep, 0, 68 // between two frames
+Offset    Offset_Info_LeftText, 0, 12 // Info_HealthFrame end
+Offset    Offset_Info_RightText, 243, 68 // Info_Top
+Offset    Info_CheckBoxFrame, 305, 0 // Offset_Info_RightText
+Offset    Info_HostedConfigFrame, 0, 103 // Info_HostedFrame
+Offset    Offset_Info_HostedConfigActiveFrame, 0, 136 // Info_HostedFrame
+Offset    Offset_Info_HostedConfigFrameStep, 0, 64 // between two frames
+Offset    Info_ButtonFrame, 20, 40 // Info_Bottom
+Offset    Offset_Info_ButtonSpace, 12, 12 // space between the buttons
+Offset    Offset_Info_ButtonCenter, 36, 34 
+Offset    Offset_Info_HeaderCenter, 308, 29 // Info_Top
+Offset 	  Offset_Info_Additional_UnitFrame, 21, 57 // Info_AdditionalFrame
+Offset 	  Offset_Info_Additional_RightText, 230, 62 // Info_AdditionalFrame
+Offset 	  Offset_Info_Additional_NameCenter, 222, 22 // Info_AdditionalFrame
+Offset    Info_AdditionalFrame_Middle_Left, 3, 0 // real size of the frame
+Offset    Info_AdditionalFrame_Middle_Right, 8, 0 // real size of the frame
+
+Offset    Clock_Blue, 298, 302 // from bottom right screen corner
+Offset    Clock_Ticks, 0, -4, // from Clock_Blue
+Offset    Clock_Pause_Frame, 735, 58 // from bottom right
+Offset    Clock_Background_Circle, 1597, 1098 // from bottom right screen corner
+
+Offset    Offset_Missiles_Bar_Top, 110, 0  // from bottom right screen corner
+Offset    Missile_Frame, 14, 0  // between cells
+
+Offset    Offset_Unit_Bar_Top, 0, 140  // from bottom left screen corner
+Offset    Unit_Frame, 0, 16  // between cells
+Offset    Unit_Scroll_Background_Top, 4, 0 // from Unit_Bar_Top right border
+
+Offset    Main_Button_Bar_Background, 943, 184 // from bottom right
+Offset    Main_Button_Diplomacy, 9, 0// from Main_Button_Bar_Background
+Offset    Main_Button_Territory, 108, 0// from Main_Button_Bar_Background
+Offset    Main_Button_Radar, 206, 0// from Main_Button_Bar_Background
+Offset    Main_Button_Globe, 304, 0// from Main_Button_Bar_Background
+Offset    Main_Button_Splitter, 402, 0// from Main_Button_Bar_Background
+
+Offset    Construction_Unit_Bar_Bottom 0, 346  // from bottom right
+Offset    Construction_Category_Ground 0, 40 // from Construction_Unit_Bar_Top
+Offset    Construction_Category_Ground_High, 148, 132 // category size
+
+Offset    Journal_BlueBackround_Left, -10, 8 // from black background
+Offset    Journal_Open_Button, 4, 0
+Offset    Journal_CloseAndContinue_Button, 8, 7
+Offset    Journal_CloseAndContinue_Button_Selected, 8, 4
+
+Offset    Small_Check_Blue_Win, 10, 0 // between checks
+Offset    Disabled_Line, 0, 33 // between consequent names
+Offset    Blue_Line_Left, 0, 11 // between consequent names in allience
+Offset    Blue_Back_Left, 0, 11 // between the header and the name lines
+
+Offset    Selection_Top_Left, 105, 80
+
+Source "UI/UI_CES_2048.png"
+
+Element    CES_Main_Middle, 0, 837, 1452, 1151
+Element    CES_Construction_Background, 1428, 0, 620, 900
+Element    CES_Espionage_Background, 1356, 944, 692, 200
+Element    CES_Science_Background, 1278, 1298, 458, 608
+Element    CES_Tech_Description_Top, 0, 0, 996, 576
+Element    CES_Tech_Description_Middle, 0, 576, 996, 198
+Element    CES_Tech_Description_Bottom, 0, 774, 996, 56
+Element    CES_Bld_Key_Down, 1828, 1761, 48, 52
+Element    CES_Bld_Key_Down_Selected, 1828, 1761, 48, 52
+Element    CES_Bld_Key_Up, 1925, 1761, 48, 52
+Element    CES_Bld_Key_Up_Selected, 1925, 1761, 48, 52
+Element    CES_Main_Selector, 1327, 730, 71, 71
+Element    CES_Espionage_Intel_Icon, 1709, 1163, 102, 102
+Element    CES_Espionage_Sabotage_Icon, 1846, 1166, 102, 102
+Element    CES_Espionage_Selector, 1613, 1160, 36, 118
+Element    CES_Espionage_Selector_High, 1658, 1160, 36, 118
+Element    CES_TechTreeBack_Left, 1750, 1310, 5, 32
+Element    CES_TechTreeBack_Mid, 1755, 1310, 32, 32
+Element    CES_TechTreeBack_Right, 1787, 1310, 3, 32
+Element    CES_Espionage_Race_Enabled_Sign, 1877, 1702, 67, 32
+Element    CES_Espionage_Race_Disabled_Sign, 1973, 1708, 67, 32
+Element    CES_Espionage_Unknown_Sign, 1971, 1759, 64, 64
+Element    CES_Settings, 2002, 2002, 46, 46
+
+Element    Planner_Red, 1636, 0, 136, 136
+Element    Planner_Orange, 1774, 0, 136, 136
+Element    Planner_Yellow, 1912, 0, 136, 136
+Element    Planner_Icon_Background_Left, 1456, 144, 200, 81
+Element    Planner_Icon_Background_Center, 1656, 144, 192, 81
+Element    Planner_Icon_Background_Right, 1848, 144, 200, 81
+Element    Planner_HeaderLeft, 1501, 238, 64, 115
+Element    Planner_HeaderMidLeft, 1565, 238, 64, 115
+Element    Planner_HeaderCenter, 1629, 238, 291, 115
+Element    Planner_HeaderMidRight, 1920, 238, 64, 115
+Element    Planner_HeaderRight, 1984, 238, 64, 115
+Element    Planner_Priority_1, 1494, 0, 35, 36
+Element    Planner_Priority_2, 1540, 0, 35, 36
+Element    Planner_Priority_3, 1580, 0, 35, 36
+
+Element    Chart_XAxis, 54, 0, 32, 17
+Element    Chart_YAxis, 91, 0, 11, 17
+Element    Chart_Info_Layer, 0, 126, 512, 198
+Element    Chart_Button_Background, 105, 0, 114, 126
+Element    Chart_Tab_Background_Left, 0, 331, 70, 137
+Element    Chart_Tab_Background_Mid, 70, 331, 32, 137
+Element    Chart_Tab_Background_Right, 102, 331, 70, 137
+Element    Chart_Tab_Button_1, 219, 0, 112, 112
+Element    Chart_Tab_Button_2, 331, 0, 112, 112
+Element    Chart_Tab_Button_3, 443, 0, 112, 112
+Element    Chart_Tab_Button_4, 555, 0, 112, 112
+Element    Chart_Tab_Button_5, 667, 0, 112, 112
+Element    Chart_Tab_Button_6, 779, 0, 112, 112
+Element    Chart_Tab_Button_7, 891, 0, 112, 112
+Element    Chart_Tab_Button_8, 555, 112, 112, 112
+Element    Chart_Tab_Button_9, 667, 112, 112, 112
+Element    Chart_Tab_Button_10, 781, 112, 112, 112
+Element    Chart_XAxis_Glow, 0, 472, 256, 256
+Element    Chart_YAxis_Glow, 256, 472, 256, 79
+Element    Chart_Darken, 2, 55, 28, 28
+
+
+
+Offset    CES_Close_Sign, 1395, 115 // from CES_Main_Middle
+Offset    CES_Close_Sign_Bracket, 1081, -67 // from CES_Main_Middle
+Offset    CES_Bld_Frame, 10, 10 // between frames
+Offset    CES_Main_Middle, 425, 510 // the AP radius
+Offset    CES_Main_Bottom, 0, 492 // the radius for espionage
+Offset    CES_Construction_Background, -10, -612 // from the center
+Offset    CES_Science_Background, -145, -500 // from the center
+Offset    CES_Espionage_Background, 0, 342 // from the center
+Offset    CES_Tech_Frame_Blue, -527, -249 // from CES center
+Offset    CES_Tech_Frame_Green, -100, 300 // from CES center
+Offset    CES_Bld_Key_Up, 85, -512  // from CES center
+Offset    CES_Bld_Key_Down, 85, 512 // from CES center
+Offset    CES_Espionage_Intel_Icon, -295, -100
+Offset    CES_Espionage_Sabotage_Icon, 295, -100
+Offset    CES_Tech_Description_Top, -1232, -494 // from center
+Offset    CES_Tech_Description_Middle, 580, 25 // Text drawing area
+Offset    CES_Main_Selector, 726, 575 // from CES_Main_Middle
+Offset    CES_Selector_Window, 600, 73 // width, height
+Offset    CES_Espionage_Element_Size, 550, 80 // width, height
+Offset    CES_Espionage_Element_Gap, 32, 16 // width, height
+Offset    Planner_HeaderLeft, 12, 52
+Offset    Planner_HeaderCenter, 0, 11
+Offset    Planner_Icon_Background_Left, 47, 43
+Offset    Planner_HeaderMidLeft, 20, 82
+Offset    Chart_XAxis, 140, 452
+Offset    Chart_YAxis, 143, 83
+Offset    Chart_Info_Layer, 0, 274
+Offset    Chart_Button_Background, 0, 195
+Offset 	  Chart_Tab_Background_Left, 0, 354
+
+/*
+Source "UI/UI_START.png"
+
+Element    Start_Left, 0, 0, 164, 562
+Element    Start_Right, 164, 0, 164, 562
+Element    Start_Name, 0, 566, 376, 164
+Element    Start_Name_Alt, 517, 0, 557, 145
+Element    Start_Bottom, 0, 744, 222, 24
+Element    Start_Button, -3, 788, 294, 72
+Element    Start_Button_Highlighted, 296, 788, 294, 72
+Element    Start_Button_Disabled_New, 296, 868, 294, 72
+Element    Start_Button_Disabled_Green, -3, 868, 294, 72
+Element    Start_Button_Disabled, -3, 948, 294, 72
+Element    Start_Button_Small, 296, 986, 144, 38
+Element    Start_Button_Small_Highlighted, 296, 948, 144, 38
+
+Offset     Start_Button, 0, 34 // between buttons
+Offset     Start_Left, -110, -181 // from menu window
+Offset     Start_Right, -52, -181 // from menu window
+Offset     Start_Bottom, 0, 44 // from menu window
+Offset     Start_Name, 0, 0// -30 // from menu window
+*/
+
+Source "UI/start_frames.png"
+
+Element    Start_Menu_Frames_Top, 0, 0, 1340, 943
+Element    Start_Menu_Frames_Bottom, 1341, 0, 706, 525
+
+Offset     Start_Menu_Frames_Top, 0, -547 // from top to the first button
+Offset     Start_Menu_Frames_Bottom, 0, -222 // from top to the last button
+
+
+Source "UI/cursors.png"
+Element    cursor_Standard, 417, 131, 31, 38
+Element    cursor_Launch, 466, 129, 41, 41
+Element    cursor_SelectPath_0, 6, 4, 50, 50
+Element    cursor_SelectPath_1, 56, 4, 50, 50
+Element    cursor_SelectPath_2, 106, 4, 50, 50
+Element    cursor_SelectPath_3, 156, 4, 50, 50
+Element    cursor_SelectPath_4, 206, 4, 50, 50
+Element    cursor_SelectPath_5, 256, 4, 50, 50
+Element    cursor_SelectPath_6, 306, 4, 50, 50
+Element    cursor_SelectPath_7, 356, 4, 50, 50
+Element    cursor_SelectPath_8, 406, 4, 50, 50
+Element    cursor_SelectPath_9, 456, 4, 50, 50
+Element    cursor_Select_0, 5, 62, 50, 50
+Element    cursor_Select_1, 56, 62, 50, 50
+Element    cursor_Select_2, 106, 62, 50, 50
+Element    cursor_Select_3, 156, 62, 50, 50
+Element    cursor_Select_4, 206, 62, 50, 50
+Element    cursor_Select_5, 256, 62, 50, 50
+Element    cursor_Select_6, 306, 62, 50, 50
+Element    cursor_Select_7, 356, 62, 50, 50
+Element    cursor_Select_8, 406, 62, 50, 50
+Element    cursor_Select_9, 456, 62, 50, 50
+Element    cursor_Target_0, 5, 123, 50, 50
+Element    cursor_Target_1, 56, 123, 50, 50
+Element    cursor_Target_2, 106, 123, 50, 50
+Element    cursor_Target_3, 156, 123, 50, 50
+Element    cursor_Target_4, 206, 123, 50, 50
+Element    cursor_Target_5, 256, 123, 50, 50
+Element    cursor_Target_6, 307, 123, 50, 50
+Element    cursor_Target_7, 358, 123, 50, 50
+Element    cursor_Return, 6, 204, 35, 33
+Element    cursor_Follow, 70, 191, 60, 58
+Element    cursor_Submerge, 156, 198, 46, 40
+Element    cursor_Surface, 218, 196, 46, 40
+Element    cursor_Disabled, 285, 199, 39, 39
+Element    cursor_Disassemble, 340, 194, 50, 50
+
+Element    FinalPosition_Mark, 412, 209, 25, 25
+Element    AttackPosition_Mark, 445, 209, 28, 28
+
+Source "UI/UI_FRAMES_1024.png"
+
+Element    Frame_Right_Top_Right, 0, 0, 129, 381
+Element    Frame_Right_Top_Top, 131, 0, 298, 60
+Element    Frame_Right_Bottom_Left, 110, 61, 129, 381
+Element    Frame_Right_Bottom_Bottom, 0, 444, 297, 60
+Element    Frame_Cross, 251, 67, 38, 38
+Element    Frame_Left_Top_Left, 302, 70, 383, 293
+Element    Frame_Left_Bottom_Right, 0, 506, 183, 148
+
+Offset    Frame_Right_Top_Top, -254, -72 // from top right
+Offset    Frame_Right_Top_Right, 15, 34 // from top right
+Offset    Frame_Right_Bottom_Left, -148, -311 // from bottom left
+Offset    Frame_Right_Bottom_Bottom, -62, 22 // from bottom left
+Offset    Frame_Cross, 9, 4 // from top right
+Offset    Frame_Left_Top_Left, -139, -212 // from top left
+Offset    Frame_Left_Bottom_Right, -82, -78 // from bottom right
+
+Source "UI/UI_PATHS_1024.png"
+Element  "path/launch HELI", 0, 0, 256, 32
+Element  "path/patrol path", 0, 32, 256, 32
+Element  "path/PatrolPoints", 0, 64, 256, 32
+Element  "path/launch AWACS", 0, 96, 256, 32
+Element  "path/attack", 0, 128, 256, 32
+Element  "path/follow", 0, 160, 256, 32
+Element  "path/launch bomber", 0, 192, 256, 32
+Element  "path/direction", 0, 225, 256, 32
+Element  "path/attack nuclear", 0, 256, 256, 32
+Element  "path/PatrolPointsLand", 0, 288, 256, 32
+Element  "path/launch fighter", 0, 320, 256, 24
+Element  "path/launch attack bomber", 0, 344, 256, 24
+Element  "path/direction_err", 0, 368, 256, 32
+Element  "path/launch STD", 0, 400, 256, 32
+
+Source "UI/UI_START_2.png"
+
+Element    Start_Menu_Back, 1016, 0, 6, 1024
+Element    Start_Name, 0, 0, 859, 400
+Element    Start_Name_Alt, 517, 0, 557, 145
+Element    Start_Left, 0, 0, 164, 562
+Element    Start_Right, 164, 0, 164, 562
+Element    Start_Bottom, 0, 744, 222, 24
+Element    Start_Button, -3, 788, 294, 72
+Element    Start_Button_Highlighted, 296, 788, 294, 72
+Element    Start_Button_Disabled_New, 296, 868, 294, 72
+Element    Start_Button_Disabled_Green, -3, 868, 294, 72
+Element    Start_Button_Disabled, -3, 948, 294, 72
+Element    Start_Button_Small, 296, 986, 144, 38
+Element    Start_Button_Small_Highlighted, 296, 948, 144, 38
+
+/*
+Element    Main2_ProgressBarFrame_Left, 945, 1988, 8, 20 
+Element    Main2_ProgressBarFrame_Center, 953, 1988, 240, 20
+Element    Main2_ProgressBarFrame_Right, 1193, 1988, 8, 20
+
+Element    Main2_ProgressBarFrame_H_Left, 945, 1940, 8, 20 
+Element    Main2_ProgressBarFrame_H_Center, 953, 1940, 240, 20
+Element    Main2_ProgressBarFrame_H_Right, 1193, 1940, 8, 20
+*/
+
+Offset     Start_Name, 0, 160// from menu window
+Offset     Start_Menu_Back, 75, 48 // from top right
+Offset     Start_Name_Alt, 1100, 266 // the size of the rating background
+
+Offset     Start_Button, 0, 115 // between buttons
+Offset     Start_Left, -110, -181 // from menu window
+Offset     Start_Right, -52, -181 // from menu window
+Offset     Start_Bottom, 0, 44 // from menu window
+
+Source "UI/UI2_2048.png"
+
+Element    Main2_BlackTop, 0, 2000, 450, 26 // from bottom, resize X
+Element    Main2_Bottom, 0, 410, 450, 414 // from bottom, resize X
+Element    Main2_SelectedUnit_Tint, 0, 0, 450, 384
+Element    Clock2_Tint, 0, 0, 450, 410 // from bottom right
+Element    WindowBack_Tint, 0, 0, 449, 383 // from bottom right
+Element    Clock2_Timer_Tint, 0, 820, 450, 72 // from bottom, resize X
+Element    Clock2_Background, 0, 892, 354, 354// from bottom right
+Element    Clock2_RotatingLines, 0, 1610, 356, 356 // from bottom right
+Element    Clock2_Background_Top, 0, 1250, 354, 354// from bottom right
+Element    Clock2_Rotating_Inner, 452, 0, 156, 156 // from bottom right -182, -185
+Element    Clock2_Play_Button, 610, 0, 156, 156 // from bottom right -182, -185
+Element    Clock2_Pause_Button, 770, 0, 156, 156 // from bottom right -182, -185
+Element    Clock2_Ticks_High, 452, 160, 186, 186 // from bottom right -284, -289
+
+Element    MiniMenu2_Background, 460, 1940, 458, 108 // from bottom right -841, -173
+Element    MiniMenu2_Button, 370, 1938, 83, 61 // from MiniMenu2_Background 44, 18
+Element    MiniMenu2_Button_Selected, 370, 1877, 83, 61 // shift to next 96
+Element    MiniMenu2_Icon_Diplomacy, 365, 1695, 46, 46 
+Element    MiniMenu2_Icon_Ownership, 365, 1740, 46, 46 
+Element    MiniMenu2_Icon_Radars, 365, 1785, 46, 46 
+Element    MiniMenu2_Icon_GlobeView, 365, 1830, 46, 46 
+Element    MiniMenu2_Icon_Diplomacy_Selected, 413, 1695, 46, 46 
+Element    MiniMenu2_Icon_Ownership_Selected, 413, 1740, 46, 46 
+Element    MiniMenu2_Icon_Radars_Selected, 413, 1785, 46, 46 
+Element    MiniMenu2_Icon_GlobeView_Selected, 413, 1830, 46, 46 
+
+Element    Main2_Research_Button, 455, 350, 106, 106 
+Element    Main2_Construction_Icon, 455, 456, 106, 106 
+Element    Main2_Research_Icon, 455, 562, 106, 106 
+Element    Main2_Research_Add, 455, 668, 106, 106 
+Element    Main2_StrikePlan_Icon, 465, 784, 86, 86 
+
+Element    Main2_Radiation_Sign, 640, 158, 118, 118 
+
+Element    Main2_SkewedWindow_Top_Left, 460, 1868, 26, 30 
+Element    Main2_SkewedWindow_Top_Center, 486, 1868, 298, 30 
+Element    Main2_SkewedWindow_Top_Right, 784, 1868, 26, 30 
+Element    Main2_SkewedWindow_Middle_Left, 460, 1898, 26, 32 
+Element    Main2_SkewedWindow_Middle_Center, 486, 1898, 298, 32 
+Element    Main2_SkewedWindow_Middle_Right, 784, 1898, 26, 32 
+Element    Main2_SkewedWindow_Bottom_Left, 460, 1930, 26, 10 
+Element    Main2_SkewedWindow_Bottom_Center, 486, 1930, 298, 10 
+Element    Main2_SkewedWindow_Bottom_Right, 784, 1930, 26, 10 
+
+Element    Main2_WindowTop_Left, 460, 1815, 20, 10 
+Element    Main2_WindowTop_Center, 480, 1815, 392, 10 
+Element    Main2_WindowTop_Right, 872, 1815, 20, 10 
+Element    Main2_WindowMiddle_Left, 460, 1825, 20, 32 
+Element    Main2_WindowMiddle_Center, 480, 1825, 392, 32 
+Element    Main2_WindowMiddle_Right, 872, 1825, 20, 32 
+Element    Main2_WindowBottom_Left, 460, 1857, 20, 10 
+Element    Main2_WindowBottom_Center, 480, 1857, 392, 10 
+Element    Main2_WindowBottom_Right, 872, 1857, 20, 10 
+
+Element    Main2_HeaderWindowTop_Left, 460, 1667, 20, 41 
+Element    Main2_HeaderWindowTop_Center, 480, 1667, 392, 41 
+Element    Main2_HeaderWindowTop_Right, 872, 1667, 20, 41 
+Element    Main2_HeaderWindowMiddle_Left, 460, 1708, 20, 32 
+Element    Main2_HeaderWindowMiddle_Center, 480, 1708, 392, 32 
+Element    Main2_HeaderWindowMiddle_Right, 872, 1708, 20, 32 
+Element    Main2_HeaderWindowBottom_Left, 460, 1740, 20, 10 
+Element    Main2_HeaderWindowBottom_Center, 480, 1740, 392, 10 
+Element    Main2_HeaderWindowBottom_Right, 872, 1740, 20, 10 
+
+Element    White_Circle, 512, 875, 64, 64
+Element    White_EmptyCircle, 512, 942, 64, 64
+Element    White_EmptyBoldCircle, 512, 1010, 64, 64
+
+Element    Main2_WhiteWindowTop_Left, 512, 875, 26, 26 
+Element    Main2_WhiteWindowTop_Center, 538, 875, 12, 26 
+Element    Main2_WhiteWindowTop_Right, 550, 875, 26, 26 
+Element    Main2_WhiteWindowMiddle_Left, 512, 901, 26, 12 
+Element    Main2_WhiteWindowMiddle_Center, 538, 901, 12, 12 
+Element    Main2_WhiteWindowMiddle_Right, 550, 901, 26, 12 
+Element    Main2_WhiteWindowBottom_Left, 512, 913, 26, 26 
+Element    Main2_WhiteWindowBottom_Center, 538, 913, 12, 26 
+Element    Main2_WhiteWindowBottom_Right, 550, 913, 26, 26 
+
+Element    Main2_WhiteEmptyWindowTop_Left, 512, 942, 26, 26 
+Element    Main2_WhiteEmptyWindowTop_Center, 538, 942, 12, 26 
+Element    Main2_WhiteEmptyWindowTop_Right, 550, 942, 26, 26 
+Element    Main2_WhiteEmptyWindowMiddle_Left, 512, 968, 26, 12 
+Element    Main2_WhiteEmptyWindowMiddle_Center, 538, 968, 12, 12 
+Element    Main2_WhiteEmptyWindowMiddle_Right, 550, 968, 26, 12 
+Element    Main2_WhiteEmptyWindowBottom_Left, 512, 980, 26, 26 
+Element    Main2_WhiteEmptyWindowBottom_Center, 538, 980, 12, 26 
+Element    Main2_WhiteEmptyWindowBottom_Right, 550, 980, 26, 26 
+
+Element    Main2_WhiteEmptyBoldWindowTop_Left, 512, 1010, 26, 26 
+Element    Main2_WhiteEmptyBoldWindowTop_Center, 538, 1010, 12, 26 
+Element    Main2_WhiteEmptyBoldWindowTop_Right, 550, 1010, 26, 26 
+Element    Main2_WhiteEmptyBoldWindowMiddle_Left, 512, 1036, 26, 12 
+Element    Main2_WhiteEmptyBoldWindowMiddle_Center, 538, 1036, 12, 12 
+Element    Main2_WhiteEmptyBoldWindowMiddle_Right, 550, 1036, 26, 12 
+Element    Main2_WhiteEmptyBoldWindowBottom_Left, 512, 1048, 26, 26 
+Element    Main2_WhiteEmptyBoldWindowBottom_Center, 538, 1048, 12, 26 
+Element    Main2_WhiteEmptyBoldWindowBottom_Right, 550, 1048, 26, 26 
+
+Element    Main2_Button_Left, 873, 1898, 12, 41 
+Element    Main2_Button_Center, 885, 1898, 17, 41 
+Element    Main2_Button_Right, 902, 1898, 12, 41 
+
+Element    Main2_Button_SelectedTop_Left, 895, 1815, 12, 12 
+Element    Main2_Button_SelectedTop_Center, 907, 1815, 17, 12 
+Element    Main2_Button_SelectedTop_Right, 924, 1815, 12, 12 
+Element    Main2_Button_SelectedMiddle_Left, 895, 1827, 12, 17 
+Element    Main2_Button_SelectedMiddle_Center, 907, 1827, 17, 17 
+Element    Main2_Button_SelectedMiddle_Right, 924, 1827, 12, 17 
+Element    Main2_Button_SelectedBottom_Left, 895, 1844, 12, 12 
+Element    Main2_Button_SelectedBottom_Center, 907, 1844, 17, 12 
+Element    Main2_Button_SelectedBottom_Right, 924, 1844, 12, 12 
+
+Element    Main2_Button_Selected_Left, 895, 1815, 12, 41 
+Element    Main2_Button_Selected_Center, 907, 1815, 17, 41 
+Element    Main2_Button_Selected_Right, 924, 1815, 12, 41 
+
+Element    Main2_Button_Disabled_Left, 895, 1770, 12, 41 
+Element    Main2_Button_Disabled_Center, 907, 1770, 17, 41 
+Element    Main2_Button_Disabled_Right, 924, 1770, 12, 41 
+
+Element    Main2_Button_Square, 360, 895, 48, 48 
+Element    Main2_Button48_Left, 360, 895, 8, 48 
+Element    Main2_Button48_Center, 368, 895, 32, 48 
+Element    Main2_Button48_Right, 400, 895, 8, 48 
+
+Element    Main2_Button_Square_Selected, 470, 1330, 48, 48 
+
+Element    Main2_Button_Square_Disabled, 470, 1270, 48, 48 
+Element    Main2_Button48_Disabled_Left, 470, 1270, 8, 48 
+Element    Main2_Button48_Disabled_Center, 478, 1270, 32, 48 
+Element    Main2_Button48_Disabled_Right, 510, 1270, 8, 48 
+
+Element    Main2_IconAddMissiles, 360, 945, 40, 40 
+Element    Main2_IconAddAircraft, 360, 985, 40, 40 
+Element    Main2_IconShiftUp, 360, 1025, 40, 40 
+Element    Main2_IconShiftDown, 360, 1065, 40, 40 
+Element    Main2_IconCancelOrders, 360, 1105, 40, 40 
+Element    Main2_IconMove, 360, 1145, 40, 40 
+Element    Main2_IconAttack, 360, 1185, 40, 40 
+Element    Main2_IconFollow, 360, 1225, 40, 40 
+Element    Main2_IconReturnToBase, 360, 1275, 40, 40 
+
+/*
+Element    Main2_RedIconAddMissiles, 360, 1275, 40, 40 
+Element    Main2_RedIconAddAircraft, 360, 1315, 40, 40 
+Element    Main2_RedIconShiftUp, 360, 1355, 40, 40 
+Element    Main2_RedIconShiftDown, 360, 1395, 40, 40 
+Element    Main2_RedIconCancelOrders, 360, 1435, 40, 40 
+Element    Main2_RedIconMove, 360, 1475, 40, 40 
+Element    Main2_RedIconAttack, 360, 1515, 40, 40 
+Element    Main2_RedIconFollow, 360, 1555, 40, 40 
+*/
+
+Element    Main2_CheckboxPressed, 810, 1909, 30, 30 
+Element    Main2_CheckboxEmpty, 841, 1909, 30, 30 
+Element    Main2_Checkbox2Pressed, 895, 1710, 29, 29 
+Element    Main2_Checkbox2Empty, 895, 1740, 29, 29 
+Element    Info_HealthFrame, 460, 1765, 162, 7 
+Element    Info_HealthBarStart, 460, 1755, 1, 7 
+Element    Info_HealthBarEnd, 621, 1755, 1, 7 
+Element    Info_HealthBarMiddle, 461, 1755, 160, 7 
+Element    Main2_WeaponSlotBackground, 410, 975, 54, 55 
+Element    Main2_WeaponSlotBackgroundHigh, 410, 1031, 54, 55 
+Element    Main2_NuclearWeaponSlotBackground, 410, 975, 54, 55 
+Element    Main2_NuclearWeaponSlotBackgroundHigh, 410, 1090, 54, 55 
+Element    Main2_DisabledWeaponSlotBackground, 410, 1150, 54, 55 
+
+Element    Main2_NuclearWindowTop_Left, 410, 1090, 5, 6 
+Element    Main2_NuclearWindowTop_Center, 415, 1090, 44, 6 
+Element    Main2_NuclearWindowTop_Right, 459, 1090, 5, 6 
+Element    Main2_NuclearWindowMiddle_Left, 410, 1096, 5, 43 
+Element    Main2_NuclearWindowMiddle_Center, 415, 1096, 44, 43 
+Element    Main2_NuclearWindowMiddle_Right, 459, 1096, 5, 43 
+Element    Main2_NuclearWindowBottom_Left, 410, 1139, 5, 6 
+Element    Main2_NuclearWindowBottom_Center, 415, 1139, 44, 6 
+Element    Main2_NuclearWindowBottom_Right, 459, 1139, 5, 6 
+
+Element    Main2_WeaponNumberTint_Left, 835, 1870, 3, 22 
+Element    Main2_WeaponNumberTint_Center, 838, 1870, 9, 22 
+Element    Main2_WeaponNumberTint_Right, 847, 1870, 3, 22 
+
+Element    Main2_WeaponNumberRedTint_Left, 897, 1870, 3, 22 
+Element    Main2_WeaponNumberRedTint_Center, 900, 1870, 9, 22 
+Element    Main2_WeaponNumberRedTint_Right, 909, 1870, 3, 22 
+
+Element    Main2_ConfigBackground, 470, 1090, 162, 55 
+Element    Main2_NuclearConfigBackground, 470, 1150, 162, 55 
+Element    Main2_DisabledConfigBackground, 470, 1210, 162, 55 
+Element    Main2_SmallConfigBackground, 410, 1210, 54, 55 
+Element    Main2_SmallNuclearConfigBackground, 410, 1270, 54, 55 
+Element    Main2_SmallDisabledConfigBackground, 410, 1330, 54, 55 
+
+Element    Main2_HostedSelected, 580, 470, 106, 106 
+Element    Main2_HostedBackground, 580, 580, 106, 106 
+Element    Main2_HostedDisabled, 580, 690, 106, 106 
+Element    Main2_HostedConfigDisabled, 580, 800, 87, 54 
+Element    Main2_HostedConfigNuclear, 580, 855, 87, 54 
+Element    Main2_HostedConfig, 580, 910, 87, 54 
+Element    Main2_HostedConfigHangar, 580, 965, 87, 54 
+
+Element    Main2_HostedNumberTint_Left, 851, 1870, 8, 27 
+Element    Main2_HostedNumberTint_Center, 851, 1870, 29, 27 
+Element    Main2_HostedNumberTint_Right, 851, 1870, 8, 27 
+
+Element    Main2_UnitWindow, 580, 350, 162, 119 
+Element    Main2_CurrentOrderArrow, 810, 1895, 10, 12 
+Element    Main2_WeaponOn, 825, 1895, 11, 11 
+Element    Main2_WeaponOff, 836, 1895, 11, 11 
+Element    Main2_NuclearIndicator, 810, 1870, 22, 22 
+Element    Main2_WeaponWeaponIcon, 692, 330, 16, 16 
+Element    Main2_WeaponRadarIcon, 708, 330, 16, 16 
+Element    Main2_WeaponStockpileIcon, 725, 330, 16, 16 
+Element    Info_DeleteUnitIcon, 690, 472, 48, 48
+
+Element    Main2_SeparatorLine, 460, 1811, 32, 3 
+
+Element    Main2_BackgroundHighlight, 460, 1775, 318, 35 
+Element    Main2_PureWhite, 857, 1903, 1, 1
+
+Element    Main2_Journal_Background_Top, 460, 1630, 430, 8 
+Element    Main2_Journal_Background_Center, 460, 1638, 430, 12 
+Element    Main2_Journal_Background_Bottom, 460, 1650, 430, 8 
+Element    Main2_Journal_Icon, 360, 1630, 37, 46 
+Element    Main2_Journal_Arrow_Left, 400, 1630, 12, 12 
+Element    Main2_Journal_Arrow_Right, 400, 1645, 12, 12 
+
+Element    Main2_Science_Background, 471, 1067, 14, 14 
+Element    Main2_Science_Column, 562, 350, 10, 256 
+Element    Main2_Science_Column_Div, 573, 350, 6, 256 
+Element    Main2_Science_Back_Top, 470, 1083, 10, 3 
+Element    Main2_Science_Name, 930, 2014, 512, 32 
+
+Element    Main2_SP_Controller_Science_Left, 580, 1020, 4, 20 
+Element    Main2_SP_Controller_Science_Center, 584, 1020, 28, 20 
+Element    Main2_SP_Controller_Production_Center, 615, 1020, 28, 20 
+Element    Main2_SP_Controller_Production_Right, 643, 1020, 4, 20 
+Element    Main2_SP_Controller_Slider, 688, 518, 54, 113 
+
+Element    CES_Close_Sign, 690, 635, 47, 47
+Element    CES_Bld_Delete_Sign, 410, 1390, 93, 93
+Element    CES_Bld_Add_Sign, 410, 1485, 96, 94
+Element    CES_Bld_Move_Up_Sign, 410, 1580, 60, 48
+
+Element    CES_Bld_Frame, 679, 1470, 152, 153
+Element    CES_Bld_Frame_Highlight, 520, 1470, 152, 153
+Element    CES_Bld_Frame_Disabled, 525, 1270, 152, 153
+
+Element    Main2_ProgressBar_Left, 945, 1965, 4, 20 
+Element    Main2_ProgressBar_Center, 949, 1965, 248, 20
+Element    Main2_ProgressBar_Right, 1197, 1965, 4, 20
+
+Element    Main2_ProgressBarFrame_Left, 945, 1988, 8, 20 
+Element    Main2_ProgressBarFrame_Center, 953, 1988, 240, 20
+Element    Main2_ProgressBarFrame_Right, 1193, 1988, 8, 20
+
+Element    Main2_ProgressBarFrame_H_Left, 945, 1940, 8, 20 
+Element    Main2_ProgressBarFrame_H_Center, 953, 1940, 240, 20
+Element    Main2_ProgressBarFrame_H_Right, 1193, 1940, 8, 20
+
+Element    Coverage_Jammers, 1913, 1482, 50, 42
+Element    Coverage_Missile, 1913, 2005, 50, 42
+Element    Coverage_LWRadar, 1913, 1960, 50, 42
+Element    Coverage_SWRadar, 1913, 1915, 50, 42
+Element    Coverage_Sonar, 1913, 1860, 50, 42
+Element    Coverage_SpaceRadar, 1913, 1814, 50, 43
+Element    Coverage_SatPaths, 1913, 1766, 50, 43
+Element    Coverage_SAM, 1913, 1714, 50, 43
+Element    Coverage_ABM, 1913, 1667, 50, 43
+Element    Coverage_MRBM, 1913, 1615, 50, 43
+Element    Coverage_ICBM, 1913, 1568, 50, 43
+Element    Coverage_Optics, 1913, 1525, 50, 43
+
+Element    Coverage_Jammers_Grey, 1973, 1482, 50, 42
+Element    Coverage_Missile_Grey, 1973, 2005, 50, 42
+Element    Coverage_LWRadar_Grey, 1973, 1960, 50, 42
+Element    Coverage_SWRadar_Grey, 1973, 1915, 50, 42
+Element    Coverage_Sonar_Grey, 1973, 1860, 50, 42
+Element    Coverage_SpaceRadar_Grey, 1973, 1814, 50, 43
+Element    Coverage_SatPaths_Grey, 1973, 1766, 50, 43
+Element    Coverage_SAM_Grey, 1973, 1714, 50, 43
+Element    Coverage_ABM_Grey, 1973, 1667, 50, 43
+Element    Coverage_MRBM_Grey, 1973, 1615, 50, 43
+Element    Coverage_ICBM_Grey, 1973, 1568, 50, 43
+Element    Coverage_Optics_Grey, 1973, 1525, 50, 43
+
+Element    Overlay_Production, 1840, 1984, 64, 64
+Element    Overlay_Science, 1840, 1920, 64, 64
+Element    Overlay_Espionage, 1840, 1854, 64, 64
+Element    Overlay_Territory, 1840, 1790, 64, 64
+Element    Overlay_Terrain, 1840, 1726, 64, 64
+Element    Stat_Population, 1840, 1662, 64, 64
+Element    Stat_NumRegions, 1840, 1598, 64, 64
+Element    Icon_Get, 1840, 1534, 64, 64
+Element    Icon_Give, 1840, 1470, 64, 64
+
+Element    Selection_Top_Left, 700, 1370, 30, 30
+Element    Selection_Top_Right, 775, 1370, 30, 30
+Element    Selection_Bottom_Left, 700, 1420, 30, 30
+Element    Selection_Bottom_Right, 775, 1420, 30, 30
+
+Element    SelectionAlt_Top_Left, 700, 1290, 30, 30
+Element    SelectionAlt_Top_Right, 775, 1290, 30, 30
+Element    SelectionAlt_Bottom_Left, 700, 1340, 30, 30
+Element    SelectionAlt_Bottom_Right, 775, 1340, 30, 30
+
+Element    Main2_Up_Arrow, 690, 690, 54, 38
+Element    Main2_DarkBlueBox, 470, 1066, 16, 16
+
+Element    Main2_DiplomacyFactionBackground, 1280, 2014, 120, 32
+Element    Main2_DiplomacyFactionBackgroundSelected, 1200, 2014, 120, 32
+
+Element    Info_CheckBoxFrame, 640, 1090, 38, 38
+Element    Info_CheckBoxFiller, 640, 1060, 27, 27
+Element    Info_CheckBoxRoundFrame, 640, 1210, 54, 54
+Element    Info_CheckBoxAccept, 640, 1170, 34, 34
+Element    Info_CheckBoxReject, 640, 1135, 34, 34
+Element    Info_CheckBoxMissing, 640, 1050, 34, 8
+
+Element    Green_Disable_Sign, 690, 740, 50, 50
+Element    Trash_Icon, 700, 1200, 64, 64
+
+/*
+Element    DEFCON1, 680, 800, 64, 64
+Element    DEFCON2, 680, 865, 64, 64
+Element    DEFCON3, 680, 930, 64, 64
+Element    DEFCON4, 680, 995, 64, 64
+Element    DEFCON5, 680, 1060, 64, 64
+*/
+
+Offset     Clock2_Rotating_Inner, -182, -185
+Offset     Clock2_Play_Button, -182, -185
+Offset     Clock2_Ticks_High, -284, -289
+
+Offset     MiniMenu2_Background, -841, -173
+Offset     MiniMenu2_Button, 44, 18
+Offset     MiniMenu2_Button_Selected, 96, 0
+Offset     MiniMenu2_Icon_Diplomacy, 9, 0 // from MiniMenu2_Icon_Diplomacy
+Offset     Main2_Research_Button, -227, -13 // from MiniMenu2_Background
+Offset     Main2_Construction_Icon, 124, 0 // from one to another
+
+Offset     Main2_Radiation_Sign, -64, 67 // real center
+
+Offset     Main2_WindowTop_Left, 32, -241 // command window offset from bottom left
+Offset     Main2_WindowBottom_Right, 432, 200 // standard command window size
+Offset     Main2_Button_Left, 50, 26 // from command window top left
+Offset     Main2_Button_Center, 186, 0 // standard size
+Offset     Main2_IconMove, 0, 52 // from one button to next button
+Offset     Main2_IconAttack, 34, 0 // standard dist from button to the center of icon
+Offset     Main2_Button48_Left, -85, 20 // from top right corner of the command window
+Offset     Main2_IconCancelOrders, -113, 50 // from cancel order button
+Offset     Main2_IconAddAircraft, 57, 55 // shift to other small buttons
+
+Offset    Info_HealthFrame, 0, 6 // Info_UnitFrame
+Offset 	  Info_HealthBarStart, 0, 0 //Info_HealthFrame start
+Offset    Main2_ConfigBackground, 0, 6 // Info_UnitFrame
+
+Offset    Main2_HostedBackground, 9, 88 //to center below hosted frame
+Offset    Main2_HostedConfig, 0, 15 //between hosted
+Offset    Main2_HostedConfigHangar, 0, 15 //between hosted
+
+Offset    Main2_WeaponWeaponIcon, 7, 0 // from unit icon window
+
+Offset    Main2_Journal_Background_Center, 994, 180 // real size
+Offset    Main2_Journal_Background_Top, 800, 0 // text size
+Offset    Main2_Journal_Background_Bottom, 0, 110// text offset from bottom
+Offset    Main2_Journal_Icon, -181, -71 // from Journal Background bottom
+Offset    Main2_Journal_Arrow_Left, -17, 17 // from Icon
+Offset    Main2_Journal_Arrow_Right, 42, 17 // from Icon
+
+Offset    Main2_Science_Name, 1640, 68 // real size
+
+Offset    Main2_SP_Controller_Slider, 22, 81 // real size
+Offset    Main2_SP_Controller_Science_Left, 16, 5 // touch zone start
