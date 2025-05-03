@@ -232,5 +232,8 @@ USE PREVIOUS "tech.txt"
   Name "U_Construction_Team_NAME"
   Description "U_Construction_Team_DESC"
   
+[TECHNOLOGY] "U_Capital"
+  Name "U_Capital_NAME"
+  Description "U_Capital_DESC"
 
 [END]

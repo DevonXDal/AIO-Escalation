@@ -595,7 +595,7 @@ Element  "path/launch STD", 0, 400, 256, 32
 Source "UI/UI_START_2.png"
 
 Element    Start_Menu_Back, 1016, 0, 6, 1024
-Element    Start_Name, 0, 0, 859, 280
+Element    Start_Name, 0, 0, 859, 400
 Element    Start_Name_Alt, 517, 0, 557, 145
 Element    Start_Left, 0, 0, 164, 562
 Element    Start_Right, 164, 0, 164, 562

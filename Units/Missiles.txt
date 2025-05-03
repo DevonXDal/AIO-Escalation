@@ -1,50 +1,6 @@
 USE PREVIOUS "units/Missiles.txt"
 
 
-[MISSILE] "Anti Ship Ballistic Missile Reentry Phase"
-  Tech "M_Anti_Ship_Ballistic_Missile"
-  RequiresPreciseTargeting No
-  CanBeUsedAgainst Naval
-  Icon "Units/Images/Missiles/ASBM.png"
-  Movie "Units/Images/Projectiles/ATGM.midx"
-  DrawSize 12
-  Sound 113 or 114 Volume 0.5
-  Explosion "Antiship3"
-  SingleAttack
-  Range 700
-  Speed 4500
-  CanBeIntercepted 0.2
-  Precision 1.0
-  CanBeLimited false
-
-  ImprovedBy "Stealth_Weapons" CanBeIntercepted 0.8
-  
-  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
-  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
-  
-  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
-  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
-  
-  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30      
-
-  AffectedBy Unit "BM_Accuracy_Damage_Penalty" Complex Damage
-	Case Self "Advanced_Inertial_Guidance" Multiply 1
-	Case Self "Improved_Inertial_Guidance" Multiply 0.9
-	Default Multiply 0.7
-
-
-  ImprovedBy "Improved_Inertial_Guidance_Buffer" Set Precision 0.6 //Higher accuracy than nuclear for balance
-  ImprovedBy "Advanced_Inertial_Guidance_Buffer" Set Precision 0.3 //Higher accuracy than nuclear for balance
-  ImprovedBy "MARV_Buffer" CanBeIntercepted 0.70
-  ImprovedBy "MARV_Buffer" Precision 0.5
-
-  
-  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
-
 [MISSILE] "Anti Ship Ballistic Missile"
   Tech "M_Anti_Ship_Ballistic_Missile"
   RequiresPreciseTargeting No
@@ -54,8 +10,6 @@ USE PREVIOUS "units/Missiles.txt"
   DrawSize 12
   Sound 113 or 114 Volume 0.5
   Explosion "Antiship3"
-  Ballistic
-  SingleAttack
   Elevation 250
   Range 1700
   Speed 3500
@@ -63,8 +17,6 @@ USE PREVIOUS "units/Missiles.txt"
   CanBeIntercepted 0.3
   Precision 1.0
   CanBeLimited false
-  Heads 1 "Anti Ship Ballistic Missile Reentry Phase"
-
   ImprovedBy "Stealth_Weapons" CanBeIntercepted 0.8
   
   AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
@@ -112,65 +64,6 @@ USE PREVIOUS "units/Missiles.txt"
   CanBeLimited false
 
   
-[MISSILE] "Coastal Gun"
-  Tech "M_Coastal_Gun_Old"
-  CanBeUsedAgainst Naval
-  Icon "Units/Images/Missiles/SHIP_GUN.png"
-  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
-  DrawSize 6
-  Sound 71 Volume 0.5
-  Explosion "big_bomb_old"
-  RequiresPreciseTargeting No
-  Range 500
-  Speed 800
-  CanBeIntercepted 0.4
-  Precision 0.8
-  CanBeLimited false
-
-  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
-  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20 
-
-  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
-
-  AffectedBy Unit "Collateral_Damage_Modifier" Damage 800000 ///Medium Munition Damage
-  
-  DisablingTech "M_Coastal_Railgun"
-  
-  Trajectory MaxPoints 2 MaxLength 0.25 WidthMult 0.80
-  
-  AIHint CounterValue 0 //Default Conventional
-  AIHint CounterForce 1 //Default Conventional  
-  
-  
-[MISSILE] "Coastal Railgun"
-  Tech "M_Coastal_Railgun"
-  CanBeUsedAgainst Naval
-  RequiresPreciseTargeting No
-  Icon "Units/Images/Missiles/RAILGUN.png"
-  Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
-  DrawSize 8
-  Sound 71 Volume 0.5
-  Explosion "Railgun_Hit"
-  Range 650
-  Speed 5000
-  CanBeIntercepted 0.05
-  Precision 0.70
-  CanBeLimited false
-  AffectedBy Unit "ABM_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "ABM_Mk3_Modifier" CanBeIntercepted 1.25
-  AffectedBy Unit "ABM_Mk4_Modifier" CanBeIntercepted 1.20
-
-  AffectedBy Unit "Terminal_BM_Defence_Mk2_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "Terminal_BM_Defence_Mk3_Modifier" CanBeIntercepted 1.30
-  AffectedBy Unit "Collateral_Damage_Modifier" Damage 2000 ///Heavy Munition Damage
-  Trajectory MaxPoints 5 MaxLength 50  
-  
-  
-  AIHint CounterValue 0
-  AIHint CounterForce 1
-
 [MISSILE] "ALCM" MODIFY
   ImprovedBy Unit "Weaponized_Spy_Planes" Set Speed 3000
   ImprovedBy Unit "Weaponized_Spy_Planes" Set Range 700
@@ -191,5 +84,376 @@ USE PREVIOUS "units/Missiles.txt"
   CanBeUsedAgainst "VIP"
 
 
-=======
+
+
+[MISSILE] "ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Co-Orbital ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Aircraft ASAT" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear ASAT" MODIFY
+  ProducedByAnotherUnit true
+
+
+
+[MISSILE] "Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Improved_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Advanced_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Engineered_Bioweapon_ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Bioweapon_MIRV" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x Bioweapon_MIRV" MODIFY
+  ProducedByAnotherUnit true
+
+
+
+[MISSILE] "ALCM-N" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion ALCM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear Cruise Missile" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion Cruise Missile" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear AAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion AAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear SAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion SAM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear ABM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion ABM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Nuclear Torpedo" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion Torpedo" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "SRBM-N" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Fusion SRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M_Fusion_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Cobalt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Salt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM_EMP" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_SLBM_EMP_Super" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x100kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x250kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1M_Fusion_SLBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Cobalt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Salt ALBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "10M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "25M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "50M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100M nuke_heavy" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M nuke_light" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Cobalt_Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "Salted_Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Light Cobalt Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt Light Salt Bomb" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "100kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "1M_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "5M_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Cobalt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_Salt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM_EMP" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "500kt_MRBM_EMP_Super" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x100kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x250kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1MT_MRBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (250kt Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (500kt Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (5M Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Fusion Light)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (500kt Heavy)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (5M Heavy)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (25M)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (50M Fusion)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Cobalt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Salt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Cobalt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Salt)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (1M Super EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "ICBM (10M Super EMP)" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "6x1M ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "12x500kt ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "12x1M ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x250kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "3x500kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x500kt Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+[MISSILE] "8x1M Light ICBM" MODIFY
+  ProducedByAnotherUnit true
+
+
+/*
+ASAT
+Co-Orbital ASAT
+Aircraft ASAT
+Nuclear ASAT
+
+
+
+Bioweapon_bomb
+Improved_Bioweapon_bomb
+Advanced_Bioweapon_bomb
+Engineered_Bioweapon_bomb
+
+Bioweapon_MRBM
+Improved_Bioweapon_MRBM
+Advanced_Bioweapon_MRBM
+Engineered_Bioweapon_MRBM
+
+Bioweapon_ICBM
+Improved_Bioweapon_ICBM
+Advanced_Bioweapon_ICBM
+Engineered_Bioweapon_ICBM
+
+Bioweapon_MIRV
+8x Bioweapon_MIRV
+
+
+
+ALCM-N
+Fusion ALCM
+
+Nuclear Cruise Missile
+Fusion Cruise Missile
+
+Nuclear AAM
+Fusion AAM
+
+Nuclear SAM
+Fusion SAM
+
+Nuclear ABM
+Fusion ABM
+
+Nuclear Torpedo
+Fusion Torpedo
+
+SRBM-N
+Fusion SRBM
+
+100kt_SLBM
+250kt_SLBM
+500kt_SLBM
+1M_SLBM
+5M_Fusion_SLBM
+500kt_Cobalt_SLBM
+500kt_Salt_SLBM
+500kt_SLBM_EMP
+500kt_SLBM_EMP_Super
+3x100kt_SLBM
+3x250kt_SLBM
+6x250kt_SLBM
+6x500kt_SLBM
+8x500kt_SLBM
+8x1M_Fusion_SLBM
+100kt ALBM
+250kt ALBM
+500kt ALBM
+1M ALBM
+5M ALBM
+500kt Cobalt ALBM
+500kt Salt ALBM
+
+500kt nuke_heavy
+10M nuke_heavy
+25M nuke_heavy
+50M nuke_heavy
+100M nuke_heavy
+100kt_nuke_light
+250kt_nuke_light
+500kt nuke_light
+1M nuke_light
+5M nuke_light
+
+Cobalt_Bomb
+Salted_Bomb
+500kt Light Cobalt Bomb
+500kt Light Salt Bomb
+
+100kt_MRBM
+250kt_MRBM
+500kt_MRBM
+1M_MRBM
+5M_MRBM
+500kt_Cobalt_MRBM
+500kt_Salt_MRBM
+500kt_MRBM_EMP
+500kt_MRBM_EMP_Super
+
+3x100kt_MRBM
+3x250kt_MRBM
+6x250kt_MRBM
+6x500kt_MRBM
+8x500kt_MRBM
+8x1MT_MRBM
+
+ICBM (250kt Light)
+ICBM (500kt Light)
+ICBM (1M Light)
+ICBM (5M Light)
+ICBM (10M Fusion Light)
+
+ICBM (500kt Heavy)
+ICBM (5M Heavy)
+ICBM (10M)
+ICBM (25M)
+ICBM (50M Fusion)
+ICBM (1M Cobalt)
+ICBM (1M Salt)
+ICBM (10M Cobalt)
+ICBM (10M Salt)
+ICBM (1M EMP)
+ICBM (1M Super EMP)
+ICBM (10M Super EMP)
+
+3x250kt ICBM
+3x500kt ICBM
+6x500kt ICBM
+6x1M ICBM
+12x500kt ICBM
+12x1M ICBM
+
+3x250kt Light ICBM
+3x500kt Light ICBM
+8x500kt Light ICBM
+8x1M Light ICBM
+*/
+
+
+
+
+
+
 [END]

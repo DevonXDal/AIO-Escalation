@@ -47,7 +47,7 @@ If you want to add features to this mod or change existing features you can help
     [*]Vehicle Factory
     [*]Nuclear Factory
     [*]Fixed Factory
-    [*]Construction Team 
+    [*]Construction Team
     [*]VIP
 [/list]
 [h3]Changes[/h3]
@@ -57,6 +57,7 @@ If you want to add features to this mod or change existing features you can help
     [*]Added Helicopters to cruisers and destroyers.
     [*]Added some new models for existing units in certain tech eras.
     [*]Combat engineneers can carry more units.
+    [*]Placing of any unit got overhauled.
 [/list]
 
 
