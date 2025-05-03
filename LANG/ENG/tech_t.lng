@@ -211,10 +211,6 @@ Increases the speed, survivability and fire rates of surface ships."
 "U_Fixed_Factory_DESC" LANG "A military factory that builds most non permanent structures such as SAMs, radars and much more.
 + Allows for the production of all fixed structures."
 
-"U_Capital_NAME" LANG "Capital"
-"U_Capital_DESC" LANG "The capital of your faction it cant be destroyed and is used as a starting point for your Construction Teams.
-+ Allows for the building of Construction Teams."
-
 "U_Construction_Team_NAME" LANG "Construction Team"
 "U_Construction_Team_DESC" LANG "A militarized construction crew often part of the military corps responsible for building and maintaining military facilities, infrastructure, and structures, both domestically and internationally, including everything from bases to missile silos.
 + Allows for the building of permanent structures."
