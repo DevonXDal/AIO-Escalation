@@ -638,7 +638,7 @@ ImprovedBy "Army_Mech_Mk2"
   AutoRepair 0.35
   OccupationRadius NULL
     AlwaysVisibleOnEnemyTerritory Yes
-  Speed 30
+  Speed 35
   TurnSpeed 4 // in angles per second
   Power 150
   SelfDestructTime 60
@@ -661,7 +661,6 @@ ImprovedBy "Army_Mech_Mk2"
 	TargetInPlanner Yes
 	AttackerInPlanner
 	
-  ImprovedBy "Army_Mech_Mk1" Set Speed 35
   ImprovedBy "Army_Mech_Mk2" Set Speed 40
   ImprovedBy "Army_Mech_Mk3" Set Speed 45
   ImprovedBy "Army_Mech_Mk4" Set Speed 50
@@ -1529,7 +1528,7 @@ ImprovedBy "Army_Mech_Mk2"
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage Principal DefaultOff
   Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
 
-  HangarMaxLoad 5
+  HangarMaxLoad 3
   CanCarryUnit "Fighter"
   CanCarryUnit "Attack"
   CanCarryUnit "Interceptor"

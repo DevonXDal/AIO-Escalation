@@ -208,6 +208,9 @@ USE PREVIOUS "tech.txt"
   Name "U_Army_Factory_NAME"
   Description "U_Army_Factory_DESC"
   
+[TECHNOLOGY] "Biological_Weapons" MODIFY
+	LeadsTo "U_Bio_Factory"
+
 [TECHNOLOGY] "U_Bio_Factory"
   Name "U_Bio_Factory_NAME"
   Description "U_Bio_Factory_DESC"
@@ -220,6 +223,9 @@ USE PREVIOUS "tech.txt"
   Name "U_Vehicle_Factory_NAME"
   Description "U_Vehicle_Factory_DESC"
   
+[TECHNOLOGY] "Nuclear_Fission" MODIFY
+  LeadsTo "U_Nuclear_Factory"
+
 [TECHNOLOGY] "U_Nuclear_Factory"
   Name "U_Nuclear_Factory_NAME"
   Description "U_Nuclear_Factory_DESC"
