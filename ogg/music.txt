@@ -1,0 +1,11 @@
+"Open" = "Game Opening.ogg"
+"Peace" = "The Inevitable.ogg"
+"Tension" = "Boots On The Ground.ogg", "Divisions Ready.ogg"
+"Conventional Invasion" = "The Beast.ogg", "The Seige.ogg"
+"Huge Invasion" = "Regional Conflict.ogg", "Superior Entity.ogg"
+"Nuclear Sting" = "Beginning Of The End.ogg"
+"Battered Peace" = "Drones.ogg", "Rearmed.ogg"
+"Victory Sting" = "Victory.ogg"
+"Apocalyptic Violence" = "WW3.ogg", "Tribulation.ogg"
+"End Game" = "End.ogg"
+

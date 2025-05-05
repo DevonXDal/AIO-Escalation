@@ -208,6 +208,9 @@ USE PREVIOUS "tech.txt"
   Name "U_Army_Factory_NAME"
   Description "U_Army_Factory_DESC"
   
+[TECHNOLOGY] "Biological_Weapons" MODIFY
+	LeadsTo "U_Bio_Factory"
+
 [TECHNOLOGY] "U_Bio_Factory"
   Name "U_Bio_Factory_NAME"
   Description "U_Bio_Factory_DESC"
@@ -220,6 +223,9 @@ USE PREVIOUS "tech.txt"
   Name "U_Vehicle_Factory_NAME"
   Description "U_Vehicle_Factory_DESC"
   
+[TECHNOLOGY] "Nuclear_Fission" MODIFY
+  LeadsTo "U_Nuclear_Factory"
+
 [TECHNOLOGY] "U_Nuclear_Factory"
   Name "U_Nuclear_Factory_NAME"
   Description "U_Nuclear_Factory_DESC"
@@ -232,8 +238,59 @@ USE PREVIOUS "tech.txt"
   Name "U_Construction_Team_NAME"
   Description "U_Construction_Team_DESC"
   
-[TECHNOLOGY] "U_Capital"
-  Name "U_Capital_NAME"
-  Description "U_Capital_DESC"
+
+[TECHNOLOGY] "U_War_Factory"
+ Name "U_War_Factory_NAME"
+ Description "U_War_Factory_DESC" 
+ 
+ [TECHNOLOGY] "M_Anti_Weapons"
+ Name "M_Anti_Weapons_NAME"
+ Description "M_Anti_Weapons_DESC" 
+
+[TECHNOLOGY] "M_Artillery"
+  Name "M_Artillery_NAME"
+  Description "M_Artillery_DESC"
+
+[TECHNOLOGY] "M_Light_Weapons"
+  Name "M_Light_Weapons_NAME"
+  Description "M_Light_Weapons_DESC"
+
+[TECHNOLOGY] "U_National"
+ Name "U_National_NAME"
+ Description "U_National_DESC"
+
+[TECHNOLOGY] "U_Artillery"
+ Name "U_Artillery_NAME"
+ Description "U_Artillery_DESC" 
+
+[TECHNOLOGY] "U_Armored"
+ Name "U_Armored_NAME"
+ Description "U_Armored_DESC"
+
+[TECHNOLOGY] "U_Mobile"
+ Name "U_Mobile_NAME"
+ Description "U_Mobile_DESC"
+
+[TECHNOLOGY] "U_Entrenched"
+ Name "U_Entrenched_NAME"
+ Description "U_Entrenched_DESC"
+
+[TECHNOLOGY] "U_Static"
+ Name "U_Static_NAME"
+ Description "U_Static_DESC"
+
+[TECHNOLOGY] "U_Mechanized"
+ Name "U_Mechanized_NAME"
+ Description "U_Mechanized_DESC"
+
+[TECHNOLOGY] "U_Military_Outpost" 
+  Name "U_Military_Outpost_NAME"
+  Description "U_Military_Outpost_DESC"
+
+ [TECHNOLOGY] "M_Land_Force_ARMY" MODIFY
+ Name "M_Land_Force_ARMY_NAME"
+ Description "M_Land_Force_ARMY_DESC" 
+
+
 
 [END]

@@ -1,0 +1,8 @@
+USE PREVIOUS "lang/Eng/loading.lng"
+"Infantry divisions are very slow, be sure to send them into mobile mode when redeploying from the ground. Be advised, IFVs will be easier to destroy so be sure to get your troops out and combat ready!"
+
+"Battles between ground forces will cause collateral damage to nearby cities. Expect to see heavy civilian casualties if your armies end up fighting near or in a city, and plan your defence accordingly!"
+
+"Protect your artillery divisions! If used correctly they can be the force that keeps your enemy at bay or lay down heavy fire from afar while your units gain control."
+
+END

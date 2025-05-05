@@ -211,12 +211,238 @@ Increases the speed, survivability and fire rates of surface ships."
 "U_Fixed_Factory_DESC" LANG "A military factory that builds most non permanent structures such as SAMs, radars and much more.
 + Allows for the production of all fixed structures."
 
-"U_Capital_NAME" LANG "Capital"
-"U_Capital_DESC" LANG "The capital of your faction it cant be destroyed and is used as a starting point for your Construction Teams.
-+ Allows for the building of Construction Teams."
-
 "U_Construction_Team_NAME" LANG "Construction Team"
 "U_Construction_Team_DESC" LANG "A militarized construction crew often part of the military corps responsible for building and maintaining military facilities, infrastructure, and structures, both domestically and internationally, including everything from bases to missile silos.
 + Allows for the building of permanent structures."
+
+"U_War_Factory_NAME" LANG "Army Factory"
+"U_War_Factory_DESC" LANG "A military factory, that produces military equipment, weapons, and other essential goods needed for warfare.
++ Produces army ground forces"
+
+"U_Military_Outpost_NAME" LANG "Military Outpost"
+"U_Military_Outpost_DESC" LANG "A smaller overwatch unit stationed away from the main military force to act as a first line of defense against surprise attacks and unauthorized intrusions. Outposts are often located in remote or sparsely populated areas, such as on a frontier, political boundary, or in another country. checkpoints can be used to detect and engage enemy covert units that get too close.
++ Great defence against covert units.
++ Relatively inexpensive.
++ Effective against covert units and ground forces.
+- Easily found and destroyed by other means."
+
+"U_National_NAME" LANG "National Guard"
+"U_National_DESC" LANG "Primary combat reserve and first emergency response force. Seamlessly providing enduring, rotational, and joint task Forces to fight in the nation's wars and defend the homeland. Can fight alongside other combat forces however, these units strictly put the nation's best interest first and remain as the defensive fighting force. If they have to choose between losing military assets or themselves in order to protect the sovereign, they will not hesitate to ensure security.   
++ Quick Mobilization.
++ Relatively inexpensive.
++ Strongest border protection.
+- Can not cross into unoccupied territory.
+- Easily destoryed."
+
+"Counter_Rocket_Artillery_Mortar_DESC" LANG "Originally, CIWS was relegated to warships as that was where it was the most practical. Warships are often threatened by cruise and anti-ship missiles, which are relatively large and easy to hit, and warships also innately have the tracking systems, electrical power and other provisions needed to operate CIWS effectively. However, CIWS would eventually expand beyond naval use, as advancements in targeting and radar systems would make it possible to intercept smaller targets like incoming rockets, artillery and mortars. As it also became more logistically feasible to set up the system on land to defend forward military bases, the concept of Counter Rocket Artillery and Mortar, or C-RAM, was born.
+Adds C-RAM to large airbases, armored divisions, army bases, combat engineers and FOBs. C-RAM shoots down incoming projectiles similarly to a CIWS system."
+
+"Chemical_Weapons_DESC" LANG "A chemical weapon is a device that uses chemical agents in order to injure, kill or otherwise incapacitate living targets. Most early chemical weapons were asphyxiants or blister agents, which worked by inflaming the target's skin, eyes and airways, producing an intense burning sensation and quite often, suffocation from lung damage. Chemical weapons can be used as an area denial weapon by contaminating a target area and adversely affecting anyone who enters without proper protection. Chemical weapons have been used as early as WWI, mostly in the form of repurposed and modified commercial chemicals, but only a few nations have seriously pursued a chemical warfare program since then.
+Chemical weapons can't physically destroy military hardware, but they can be deployed against ground forces, army bases, combat engineers, forward operating bases, and of course, civilians, to inflict heavy casualties. Units exposed to chemical weapons will be slowed down signficantly. However, chemical weapons are difficult to control and will inflict considerable collateral damage, often on the unit deploying them. They are best used against massed enemy groups and away from friendly cities to quickly dispatch enemy forces.
+Unlocks basic chemical weapons, which do not have a production cost."
+"Weapon_Modernization_DESC" LANG "Prior to the Cold War, most mainstay infantry weapons were either submachine guns or rifles chambered for full-power cartridges. Although neither type of weapon would be completely phased out from military use, they were both largely supplanted by assault rifles. Assault rifles fire intermediate cartridges and are generally relatively accurate and controllable when fired in full-auto, making them versatile weapons suitable for most situations. Concurrently, while most nations transitioned to assault rifles, their other weapons, like tank guns and artillery, would also enjoy incremental improvements, namely a trend towards standardized calibers and more powerful ammunition.
+Transitioning to more effective weapons will allow ground and special forces to damage and destroy their targets faster. Don't forget to invest in better optics if you want to spot and attack your enemies from farther away!
+Increases the damage done by armies and units with light weapons."
+
+"Improved_Army_Weapons_DESC" LANG "The first generation of assault rifles had shortcomings like weight and reliability issues and had room for ergonomic improvements. Upgraded models of these weapons would quickly arrive, while a concurrent demand for other forms of firepower would lead to the introduction of relatively new or recently refined weapon concepts, like intermediate-caliber light machine guns, DMRs and grenade launchers. The increased presence of armoured vehicles on the battlefield due to widespread mechanization incentivized the creation of better anti-tank weapons, while the advent of helicopters spurred the development of shoulder-fired anti-air missiles. Naturally, other weapon systems like artillery and tank shells would also benefit from improved accuracy and improved ammunition.
+Increases the damage done by units with light weapons.
+Partially unlocks MANPADS, which are short-range shoulder-fired AA missiles used by a variety of units that carry light weapons."
+
+"Enhanced_Army_Weapons_DESC" LANG "The basic design of an assault rifle is difficult to improve upon, as the concept of the weapon itself is extremely sound, and the roles that it cannot fulfill are generally performed by weapons with vastly different characteristics. As a result, while some light weapons tried adopting radical new ideas like bullpup configurations, many simply became more ergonomic, modular and adaptable to their surroundings. Shortened weapons suitable for close-quarter battle like carbines and the first Personal Defence Weapon concepts would also start to garner interest as well. Heavier munitions like anti-tank missiles and artillery would leverage ever-increasing computing power, leading to the invention of the first top-attack missiles and smart artillery shells, making the battlefield a much more dangerous place for slow or exposed targets.
+Increases the damage done by units with light weapons."
+
+"Advanced_Army_Weapons_DESC" LANG "The increasing prevalence of body armour and the tendency for infantry to often find themselves in tight, cover-filled urban settings on the modern battlefield led to a demand for further weapon improvements. The demand was for weapons that were more capable of defeating modern body armour, while also more maneuverable in close quarters. As a result, armour piercing ammunition started to see widespread use, even being used in certain weapons as small as SMGs and handguns, and interest was renewed in heavier, larger caliber ammunition for service rifles. Carbines, bullpups and collapsible and folding stocks would become ubiquitous, while the realm of anti-tank weapons would see an increasing demand for armour-penetrating power, leading to smaller rifles and bigger rockets. The precision of other tactical ground-based weapons would also continue to improve, making them even more dangerous than before.
+Increases the damage done by units with light weapons."
+
+"Experimental_Army_Weapons_DESC" LANG "Advancements in weapons development and the application of prototypical concepts has the potential to make armies even more dangerous on the battlefield. New, relatively untested innovations such as caseless ammunition and smart airburst grenades have the potential to give armies even more of an edge. And of course, the cumulative improvements to other weapons systems and the widespread adoption of smart guidance systems, potentially on systems as small as man-portable mortars, will continue to make fighting even more perilous, to the point where the difference between life and near-instant death may just be a matter of being in the open for just a few seconds too long.
+Increases the damage done by units with light weapons."
+
+"Army_Mech_Mk2_NAME" LANG "Early Vehicle Concepts"
+"Army_Mech_Mk2_DESC" LANG "Military vehicles evolved significantly with a focus on increased mobility, improved firepower, and better protection, particularly through the development of early Infantry Fighting Vehicles (IFVs), the Main battle tank concept, and self propelled guns with vast improvments to howitzers.
+Improves the speed, health and damage of armies and combat engineers.
+Increases the speed of army support elements."
+
+"Army_Mech_Mk3_NAME" LANG "Modernized Combat Vehicles"
+"Army_Mech_Mk3_DESC" LANG "Early vehicle concepts were a considerable step forward, but some designs were relatively unrefined and each had its own shortcomings, such as poor protection and mobility, inaccurate anti-infantry weapons and ineffective or absent anti-tank capabilities. The next generation of military vehicles would collectively learn from these mistakes once developed, produced, and fielded. Autocannons and wire-guided anti-tank missiles would become ubiquitous on IFVs, and although a greater emphasis would be put on speed and maneuverability, most of the designs would become heavier and better armored as well. Concurrently, tanks already being transitioned to heavier and better protected designs, with larger main guns being the new standard for advanced features like autoloaders, gas turbine engines and improved gun stabilizers setting the stage for faster, smarter and deadlier armored warfare.
+Improves the speed, health and damage of ground forces and combat engineers.
+Increases the speed of support elements."
+
+"Army_Mech_Mk4_NAME" LANG "Armoured Mid-life Upgrades"
+"Army_Mech_Mk4_DESC" LANG "For a period, modern vehicle designs as a whole were generally sophisticated enough that heavily upgrading them was preferable to designing completely new replacements. However, the gap in ability between the old and new models would prove to be substantial after years of cumulative upgrades. Vehicles would enter a new era of evolution with a major focus on improved electronics, communication systems, sensors, and computing power, leading to enhanced situational awareness, better battlefield networking, and increased mobility, largely driven by advancements in civilian technology applied to military vehicles.
+Improves the speed, health and damage of ground forces and combat engineers.
+Increases the speed of support elements."
+
+"Army_Mech_Mk5_NAME" LANG "Novel Fighting Vehicle Concepts"
+"Army_Mech_Mk5_DESC" LANG "Newly emerging technologies have the potential to increase the mobility, survivability and lethality of military vehicles. Novel developments such as active thermal stealth, advanced reactive armours, next-generation hard-kill protection systems and optional manning have the potential to make armoured vehicles and their crews much harder to hit or kill. These new measures don't rely on heavy plating, allowing all modern vehicles to be lighter, more mobile and more effective, while also granting them more weight to dedicate to heavier weapons, which are also trending. These improvements will give ground forces a huge amount of operational flexibility and allow them to attack with extreme speed and ferocity, allowing them to quickly overwhelm and overpower their enemies.
+Improves the speed, health and damage of ground forces and combat engineers.
+Increases the speed of support elements."
+
+
+"Portable Electronic Optics_DESC" LANG "In any battle, knowing exactly where the enemy is can mean the difference between a decisive victory and a crushing defeat. Effective ground reconnaissance allows armies and special forces to identify their targets from farther away and engage them earlier. Early night-vision and infrared imagers were big, cumbersome and had limited effectiveness, but they provided an advantage in finding enemy targets at night and in poor conditions. By sizing down these devices to a more manageable size and improving their performance, ground reconnaissance teams can use them to find enemy forces and precisely determine their positions. This increases the situational awareness of their parent unit and allows for more consistent and effective long-range attacks.
+Increases the detection ranges for spec-ops, military outposts and ground forces.
+Increases the range of light weapons,and slightly increases their accuracy and damage.
+Increases the attack range for army bases and entrenched armies, and slightly increases their accuracy and damage.
+ground forces will be better at finding covert units."
+
+
+"Early_Tactical_Optics_DESC" LANG "Increasing the performance of night-vision and thermal optics even further allows them to be directly integrated with fire control systems on vehicles and used in head-mounted goggles and weapon sights by infantry. Rather than being relegated to reconnaissance teams in bulky packages that were difficult to work with, these new optics were less intrusive to use and could be used more frequently and ubiquitously, with many examples being light and ergonomic enough to be used in live combat. Though at this stage, there were still performance gaps to be filled, like battery life, performance and weight, there was a clear advantage to be had in being able to acquire a target and then immediately engage it.
+Increases the detection ranges for spec-ops, military outposts and ground forces.
+Increases the range of light weapons,and slightly increases their accuracy and damage.
+Increases the attack range for army bases and entrenched armies, and slightly increases their accuracy and damage.
+Ground Forces will be better at finding covert units."
+
+"Advanced_Tactical_Optics_DESC" LANG "The latest next-generation night-vision and thermal optics allow infantry to operate in near total darkness as if it were only a minor inconvenience, and increasing the reliability and energy efficiency of these systems only makes them more accessible. Concurrently, making thermal and night-vision sights standard on armoured vehicles greatly increases their situational awareness, and by extension, their ability to strike first and perform effectively in combat. Thanks to a combination of electronic weapon sights, laser designators and infrared illuminators, ground forces will be able to spot, mark, relay and engage targets with ease from further away, even with obstructions like thick vegetation or harsh weather obscuring their targets.
+Increases the detection ranges for spec-ops, military outposts and ground forces.
+Increases the range of light weapons,and slightly increases their accuracy and damage.
+Increases the attack range for army bases and entrenched armies, and slightly increases their accuracy and damage.
+Ground forces will be better at finding covert units."
+
+
+"Light_Unmanned_Vehicles_DESC" LANG "The reconnaissance capabilities of a fighting unit can be expanded even further with the use of expendable unmanned vehicles. Using small, remote-controlled robots and throwable UAVs equipped with surveillance equipment, reconnaissance teams will be able to locate and identify enemy activity from more vantage points while also exposing themselves to less danger. The use of these devices will serve to extend the range and efficiency of reconnaissance patrols, as well as provide real-time information on enemy positions in battle.
+Increases the detection ranges for spec-ops, military outposts and ground forces.
+Increases the range of light weapons,and slightly increases their accuracy and damage.
+Increases the attack range for army bases and entrenched armies, and slightly increases their accuracy and damage.
+Ground forces will be better at finding covert units."
+
+"Robotic_Infantry_DESC" LANG "With the widespread use of drones and unmanned vehicles, the next logical thing to unman was people themselves. Armed, remote-controlled robots can supplement (but not replace) the ranks of regular infantry as expendable soldiers that can be tasked to do things that would be far too risky for humans to willingly or safely carry out. Having a sacrificable scapegoat for high-risk action is especially valuable for long-range patrols, where the risk of death or capture is especially high, as well as in regular combat situations. Integrated sensors and data fusion can also serve as a force-multiplier for those fighting alongside the robots, as they’ll be able to provide targeting data as they actively fight alongside their unit.
+Increases the detection ranges for spec-ops, military outposts and ground forces.
+Increases the range of light weapons,and slightly increases their accuracy and damage.
+Increases the attack range for army bases and entrenched armies, and slightly increases their accuracy and damage.
+Ground forces will be better at finding covert units."
+
+"Improved_Basic_Protection_DESC" LANG "There are few places on Earth more hostile to human life than a live battlefield. Explosions, shrapnel and gunfire all pose a serious threat, and before the advent of effective body armour, they would invariably spell serious injury or death. Some rudimentary protection, like improved helmets and flak jackets, can help protect soldiers from low-speed projectiles like shrapnel and grenade fragments, but will fail against more potent threats like gunfire. Improving their other equipment will allow soldiers to operate more effectively, and reduce their casualties simply by merit of making them better prepared to fight and more able to avoid being killed or injured.
+Increases the survivability of spec-ops, military outposts and ground forces."
+
+"Basic_Body_Armor_DESC" LANG "Certain high-strength fibers such as kevlar can be woven into body armour, which absorbs and dissipates the energy from incoming projectiles, providing a degree of protection against threats like low-power firearms and fragments from explosions. Although basic woven body armour is generally ineffective against rifle rounds, the additional protection from small-caliber weapons, shrapnel and blunt-force trauma will increase the survivability of infantry in the field and reduce the numbers and severity of casualties they take.
+Increases the survivability of spec-ops, military outposts and ground forces."
+
+"Improved_Body_Armor_DESC" LANG "In order to stop high-powered threats like rifle ammunition, body armour needs a high-hardness component to absorb most of the initial impact and prevent penetration. Early metals were incapable of stopping gunfire while still being light enough to be practical to wear. However, improvements in metallurgy and armour design have resulted in hard ballistic armour inserts that are capable of surviving hits from full-power rifle ammunition with limited (but not zero) injury to the wearer. Now, gunshots that may have once meant certain death for the recipient, might be reduced to minor injuries like bruising or cracked ribs.
+Increases the survivability of spec-ops, military outposts and ground forces."
+
+"Advanced_Body_Armor_DESC" LANG "Liquid armour is a concept in which a non-Newtonian fluid, which rapidly thickens under sudden strain such as from an impact, is integrated into body armour. The idea is that when a bullet or fragment hits the liquid armour, it will rapidly thicken into a solid or near-solid, and absorb and dissipate the impact before rapidly returning to its normal liquid state. When used in conjunction with woven and hard armour, it provides additional protection while also being relatively lightweight and flexible.
+Increases the survivability of spec-ops, military outposts and ground forces."
+
+"Experimental_Body_Armor_DESC" LANG "Powered armour is a concept in which the wearer is effectively enclosed in a powered protective suit or exoskeleton, which allows them to rely on the power of the suit itself rather than their own physical strength. This allows the wearer to potentially carry much more equipment, move faster, jump higher, and lift loads far heavier than they could unassisted. Extremely strong nanomaterials with tensile strength much higher than steel, have the potential to serve as the basis for extremely strong body armour, to the point where the limiting factor would be how much blunt trauma the wearer could absorb, rather than if the armour could be penetrated. A combination of the two could allow a person to greatly outperform an unequipped counterpart and withstand far more punishment. Although such a system would be extremely expensive, if it could be mass-produced, it would dramatically improve the capabilities of an infantry soldier.
+Increases the survivability of spec-ops, military outposts and ground forces."
+
+
+"CBRN_Defence_1_DESC" LANG "CBRN stands for Chemical Biological Radiological Nuclear, and CBRN defence seeks to miminize the effects of all of the above. Although chemical defence measures existed as early as 1915, the advent of nuclear weapons had serious implications for armies. Because armies tend to be large, dispersed and often in cover, the raw destructive power of nuclear weapons is often inefficient against army formations as a whole (yet undeniably effective against localized targets) but the threat of nuclear fallout creates new challenges. Although there’s no surviving a nuclear explosion at close range, personnel who aren't killed instantly can protect themselves from radiation, using respirators and specially-designed clothing which minimizes their exposure to hazardous materials and is easily decontaminated, very similarly to existing chemical defense equipment, but with emphasis on resisting radiation and offering full-body coverage.
+Better CBRN Defense equipment will reduce the damage your ground forces, combat engineers and army bases will sustain from nuclear, chemical and biological weapons, but not their survivability against conventional weapons. Invest in this technology if you're expecting chemical or bioweapon attacks, or if your strategy for nuclear war relies on armies!"
+
+"CBRN_Defence_2_DESC" LANG "As the threat posed by weapons of mass destruction proliferated, increased emphasis would be placed on giving armies the means to survive them. CBRN Defence equipment would improve in its ergonomics and protective properties, but an increased emphasis would be placed on early warning and mitigating the effects of CBRN weapons directly. Chemical detection paper, geiger counters and antidotes for common chemical weapons would become standard-issue in environments where exposure to CBRN threats was expected. Improved systems for decontaminating CBRN-exposed equipment and personnel would also be developed. These improvements would serve to increase the military's capacity to survive and continue operating in CBRN environments, but of course, weapons of mass destruction are never forgiving, and heavy casualties were still expected.
+Increases the ability of ground forces, combat engineers, and army bases to withstand nuclear, chemical and biological weapons."
+
+"CBRN_Defence_3_DESC" LANG "Increasingly potent chemical agents and the growing risk posed by tactical nuclear weapons, especially neutron bombs, spurred further developments in CBRN defence technology and doctrine. With the extreme lethality of modern nerve agents and the innate danger of radiation, the best defence is often to avoid or minimize exposure to the threats in the first place. Specialized CBRN reconnaissance vehicles would be developed specifically for the task of identifying chemical agents and evaluating the risk posed by radiological threats, which by extension would allow other units to be more prepared. Improved decontamination systems and ad-hoc CBRN specialist units would also aid in minimizing casualties in the event of a WMD strike, and also extend the longevity of CBRN equipment in a contaminated environment and ensure replacements were available.
+Further increases the ability of ground forces, combat engineers, and army bases to withstand nuclear, chemical and biological weapons."
+
+"CBRN_Defence_4_DESC" LANG "Throughout its evolution, all CBRN equipment has had a similar job and performed it in the same way. In essence, stopping the wearer from being exposed to radiation or toxic agents. CBRN defence revolves around exposure prevention, treatment, early warning and decontamination, and the methods for all of them have followed the same principles, only to be improved upon mainly with advances in chemistry and material science. Making CBRN gear more ergonomic, longer-lived and better-protecting will make it even more effective at preventing casualties, while the use of drones and unmanned ground vehicles in tandem with advanced detecting equipment will make it even easier to detect and identify CBRN threats, so they can be addressed even more efficiently.
+Further increases the ability of ground forces, combat engineers, and army bases to withstand nuclear, chemical and biological weapons."
+
+"M_Nuclear_Artillery_DESC" LANG "Heavy artillery that utilizes low-yield tactical nuclear warheads. Used by artillery divisions to dramatically increase their destructive potential when in combat.
+Releases nuclear fallout, but has no production cost."
+
+"M_Fusion_Artillery_DESC" LANG "Heavy artillery that utilizes low-yield tactical pure-fusion warheads. Used by artillery divisions to dramatically increase their destructive potential when in combat.
+Releases trace amounts of fallout, and has no production cost."
+
+"M_Artillery_NAME" LANG "Howitzer"
+"M_Artillery_DESC" LANG "The howitzer is an artillery weapon that falls between a cannon and a mortar."
+
+"M_Light_Weapons_NAME" LANG "Mounted Light Weapons"
+"M_Light_Weapons_DESC" LANG "Larger, more powerful weapons that are typically too cumbersome to be easily carried by a single person, often requiring a mount or vehicle for effective use, and usually have greater firepower or destructive capacity compared to light weapons and small arms."
+
+
+"U_Army_Division_NAME" LANG "Mechanized Division"
+"U_Army_Division_DESC" LANG "An infantry division consists chiefly of foot soldiers, but also includes support units from other combat arms. Infantry divisions are the main fighting force of an army and are equipped to fight in all types of circumstances and terrain. An infantry division can conduct major tactical operations and sustained battlefield operations.These units can travel over land and destroy any enemy units they come across. They can also move into enemy cities and occupy them, denying the enemy access to their economic output. Capturing cities also allows you to annex enemy territory. Sending a division to an army base will load it onto a transport plane so it can be deployed by air. Infantry can also board landing ships and deploy by sea.
+A historically commonplace yet reprehensible use for infantry is to deliberately target civilians and destroy cities. Commanding a division to attack a city (rather than just moving to it) will cause the unit to start razing the city to the ground.
++ Can occupy enemy cities.
++ Hard to destroy.
++ Can slowly raze cities.
+- Instantly visible when in enemy territory.
+- Very slow.
+- Only effective against ground assets.
+- May turn you into a war criminal."
+
+
+"M_Nuclear_Artillery_DESC" LANG "Heavy artillery that utilizes low-yield tactical nuclear warheads. Used by artillery divisions to dramatically increase their destructive potential when in combat.
+Releases nuclear fallout, but has no production cost."
+
+"M_Fusion_Artillery_DESC" LANG "Heavy artillery that utilizes low-yield tactical pure-fusion warheads. Used by artillery divisions to dramatically increase their destructive potential when in combat.
+Releases trace amounts of fallout, and has no production cost."
+
+"U_Entrenched_NAME" LANG "Mechanized Entrenched"
+"U_Entrenched_DESC" LANG "An entrenched vehicle refers to a vehicle equipped with a special device, often called a self-entrenching device, which allows it to dig a small trench around itself, providing added protection from enemy fire by creating a concealed, fortified position on the battlefield essentially, the vehicle can entrench itself for better cover and concealment. 
++ Harder to destroy.
++ Further Range.
++ Heavier Firepower .
+- Takes long to entrench.
+- Stationary
+- Vulnerable against aircraft.
+- May turn you into a war criminal."
+
+"U_Mobile_NAME" LANG "Armored On March"
+"U_Mobile_DESC" LANG "Armored transport."
+
+"U_Static_NAME" LANG "Battery Mode"
+"U_Static_DESC" LANG " Unit being positioned and prepared to fire, essentially getting ready to engage a target by aligning their guns and setting up to shoot simultaneously as a unit it signifies the battery is fully operational and ready to fire upon command. 
++ Heavy Firepower.
++ Further Range.
+- Takes long to entrench.
+- Stationary
+- Vulnerable against aircraft.
+- May turn you into a war criminal."
+
+"U_Artillery_NAME" LANG "Artillery Division"
+"U_Artillery_DESC" LANG "An artillery division is a military unit specifically dedicated to providing concentrated firepower support to other combat formations such as infantry or armored divisions by utilizing a large collection of artillery pieces, essentially acting as the primary fire support element for a larger military force. These units can travel over land and destroy any enemy units they come across. Artillery vehicles can also board landing ships and deploy by sea.
+Commanding a division to attack a city will cause the unit to start razing the city to the ground.
++ Can support from further distances.
++ Can equip severe weaponry such as chemical, nuclear, and fusion artillery.
++ High Power.
+- Must be stationary to fire.
+- Instantly visible when in enemy territory.
+- Easy to destroy
+- Only effective against ground assets."
+
+"U_Armored_NAME" LANG "Armored Division"
+"U_Armored_DESC" LANG "Combining multiple armored brigades with other support units to form a combat division. These units are the main offensive fighting force used to break through fortifications and pave the way for friendly ground forces. Sending a division to an army base will load it onto a transport plane so it can be deployed by air. Armored vehicles can also board landing ships and deploy by sea.
+Commanding a division to attack a city (rather than just moving to it) will cause the unit to start razing the city to the ground.
++ Heavy firepower.
++ Hard to destroy.
++ Can slowly raze cities.
+- Expensive.
+- Very slow.
+- Only effective against ground assets.
+- No occupational radius"
+
+"U_Mechanized_NAME" LANG "Mechanized Infantry Division"
+"U_Mechanized_DESC" LANG "A mechanized infantry division is a military unit that uses armored vehicles to transport infantry into battle. Mechanized infantry divisions are equipped with fire support weapons, such as machine guns and anti-tank missiles.
++ Can occupy enemy cities.
++ Hard to destroy.
++ Can slowly raze cities.
+- Instantly visible when in enemy territory.
+- Very slow.
+- Only effective against ground assets.
+- May turn you into a war criminal."
+
+"M_Land_Force_ARMY_NAME" LANG "Armored Warfare"
+"M_Land_Force_ARMY_DESC" LANG "Larger, more powerful impact weapons such as turrets carrying armor piercing or high explosive HEAT rounds."
+
+
+"U_Army_Base_DESC" LANG "Army bases house aircraft and helicopters that can be used to transport ground forces and spec-ops teams long distances. Moving one of those units into an army base will make it board an aircraft, which can then fly to its destination and deploy the unit.
++ Hosts air transports for ground forces.
++ Hosts helicopters for spec-ops teams.
++ Defends against nearby enemy ground units.
++ Resistant to conventional weapons.
+- Immobile and easy to hit."
+
+
+"M_Small_Arms_NAME" LANG "Small Arms"
+"M_Small_Arms_DESC" LANG "Small man-portable firearms. Useful for personal defence against small units. Also indicative of the combat capabilities of a larger fighting unit like an army."
+
+"U_Landing_Ship_DESC" LANG "A transport ship used to carry military forces overseas. Armies can board transport ships by moving to them when they are close together and near the coastline. They can then be carried to an enemy coastline and deployed on land.
++ Can carry armies and combat engineers.
++ More survivable than air transports.
+- Extremely vulnerable without an escort.
+- No offensive weapons."
+
 
 END

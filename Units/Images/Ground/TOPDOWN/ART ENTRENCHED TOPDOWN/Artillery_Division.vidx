@@ -1,0 +1,12 @@
+Default "units/images/ground/topdown/art topdown/Figure 0.midx"
+Variant 0 /*North America*/ "units/images/ground/topdown/art topdown/Figure 0.midx"
+Variant 1 /*Central America*/ "units/images/ground/topdown/art topdown/Figure 4.midx"
+Variant 2 /*South America*/ "units/images/ground/topdown/art topdown/Figure 4.midx"
+Variant 3 /*Europe*/ "units/images/ground/topdown/art topdown/Figure 3.midx"
+Variant 4 /*Russia*/ "units/images/ground/topdown/art topdown/Figure 4.midx"
+Variant 5 /*East Asia*/ "units/images/ground/topdown/art topdown/Figure 5.midx"
+Variant 6 /*Asia Pacific*/ "units/images/ground/topdown/art topdown/Figure 6.midx"
+Variant 7 /*Middle East-North Africa*/ "units/images/ground/topdown/art topdown/Figure 0.midx"
+Variant 8 /*Central/South Asia*/ "units/images/ground/topdown/art topdown/Figure 4.midx"
+Variant 9 /*Sub-Saharan Africa*/ "units/images/ground/topdown/art topdown/Figure 0.midx" 
+
