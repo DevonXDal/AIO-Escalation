@@ -515,6 +515,8 @@ ImprovedBy "Army_Mech_Mk2"
     Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 5.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 5.png"  
   	Movie Model "Units/Images/Ground/Mech on March/On March 5.fbx" 
 	}
+  
+  delete config "Army Weapons"
   delete config "Infantry Weapons"
   Config "Infantry Weapons" Default
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
@@ -587,6 +589,7 @@ ImprovedBy "Army_Mech_Mk2"
   	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 5.fbx" 
 	}
 
+  delete config "Army Weapons"
   delete config "Infantry Weapons"
   Config "Infantry Weapons" Default
   Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage
@@ -2423,7 +2426,7 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "SSGN"
   Produces "LCAC"
   Produces "Naval_Monitoring_Station"
-  ProductionPlacementRadius 100
+  ProductionPlacementRadius 200
   Power 1000
   SelfDestructTime 30
   Radar "STD Vision"
