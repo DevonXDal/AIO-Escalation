@@ -657,7 +657,7 @@ ImprovedBy "Army_Mech_Mk2"
 
   Modifier "BM_Accuracy_Damage_Penalty"
   
-    ProducedByAnotherUnit true
+  ProducedByAnotherUnit true
 	TargetInPlanner Yes
 	AttackerInPlanner
 	
@@ -2336,6 +2336,7 @@ ImprovedBy "Army_Mech_Mk2"
   Power 10
   Produces "Armored_Division"
   Produces "Artillery_Division"
+  ProductionPlacementRadius 100
   SelfDestructTime 30
   Radar "STD Vision"
   ProductionCost 24
@@ -2348,8 +2349,9 @@ ImprovedBy "Army_Mech_Mk2"
 	Weapon "Light SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
 	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
 	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
-
   Radar "STD Vision"
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 [UNIT] "Bio_Factory"
   Tech "U_Bio_Factory"
   Movie "Units/Images/Icons/Ground/Bio_Factory.midx"
@@ -2382,8 +2384,8 @@ ImprovedBy "Army_Mech_Mk2"
   SelfDestructTime 30
   Radar "STD Vision"
   ProductionCost 24
-  //MaxNumberOnMap 1
-	//MaxNumberToOrder 1
+  MaxNumberOnMap 1
+	MaxNumberToOrder 1
   TargetInPlanner Yes
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
 	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
@@ -2392,6 +2394,8 @@ ImprovedBy "Army_Mech_Mk2"
 	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
 	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
   Radar "STD Vision"
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 
 [UNIT] "Navy_Factory"
   Tech "U_Navy_Factory"
@@ -2435,6 +2439,8 @@ ImprovedBy "Army_Mech_Mk2"
 	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
   Radar "STD Vision"
   Radar "STD Short Wave"
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 
 
 [UNIT] "Vehicle_Factory"
@@ -2467,6 +2473,8 @@ ImprovedBy "Army_Mech_Mk2"
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 
 
 [UNIT] "Nuclear_Factory"
@@ -2579,8 +2587,8 @@ ImprovedBy "Army_Mech_Mk2"
   SelfDestructTime 30
   Radar "STD Vision"
   ProductionCost 24
-  //MaxNumberOnMap 1
-	//MaxNumberToOrder 1
+  MaxNumberOnMap 1
+	MaxNumberToOrder 1
   TargetInPlanner Yes
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
 	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
@@ -2590,6 +2598,8 @@ ImprovedBy "Army_Mech_Mk2"
 	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
   Radar "STD Vision"
   Radar "STD Short Wave"
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 
 [UNIT] "Fixed_Factory"
   Tech "U_Fixed_Factory"
@@ -2626,6 +2636,7 @@ ImprovedBy "Army_Mech_Mk2"
 	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
 	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
   Radar "STD Vision"
+	Modifier "BM_Accuracy_Damage_Penalty" 
 
 [UNIT] "Construction_Team"
   Tech "U_Construction_Team"
@@ -2727,6 +2738,8 @@ ImprovedBy "Army_Mech_Mk2"
   Radar "STD Vision"
   CanAccessGlobalStorage No  
 
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  
 
 [UNIT] "Intelligence_Center" MODIFY
   Produces "Heavy_Bomb_Truck"
