@@ -2333,7 +2333,7 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Building"
   ProducedByAnotherUnit true
-  Power 2
+  Power 10
   Produces "Armored_Division"
   Produces "Artillery_Division"
   SelfDestructTime 30
@@ -2342,7 +2342,14 @@ ImprovedBy "Army_Mech_Mk2"
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
+	Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+	Weapon "Light SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
 
+  Radar "STD Vision"
 [UNIT] "Bio_Factory"
   Tech "U_Bio_Factory"
   Movie "Units/Images/Icons/Ground/Bio_Factory.midx"
@@ -2355,7 +2362,7 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Building"
   ProducedByAnotherUnit true
-  Power 2
+  Power 100
 
   Produces "Bioweapon_bomb"
   Produces "Improved_Bioweapon_bomb"
@@ -2378,6 +2385,13 @@ ImprovedBy "Army_Mech_Mk2"
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
+	Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+	Weapon "Light SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Radar "STD Vision"
 
 [UNIT] "Navy_Factory"
   Tech "U_Navy_Factory"
@@ -2406,13 +2420,22 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "LCAC"
   Produces "Naval_Monitoring_Station"
   ProductionPlacementRadius 100
-  Power 2
+  Power 1000
   SelfDestructTime 30
   Radar "STD Vision"
   ProductionCost 24
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
+	Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+	Weapon "SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Radar "STD Vision"
+  Radar "STD Short Wave"
+
 
 [UNIT] "Vehicle_Factory"
   Tech "U_Vehicle_Factory"
@@ -2426,7 +2449,7 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Building"
   ProducedByAnotherUnit true
-  Power 2
+  Power 10
   Produces "AA_Site_Old"
   Produces "Coastal"
   Produces "MOBILE_SAM"
@@ -2559,6 +2582,14 @@ ImprovedBy "Army_Mech_Mk2"
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
+	Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+	Weapon "SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Radar "STD Vision"
+  Radar "STD Short Wave"
 
 [UNIT] "Fixed_Factory"
   Tech "U_Fixed_Factory"
@@ -2572,7 +2603,7 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Building"
   ProducedByAnotherUnit true
-  Power 2
+  Power 10
   Produces "Security_Checkpoint"
   Produces "Forward_Operating_Base"
   Produces "Improvised_Airbase"
@@ -2588,6 +2619,13 @@ ImprovedBy "Army_Mech_Mk2"
   //MaxNumberOnMap 1
 	//MaxNumberToOrder 1
   TargetInPlanner Yes
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+	Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff DefaultOff
+	Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+	Weapon "Light SAM" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "Light SAM MD" 20000 Launch 1 Time 150 AutoEngage DefaultOff
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Radar "STD Vision"
 
 [UNIT] "Construction_Team"
   Tech "U_Construction_Team"

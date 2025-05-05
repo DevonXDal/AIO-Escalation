@@ -3,12 +3,10 @@ ICBM MOD "JTO | Joint Task Overhaul"
 Version "1.0"
 
 Description "[b]THIS IS A PRERELEASE VERSION THAT LACKS TWEAKS, UNITS, TECHS, DEFCON, ETC. PLEASE GIVE ANOTHER TWO WEEKS FOR THE FULL RELEASE.
-Version 0.6 will be released approximately one week from this release. It will include many new units, DEFCON, and related systems.
-Version 1.0 will likely include campaigns, optimizations, tweaks, etc.[/b]
 
 [h1]Escalated: AIO Additions[/h1]
 
-Introducing "Escalated", a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
+Introducing "Joint Task Overhaul" ("JTO"), a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
 All features this mod adds are designed to have as high quality as the base game.
 
 
@@ -47,6 +45,9 @@ If you want to add features to this mod or change existing features you can help
     [*]Vehicle Factory
     [*]Nuclear Factory
     [*]Fixed Factory
+    [*]Infantry Division
+    [*]Armored Division
+    [*]Artillery Division
     [*]Construction Team
     [*]VIP
 [/list]
