@@ -15,13 +15,13 @@ USE PREVIOUS "units/units.txt"
   Size 0.25
   Type Ground
   Class "UC_Ground"
-  
+  ProducedByAnotherUnit true
   AutoRepair 0.5
   Power 50
   SelfDestructTime 5
-    Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage Principal
-    Weapon "Body Armor" 1
-    Weapon "Optics" 1
+  Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage Principal
+  Weapon "Body Armor" 1
+  Weapon "Optics" 1
   Radar "STD Vision"
   Radar "Reconnaissance"
   Modifier "Static_Defender_Bonus"
@@ -30,11 +30,11 @@ USE PREVIOUS "units/units.txt"
 
 	Modifier "BM_Accuracy_Damage_Penalty" 
   
-  ImprovedBy "Improved_Basic_Protection" Power 0.5
-  ImprovedBy "Basic_Body_Armor" Power 0.5
-  ImprovedBy "Improved_Body_Armor" Power 1.0
-  ImprovedBy "Advanced_Body_Armor" Power 1.0
-  ImprovedBy "Experimental_Body_Armor" Power 1.0
+  ImprovedBy "Improved_Basic_Protection" Power 1.2
+  ImprovedBy "Basic_Body_Armor" Power 1.2
+  ImprovedBy "Improved_Body_Armor" Power 1.2
+  ImprovedBy "Advanced_Body_Armor" Power 1.2
+  ImprovedBy "Experimental_Body_Armor" Power 1.2
 
 
 [UNIT] "Artillery_Division"
@@ -56,7 +56,7 @@ USE PREVIOUS "units/units.txt"
   AutoRepair 0.0
   OccupationRadius NULL
   AlwaysVisibleOnEnemyTerritory Yes
-  Speed 30
+  Speed 25
   TurnSpeed 4 // in angles per second
   Power 50
   SelfDestructTime 60
@@ -75,24 +75,26 @@ USE PREVIOUS "units/units.txt"
 
   Modifier "BM_Accuracy_Damage_Penalty"
   
-    ProducedByAnotherUnit true
+  ProducedByAnotherUnit true
 	TargetInPlanner Yes
 	AttackerInPlanner
   
-  ImprovedBy "Army_Mech_Mk2" Speed 1.3333
-  ImprovedBy "Army_Mech_Mk3" Speed 1.125
-  ImprovedBy "Army_Mech_Mk4" Speed 1.222
-  ImprovedBy "Army_Mech_Mk5" Speed 1.09
-  ImprovedBy "Army_Mech_Mk2" Power 0.20
-  ImprovedBy "Army_Mech_Mk3" Power 0.30
-  ImprovedBy "Army_Mech_Mk4" Power 0.40
-  ImprovedBy "Army_Mech_Mk5" Power 0.50
- 
-  ImprovedBy "Improved_Basic_Protection" Power 1.15
-  ImprovedBy "Basic_Body_Armor" Power 1.15
-  ImprovedBy "Improved_Body_Armor" Power 1.15
-  ImprovedBy "Advanced_Body_Armor" Power 1.15
-  ImprovedBy "Experimental_Body_Armor" Power 1.15
+  ImprovedBy "Improved_Basic_Protection" Speed 1.2
+  ImprovedBy "Basic_Body_Armor" Speed 1.166
+  ImprovedBy "Improved_Body_Armor" Speed 1.143
+  ImprovedBy "Advanced_Body_Armor" Speed 1.125
+  ImprovedBy "Experimental_Body_Armor" Speed 1.1
+
+  ImprovedBy "Improved_Basic_Protection" Power 1.1
+  ImprovedBy "Basic_Body_Armor" Power 1.1
+  ImprovedBy "Improved_Body_Armor" Power 1.1
+  ImprovedBy "Advanced_Body_Armor" Power 1.1
+  ImprovedBy "Experimental_Body_Armor" Power 1.1
+
+  ImprovedBy "Army_Mech_Mk2" Power 1.1
+  ImprovedBy "Army_Mech_Mk3" Power 1.1
+  ImprovedBy "Army_Mech_Mk4" Power 1.1
+  ImprovedBy "Army_Mech_Mk5" Power 1.1
 
 ///Leopard 1
 	ImprovedBy "Army_Mech_Mk2"
@@ -260,7 +262,7 @@ USE PREVIOUS "units/units.txt"
   
   DestructionMessage GroundMobile
   Speed 0
-  Power 175
+  Power 120
   AutoRepair 0.70
 
 
@@ -326,7 +328,7 @@ USE PREVIOUS "units/units.txt"
   ImprovedBy "Army_Mech_Mk3" Set Speed 70
   ImprovedBy "Army_Mech_Mk4" Set Speed 90
   ImprovedBy "Army_Mech_Mk5" Set Speed 105
-  Power 100
+  Power 40
   
  delete config "army weapons"
   
@@ -352,7 +354,7 @@ USE PREVIOUS "units/units.txt"
   OccupationRadius 35
   Speed 35
   TurnSpeed 4
-  Power 60
+  Power 80
 
   Reset ImprovedBy
   Reset Weapon
@@ -370,16 +372,23 @@ USE PREVIOUS "units/units.txt"
   Modifier "BM_Accuracy_Damage_Penalty"
 	TargetInPlanner Yes
 	AttackerInPlanner
-  ImprovedBy "Improved_Basic_Protection" Set Speed 40
-  ImprovedBy "Basic_Body_Armor" Set Speed 45
-  ImprovedBy "Improved_Body_Armor" Set Speed 50
-  ImprovedBy "Advanced_Body_Armor" Set Speed 55
-  ImprovedBy "Experimental_Body_Armor" Set Speed 60
-  ImprovedBy "Improved_Basic_Protection" Add Power 50
-  ImprovedBy "Basic_Body_Armor" Add Power 50
-  ImprovedBy "Improved_Body_Armor" Add Power 50
-  ImprovedBy "Advanced_Body_Armor" Add Power 50
-  ImprovedBy "Experimental_Body_Armor" Add Power 50
+  ImprovedBy "Improved_Basic_Protection" Speed 1.14286
+  ImprovedBy "Basic_Body_Armor" Speed 1.125
+  ImprovedBy "Improved_Body_Armor" Speed 1.1111
+  ImprovedBy "Advanced_Body_Armor" Speed 1.1
+  ImprovedBy "Experimental_Body_Armor" Speed 1.091
+
+  ImprovedBy "Improved_Basic_Protection" Power 1.2
+  ImprovedBy "Basic_Body_Armor" Power 1.2
+  ImprovedBy "Improved_Body_Armor" Power 1.2
+  ImprovedBy "Advanced_Body_Armor" Power 1.2
+  ImprovedBy "Experimental_Body_Armor" Power 1.2
+  ImprovedBy "Army_Mech_Mk2" Power 1.1
+  ImprovedBy "Army_Mech_Mk3" Power 1.1
+  ImprovedBy "Army_Mech_Mk4" Power 1.1
+  ImprovedBy "Army_Mech_Mk5" Power 1.1
+
+
 
 ///Leopard 1
 	ImprovedBy "Army_Mech_Mk2"
@@ -410,14 +419,14 @@ USE PREVIOUS "units/units.txt"
 	} 
 
 
+  delete config "Army Weapons"
+  Config "Infantry Weapons" Default
   Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage LaunchPoint 1
   Weapon "Body Armor" 1 LaunchPoint -1
   Weapon "Optics" 1 LaunchPoint -1
   Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
   Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
-  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  Airway Launch 3 Time 180 // in seconds in 1x time
+
 
 
 
@@ -506,16 +515,12 @@ ImprovedBy "Army_Mech_Mk2"
     Movie "Units/Images/Ground/Topdown/Mech on March Topdown/Figure 5.midx" Icon "Units/Images/Icons/Ground/Mech on March/Figure 5.png"  
   	Movie Model "Units/Images/Ground/Mech on March/On March 5.fbx" 
 	}
-  delete config "Army Weapons"
-  //Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage Principal
-  //Weapon "Land Forces Mobile" 20000 Launch 1 Time 100 AutoEngage Principal // need this for the AI
-  delete Weapon "Small Arms"
-  //Weapon "Body Armor" 1 LaunchPoint -1
-  //Weapon "Optics" 1 LaunchPoint -1
+  delete config "Infantry Weapons"
+  Config "Infantry Weapons" Default
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
+  Weapon "Body Armor" 1 LaunchPoint -1
+  Weapon "Optics" 1 LaunchPoint -1
   Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
-  //Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
-  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
 
   ModelDrawSize 55
 
@@ -541,7 +546,7 @@ ImprovedBy "Army_Mech_Mk2"
   ImprovedBy "Army_Mech_Mk3" Set Speed 70
   ImprovedBy "Army_Mech_Mk4" Set Speed 90
   ImprovedBy "Army_Mech_Mk5" Set Speed 105
-  Power 100
+  Power 50
   AutoRepair 0.0
 
 [UNIT] "Army_Entrenched" MODIFY
@@ -551,6 +556,7 @@ ImprovedBy "Army_Mech_Mk2"
   Movie "Units/Images/Ground/mid-level/Figure 1.midx"
   Model "Units/Images/Ground/Mech Entrenched/Entrenched 1.midx"    
   FixedRotationAngle true
+  Speed 0
   
   delete ImprovedBy ALL Movie // - deletes all Movie modifiers, so we can assign the new ones
 
@@ -581,19 +587,21 @@ ImprovedBy "Army_Mech_Mk2"
   	Movie Model "Units/Images/Ground/Mech Entrenched/Entrenched 5.fbx" 
 	}
 
- Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage
- Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
-  	Weapon "Body Armor" 1 LaunchPoint -1
-  	Weapon "Optics" 1 LaunchPoint -1
+  delete config "Infantry Weapons"
+  Config "Infantry Weapons" Default
+  Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
+  Weapon "Body Armor" 1 LaunchPoint -1
+  Weapon "Optics" 1 LaunchPoint -1
   Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
   Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
-  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  Airway Launch 3 Time 180 // in seconds in 1x time
-delete config "Army Weapons"
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage LaunchPoint -1 DefaultOff
+  
+
   
   ModelDrawSize 45
 
+  Power 100
   HighState "Army_Division"
   LowState NULL
   TimeToLowState 5 
@@ -653,25 +661,21 @@ delete config "Army Weapons"
 	TargetInPlanner Yes
 	AttackerInPlanner
 	
-  ImprovedBy "Improved_Basic_Protection" Add Speed 5
-  ImprovedBy "Basic_Body_Armor" Add Speed 3
-  ImprovedBy "Improved_Body_Armor" Add Speed 2
-  ImprovedBy "Advanced_Body_Armor" Add Speed 3
-  ImprovedBy "Experimental_Body_Armor" Add Speed 7
-  ImprovedBy "Improved_Basic_Protection" Add Power 50
-  ImprovedBy "Basic_Body_Armor" Add Power 50
-  ImprovedBy "Improved_Body_Armor" Add Power 50
-  ImprovedBy "Advanced_Body_Armor" Add Power 50
-  ImprovedBy "Experimental_Body_Armor" Add Power 50
-  
-  ImprovedBy "Army_Mech_Mk2" Speed 1.3333
-  ImprovedBy "Army_Mech_Mk3" Speed 1.125
-  ImprovedBy "Army_Mech_Mk4" Speed 1.222
-  ImprovedBy "Army_Mech_Mk5" Speed 1.09
-  ImprovedBy "Army_Mech_Mk2" Power 1.2
-  ImprovedBy "Army_Mech_Mk3" Power 1.2
-  ImprovedBy "Army_Mech_Mk4" Power 1.2
-  ImprovedBy "Army_Mech_Mk5" Power 1.2
+  ImprovedBy "Army_Mech_Mk1" Set Speed 35
+  ImprovedBy "Army_Mech_Mk2" Set Speed 40
+  ImprovedBy "Army_Mech_Mk3" Set Speed 45
+  ImprovedBy "Army_Mech_Mk4" Set Speed 50
+  ImprovedBy "Army_Mech_Mk5" Set Speed 60
+
+  ImprovedBy "Improved_Basic_Protection" Power 1.05
+  ImprovedBy "Basic_Body_Armor" Power 1.05
+  ImprovedBy "Improved_Body_Armor" Power 1.05
+  ImprovedBy "Advanced_Body_Armor" Power 1.05
+  ImprovedBy "Experimental_Body_Armor" Power 1.05
+  ImprovedBy "Army_Mech_Mk2" Power 1.3
+  ImprovedBy "Army_Mech_Mk3" Power 1.3
+  ImprovedBy "Army_Mech_Mk4" Power 1.3
+  ImprovedBy "Army_Mech_Mk5" Power 1.3
   
 
 ///Leopard 1
@@ -703,17 +707,16 @@ delete config "Army Weapons"
 	} 
 
 
+  Config "Army Weapons" Default
   Weapon "Land Forces" 20000 Launch 1 Time 10 AutoEngage Principal
   Weapon "Small Arms" 20000 Launch 1 Time 5 AutoEngage
   Weapon "Body Armor" 1 LaunchPoint -1
   Weapon "Optics" 1 LaunchPoint -1
   Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  LaunchPoint -1 DefaultOff //Mostly for show
-  //Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage LaunchPoint -1 DefaultOff
-  //Weapon "AA Laser" 20000 Launch 1 Time 12 AutoEngage  LaunchPoint -1 DefaultOff
   Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1 DefaultOff
-  //Weapon "Light SAM" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  //Weapon "Light SAM MD" 20000 Launch 1 Time 120 AutoEngage LaunchPoint -1 DefaultOff
-  
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage LaunchPoint -1 DefaultOff
+  Weapon "Light SAM" 1 Launch 1 Time 200 DefaultOff
+  Weapon "Light SAM MD" 1 Launch 1 Time 200 DefaultOff
 
 /////CBRN stuff/////
  Modifier "CBRN_Defence_0"
@@ -811,6 +814,7 @@ delete config "Army Weapons"
   	Movie Model "Units/Images/Ground/Armored on March/Figure 5.fbx" 
 	}
   
+  delete config "Army Weapons"
 
   HighState NULL
   LowState "Armored_Division"
@@ -832,14 +836,10 @@ delete config "Army Weapons"
   ImprovedBy "Army_Mech_Mk3" Set Speed 70
   ImprovedBy "Army_Mech_Mk4" Set Speed 90
   ImprovedBy "Army_Mech_Mk5" Set Speed 105
-  Power 100
+  Power 60
 	  
   AutoRepair 0.0
   
-  delete weapon "Land Forces"
-  delete weapon "Massacre Civilians"
-  delete weapon "Optics"
-  delete weapon "Body Armor"
   
 
 [UNIT] "Maritime_Patrol_Aircraft"
@@ -2609,7 +2609,6 @@ delete config "Army Weapons"
   Speed 20
   TurnSpeed 4 // in angles per second
   Power 20
-  SelfDestructTime 40
   Produces "Army_Factory"
   Produces "Bio_Factory"
   Produces "Navy_Factory"
@@ -2620,7 +2619,6 @@ delete config "Army Weapons"
   Produces "Maintenance_Airbase"
   Produces "Naval_Airbase"
   Produces "Army_Base"
-  Produces "Army_Division"
   Produces "Airport"
   Produces "Specialized_Airport"
   Produces "Tactical_Airbase"
@@ -2636,11 +2634,12 @@ delete config "Army Weapons"
   Produces "Space_radar"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
-  Proudces "Military_Outpost"
+  Produces "Military_Outpost"
   ProductionPlacementRadius 70
-
+  SelfDestructTime 40
   AlwaysVisibleOnEnemyTerritory Yes
   CanCrossBorderDuringPeaceTime No
+  ProductionCost 12
   
   ////Same bonuses as army divisions
   //Modifier "ECM_Bonus_1"
@@ -2689,7 +2688,6 @@ delete config "Army Weapons"
 	AffectedBy Explosion "BiologicalX" Speed 0.75
 
   Radar "STD Vision"
-  ProductionCost 12
   CanAccessGlobalStorage No  
 
 

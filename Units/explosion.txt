@@ -13,5 +13,14 @@ USE PREVIOUS "units/explosion.txt"
   TimeTotal 0.9
   RandomAngle true
   
+[EXPLOSION] "Gunfire_Mounted"
+  Movie "Images/Explosion/big_1.midx"
+  Damage 0.35
+  Range 3
+  FullEffectRange 1.5
+  DrawSize 1.5
+  TimeGrowing 0.5
+  TimeTotal 0.5 
+  RandomAngle true
 
 [END]

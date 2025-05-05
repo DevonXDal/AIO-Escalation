@@ -91,47 +91,44 @@ USE PREVIOUS "units/Missile_defs.txt"
   
   [MISSILE] "Mounted Light Weapons"
   Tech "M_Light_Weapons"
-  Type "Default"
+  Type "Army"
   Icon "Units/Images/Missiles/Light_Weapons_1.png"
   Movie "Units/Images/Projectiles/Tracer_Heavy.midx"
   DrawSize 3
   Sound 66 or 223 Volume 0.8
-  Explosion "Gunfire_Plane"
-  Range 120
+  Explosion "Gunfire_Mounted"
+  Range 50
   MaxElevation 10
-  Speed 3500
-  Precision 0.6
+  Speed 2000
+  Precision 0.3
   
   /////XM16 or AKM or FN FAL
-  ImprovedBy "Weapon_Modernization" Damage 1.15
-  ImprovedBy "Weapon_Modernization" Set Speed 3700
+  ImprovedBy "Weapon_Modernization" Damage 1.2
   ImprovedBy "Weapon_Modernization" Movie Image "Units/Images/Missiles/Light_Weapons_2.png"
 
 ////M16A2 or AK-74 or Galil
-  ImprovedBy "Improved_Army_Weapons" Damage 1.15
-  ImprovedBy "Improved_Army_Weapons" Set Speed 3900
+  ImprovedBy "Improved_Army_Weapons" Damage 1.2
   ImprovedBy "Improved_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_3.png"
 
 ///M16A4 or AN-94 or Howa Type 89
-  ImprovedBy "Enhanced_Army_Weapons" Damage 1.15
-  ImprovedBy "Enhanced_Army_Weapons" Set Speed 4200
+  ImprovedBy "Enhanced_Army_Weapons" Damage 1.2
   ImprovedBy "Enhanced_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_4.png"
 
 ///M4A1 or AK-12 or HK416 W/optics
-  ImprovedBy "Advanced_Army_Weapons" Damage 1.15
-  ImprovedBy "Advanced_Army_Weapons" Set Speed 4500
+  ImprovedBy "Advanced_Army_Weapons" Damage 1.2
   ImprovedBy "Advanced_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_5.png"
 
 ///XM7 or XM8, or F90MBR
-  ImprovedBy "Experimental_Army_Weapons" Damage 1.15
-  ImprovedBy "Experimental_Army_Weapons" Set Speed 5000
+  ImprovedBy "Experimental_Army_Weapons" Damage 1.2
   ImprovedBy "Experimental_Army_Weapons" Movie Image "Units/Images/Missiles/Light_Weapons_6.png"
-  
-  ImprovedBy "Portable_Electronic_Optics" Set Range 125
-  ImprovedBy "Tactical_Optics" Set Range 130
-  ImprovedBy "Advanced_Tactical_Optics" Set Range 135
-  ImprovedBy "Light_Unmanned_Vehicles" Set Range 140
-  ImprovedBy "Robotic_Infantry" Set Range 145
+
+////Entrenchment range bonuses - Regular range bonuses cause backpeddling
+  ImprovedBy Unit "Static_Defender_Bonus" Set Range 140 
+  ImprovedBy Unit "Portable_Electronic_Optics_EntMod" Set Range 145
+  ImprovedBy Unit "Tactical_Optics_EntMod" Set Range 150
+  ImprovedBy Unit "Advanced_Tactical_Optics_Entmod" Set Range 155
+  ImprovedBy Unit "Light_Unmanned_Vehicles_EntMod" Set Range 160
+  ImprovedBy Unit "Robotic_Infantry_EntMod" Set Range 165
     
   ImprovedBy Unit "Static_Defender_Bonus" Precision 0.3
  
@@ -141,6 +138,16 @@ USE PREVIOUS "units/Missile_defs.txt"
   ImprovedBy "Advanced_Tactical_Optics_Entmod" Damage 1.025
   ImprovedBy "Light_Unmanned_Vehicles_EntMod" Damage 1.025
   ImprovedBy "Robotic_Infantry_EntMod" Damage 1.025
+  ///Cannot instant-kill covert units - uses small arms instead
+  AffectedBy Unit "Covert_Unit" Range 0.00
+  
+  ///Causes collateral damage
+  AffectedBy Unit "Collateral_Damage_Modifier" Damage 5 ///Army Damage
+  
+  Trajectory MaxPoints 2 MaxLength 5 WidthMult 0.25 
+  
+  AIHint CounterValue 0 //Default Conventional
+  AIHint CounterForce 1 //Default Conventional  
 
 [MISSILE] "Artillery"
   Tech "M_Artillery"
@@ -200,54 +207,14 @@ AffectedBy Unit "Survival_Boost_6" Damage 0.900
   AIHint CounterForce 0 //Chemical Weapon
 
 [MISSILE] "Land Forces" MODIFY
-  Tech "M_Land_Force_ARMY"
-  Type "Army"
-  Icon "Units/Images/Missiles/ARMORED_1.png"
   Sound 202 or 203 or 204 or 205 Volume 0.8
-  Explosion "Gunfire_Army"
-  Range 125
-  Speed 1500
-  Precision 0.25
-  CanBeLimited false
-  Ballistic
-  Movie "Units/Images/Projectiles/Tracer.midx"
-  HideNumberOfMissiles true
-  CanBeLimited false
   
-  ImprovedBy "Army_Mech_Mk2" Damage 1.05
-  ImprovedBy "Army_Mech_Mk2" Movie Image "Units/Images/Missiles/Armored_2.png"
-  ImprovedBy "Army_Mech_Mk3" Damage 1.05
-  ImprovedBy "Army_Mech_Mk3" Movie Image "Units/Images/Missiles/Armored_3.png"
-  ImprovedBy "Army_Mech_Mk4" Damage 1.025
-  ImprovedBy "Army_Mech_Mk4" Movie Image "Units/Images/Missiles/Armored_4.png"
-  ImprovedBy "Army_Mech_Mk5" Damage 1.025
-  ImprovedBy "Army_Mech_Mk5" Movie Image "Units/Images/Missiles/Armored_5.png"
-  
-  ImprovedBy "Weapon_Modernization" Damage 1.15 
-  ImprovedBy "Improved_Army_Weapons" Damage 1.15
-  ImprovedBy "Advanced_Army_Weapons" Damage 1.15
-  ImprovedBy "Enhanced_Army_Weapons" Damage 1.15
-  ImprovedBy "Experimental_Army_Weapons" Damage 1.15
-  
-  ImprovedBy "Portable_Electronic_Optics" Set Range 140
-  ImprovedBy "Tactical_Optics" Set Range 145
-  ImprovedBy "Advanced_Tactical_Optics" Set Range 150
-  ImprovedBy "Light_Unmanned_Vehicles" Set Range 155
-  ImprovedBy "Robotic_Infantry" Set Range 160
-  
+[MISSILE] "Land Forces Mobile" MODIFY
+  Sound 202 or 203 or 204 or 205 Volume 0.8
+
 /////Thompson M1A1, or PPSH-41, or M3 Grease Gun
 [MISSILE] "Small Arms" MODIFY
   Sound 206 or 207 or 208 Volume 0.3
-  Range 100
-
-  ImprovedBy "Portable_Electronic_Optics" Set Range 105
-  ImprovedBy "Tactical_Optics" Set Range 110
-  ImprovedBy "Advanced_Tactical_Optics" Set Range 115 
-  ImprovedBy "Light_Unmanned_Vehicles" Set Range 120
-  ImprovedBy "Robotic_Infantry" Set Range 125
-  
-  Delete ImprovedBy Unit "Static_Defender_Bonus"
-  
   CanBeUsedAgainst "Armored_Division"
   CanBeUsedAgainst "Artillery_Division"
   CanBeUsedAgainst "Military_Outpost"
