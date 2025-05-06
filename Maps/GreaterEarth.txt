@@ -97,7 +97,7 @@ Default AvailableUnits
   ut "Fighter" 10
   ut "Attack" 10
   ut "Bomber" 5
-  ut "Construction_Team" 7
+  ut "Construction_Team" 8
   ///Spare aircraft, hopefully makes players realize they can stockpile them
   ut "Army_Base" 5
   ut "Army_Factory" 2

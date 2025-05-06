@@ -519,6 +519,7 @@ ImprovedBy "Army_Mech_Mk2"
   delete config "Army Weapons"
   delete config "Infantry Weapons"
   Config "Infantry Weapons" Default
+  Weapon "Mounted Light Weapons" 20000 Launch 1 Time 10 AutoEngage
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage
   Weapon "Body Armor" 1 LaunchPoint -1
   Weapon "Optics" 1 LaunchPoint -1
@@ -2210,119 +2211,213 @@ ImprovedBy "Army_Mech_Mk2"
 
 
 [UNIT] "Military_Outpost" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Transfer_Airbase" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Maintenance_Airbase" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Naval_Airbase" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Army_Base" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Combat_Engineers" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Army_Division" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Artillery_Division" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Armored_Division" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Airport" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Specialized_Airport" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Tactical_Airbase" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Missile_Silo" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Central_Command_Bunker" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Research_Center" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Intelligence_Center" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Missile_Silo" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "ICBM_Launchpad" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Over_Horizon_radar" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Fixed_Coastal_Gun" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Laser_Defence_Complex" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Space_radar" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Space_Operations_Center" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Satellite_Relay_Station" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Security_Checkpoint" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Forward_Operating_Base" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Improvised_Airbase" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "CRAM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Missile_Container" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Fixed_LW_radar" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "SAM_site" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Fixed_Coastal_Gun" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Coastal" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "LHA" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Battlecruiser" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Destroyer" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Cruiser" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Carrier" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Landing_Ship" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Resupply_Ship" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Arsenal_Ship" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Carrier_Submarine" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Submarine" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "SSBN" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "SSGN" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "LCAC" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Naval_Monitoring_Station" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Heavy_Bomb_Truck" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Bomb_Truck" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Spec_Ops_Team" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "AA_Site_Old" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Coastal" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "MOBILE_SAM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Mobile_SW_Radar" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "EW_MOBILE" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Mobile_SRBM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Mobile_MRBM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Mobile_ICBM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Terminal_ABM" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
 [UNIT] "Mobile_ABM_Laser" MODIFY
+  NoAutoDeploy
   ProducedByAnotherUnit true
+[UNIT] "VIP" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Army_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Bio_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Navy_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Vehicle_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Nuclear_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Fixed_Factory" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+[UNIT] "Construction_Team" MODIFY
+  NoAutoDeploy
+  ProducedByAnotherUnit true
+
+
+
+
 
 [UNIT] "Army_Factory"
   Tech "U_Army_Factory"

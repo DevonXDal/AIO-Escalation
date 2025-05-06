@@ -1,15 +1,15 @@
 ICBM MOD "JTO | Joint Task Overhaul"
 
-Version "1.0"
+Version "1.1"
 
-Description "[b]Highly advise turning off autodeploy when creating a game.
+Description "
 
-[h1]Joint Task Overhaul[/h1]
+[h1]JTO[/h1]
 
-Introducing "Joint Task Overhaul" ("JTO"), a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
+Introducing "Joint Task Overhaul" (JTO), a mod by the community that completely changes how the game is played. Consider a standard RTS where all deployments of any kind are sourced from another unit/building. Now you will have to strategically place your industrial factories in order to grow your nation!
 All features this mod adds are designed to have as high quality as the base game.
 
-
+[b]NOTE: THIS IS A FIRST RELEASE. AI IS CURRENTLY NOT SUPPORTED. MOD WILL ONLY RUN FOR PVP UNTIL NEXT UPDATE.[/b]
 
 [h2]Contributors[/h2]
 [list]
@@ -23,7 +23,7 @@ All features this mod adds are designed to have as high quality as the base game
 If you want to add features to this mod or change existing features you can help develop this mod [url=github.com/DevonXDal/AIO-Escalation]here[/url].
 
 [h2]Features[/h2]
-[h3][/h3]
+
 [h3]Units[/h3]
 [list]
     [*]CRAM
@@ -50,6 +50,7 @@ If you want to add features to this mod or change existing features you can help
     [*]Construction Team
     [*]VIP
 [/list]
+
 [h3]Changes[/h3]
 [list]
     [*]Naval unit speed adjusted.
@@ -62,4 +63,4 @@ If you want to add features to this mod or change existing features you can help
 
 
 [b]We hope you enjoy![/b]"
-ChangeLog "Initial Release."
+ChangeLog "Small Fixes"
