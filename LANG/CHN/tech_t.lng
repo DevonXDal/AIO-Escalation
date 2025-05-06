@@ -353,7 +353,7 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 "M_Light_Weapons_DESC" LANG "更大、更强的武器通常过于笨重，单兵无法携带，一般需要支架或车辆才能有效使用。先进的轻量化武器与轻武器和小型武器相比，通常具有更大的火力或破坏力。"
 
 
-"U_Army_Division_NAME" LANG "待翻译：Mechanized Division"
+"U_Army_Division_NAME" LANG "步兵师"
 "U_Army_Division_DESC" LANG "步兵师主要由步兵组成，但也包括一些来自其他作战兵种的支援部队。步兵师是军队的主力作战力量，其装备能够在各种环境和地形条件下作战。步兵师可以执行重大战术行动和持续性战场行动。这些部队可以陆上行进，消灭遇到的任何敌方单位。他们还可以进入并占领敌城市，从而降低敌方的生产能力。占领城市还可以吞并敌方领土。将一个师派往军事基地后，可以将其装载到运输机上，以便进行空运部署。步兵也可以登上登陆舰，经海路部署。
 军队历史上的用途之一就是屠城并完全将城市夷为平地。指挥一个师攻击一座城市（而不是直接前往）会使该部队立刻开始大屠杀。
 + 可以占领敌方城市。
@@ -418,7 +418,7 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 - 仅对地面目标有效。
 - 可能会让你犯下战争罪。"
 
-"M_Land_Force_ARMY_NAME" LANG "待翻译：Armored Warfare"
+"M_Land_Force_ARMY_NAME" LANG "联合军备"
 "M_Land_Force_ARMY_DESC" LANG "更大、威力更大的炮弹，例如携带脱壳尾翼稳定穿甲弹或尾翼稳定破甲弹的炮塔。"
 
 
