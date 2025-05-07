@@ -349,7 +349,7 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 "M_Artillery_NAME" LANG "榴弹炮"
 "M_Artillery_DESC" LANG "榴弹炮是一种介于火炮和迫击炮之间的火炮武器。"
 
-"M_Light_Weapons_NAME" LANG "轻量化武器"
+"M_Light_Weapons_NAME" LANG "轻武器"
 "M_Light_Weapons_DESC" LANG "更大、更强的武器通常过于笨重，单兵无法携带，一般需要支架或车辆才能有效使用。先进的轻量化武器与轻武器和小型武器相比，通常具有更大的火力或破坏力。"
 
 
