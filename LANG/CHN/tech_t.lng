@@ -110,7 +110,7 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 + 对于其他战舰而言十分快速。
 + 反潜能力强。
 + 防空 / 反导能力强。
-+ 直升机能力有限。
+- 直升机作战能力有限。
 - 对敌舰火力有限。
 - 不能搭载核武器。"
 
@@ -190,7 +190,7 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 
 
 
-"U_Army_Factory_NAME" LANG "先进军用载具制造厂"
+"U_Army_Factory_NAME" LANG "先进军用载具工厂"
 "U_Army_Factory_DESC" LANG "一个能够制造先进军用车辆的工厂，其本身也能为武装部队提供补给。
 + 允许生产先进军用车辆。"
 
@@ -202,13 +202,13 @@ USE PREVIOUS "lang/CHN/tech_t.lng"
 
 
 
-"U_Vehicle_Factory_NAME" LANG "轻型军用载具制造厂"
+"U_Vehicle_Factory_NAME" LANG "轻型军用载具工厂"
 "U_Vehicle_Factory_DESC" LANG "一家设计和制造小型车辆的军工企业，在军事专用汽车行业中发挥着至关重要的作用。
 + 允许生产所有无武装化的军用车辆。"
 
 
 
-"U_Fixed_Factory_NAME" LANG "模块化设施生产基地"
+"U_Fixed_Factory_NAME" LANG "模块化设施工厂"
 "U_Fixed_Factory_DESC" LANG "一座军工厂，承建大多数非永久性固定单位，例如地空导弹、雷达等等。
 + 允许生产所有固定单位。"
 
