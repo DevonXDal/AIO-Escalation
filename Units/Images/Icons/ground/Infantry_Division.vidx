@@ -1,0 +1,12 @@
+Default "units/images/icons/ground/Infantry_Division.png"
+Variant 0 /*North America*/ "units/images/icons/ground/Figure_0.png"
+Variant 1 /*Central America*/ "units/images/icons/ground/Figure_1.png"
+Variant 2 /*South America*/ "units/images/icons/ground/Figure_2.png"
+Variant 3 /*Europe*/ "units/images/icons/ground/Figure_3.png"
+Variant 4 /*Russia*/ "units/images/icons/ground/Figure_4.png"
+Variant 5 /*East Asia*/ "units/images/icons/ground/Figure_5.png"
+Variant 6 /*Asia Pacific*/ "units/images/icons/ground/Figure_6.png"
+Variant 7 /*Middle East-North Africa*/ "units/images/icons/ground/Figure_7.png"
+Variant 8 /*Central/South Asia*/ "units/images/icons/ground/Figure_8.png"
+Variant 9 /*Sub-Saharan Africa*/ "units/images/icons/ground/Figure_9.png" 
+

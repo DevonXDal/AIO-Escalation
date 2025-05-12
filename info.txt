@@ -1,20 +1,65 @@
-ICBM MOD "Mutually Assured Overhaul"
+ICBM MOD "JTO | Joint Task Overhaul"
 
-Version "0.3"
+Version "0.5"
 
-Description "THIS IS A PRERELEASE VERSION THAT LACKS TWEAKS, UNITS, TECHS, DEFCON, ETC. PLEASE GIVE ANOTHER TWO WEEKS FOR THE FULL RELEASE.
-Version 0.6 will be released approximately one week from this release. It will include many new units, DEFCON, and related systems.
-Version 1.0 will likely include campaigns, optimizations, tweaks, etc.
+Description "[b]Highly advise turning off autodeploy when creating a game.
 
-This is effectively meant to be the largest mod for ICBM Escalation. Its AIO or all-in-one mod. Effectively overhauling the game in so many ways that it is as though the game had seen multiple major version releases.
+[h1]Joint Task Overhaul[/h1]
 
-To briefly list what has been added: ~100 leader portraits; placeholder portraits with ids to make other mods with leader portraits easier to coordinate; a revised DEFCON system taken to a new level from its original mod; a noticeably overhauled economy system (optional with tiers of options); national focuses (optional but one max); unit specializations (which trade certain stats for others); more defensive structures; more ground units; more sound tracks; more campaigns; revised AI playstyle; capital cities; reworked existing units; an initial slowdown to reaching nuclear tech to make its entrance more impactful; etc.
+Introducing "Joint Task Overhaul" ("JTO"), a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
+All features this mod adds are designed to have as high quality as the base game.
 
 Want a single mod that almost every other player has, that has language files created for non-English speaking players, overhauls basically every area of the game, and massively increases how dynamic each game ends up playing out? This is the mod for you.
 
-Content from mit, Combat, badtatts, Schrodinger's Devon, and Honk.
-See the wiki as it developers to see documentation on mechanics, leaders, and attribution. 
+[h2]Contributors[/h2]
+[list]
+    [*]badtatts
+    [*]Combat
+    [*]Schrodinger's Devon
+    [*]Honk
+[/list]
 
-We hope you enjoy!
-"
-ChangeLog "Pre-Release."
+[h2]How to help[/h2]
+If you want to add features to this mod or change existing features you can help develop this mod [url=github.com/DevonXDal/AIO-Escalation]here[/url].
+
+[h2]Features[/h2]
+[h3][/h3]
+[h3]Units[/h3]
+[list]
+    [*]CRAM
+    [*]Missile Container
+    [*]MPA
+    [*]Air Carrier
+    [*]Battlecruiser
+    [*]Arsenal Ship
+    [*]LHA
+    [*]LCAC
+    [*]Carrier Submarine (Planes need to be filled manually)
+    [*]Maintenance Airbase
+    [*]Transfer Airbase
+    [*]Naval Airbase
+    [*]Army Factory
+    [*]Bio Factory
+    [*]Naval Shipyard
+    [*]Vehicle Factory
+    [*]Nuclear Factory
+    [*]Fixed Factory
+    [*]Infantry Division
+    [*]Armored Division
+    [*]Artillery Division
+    [*]Construction Team
+    [*]VIP
+[/list]
+[h3]Changes[/h3]
+[list]
+    [*]Naval unit speed adjusted.
+    [*]Spy Planes can be equipped with weapons after unlocking a tech.
+    [*]Added Helicopters to cruisers and destroyers.
+    [*]Added some new models for existing units in certain tech eras.
+    [*]Combat engineers can carry more units.
+    [*]Placing of any unit got overhauled.
+[/list]
+
+
+[b]We hope you enjoy![/b]"
+ChangeLog "Second Release: New systems and a multitude of tweaks."

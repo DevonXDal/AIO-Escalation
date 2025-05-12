@@ -1,0 +1,8 @@
+Model "units/images/GROUND/Fixed SAM Site 3.fbx"
+
+MISSILE "missile_1" Axis z  LaunchLength 3.0
+MISSILE "missile_2" Axis z  LaunchLength 3.0
+MISSILE "missile_3" Axis z  LaunchLength 3.0
+MISSILE "missile_4" Axis z  LaunchLength 3.0
+
+Animate 0 0.4

@@ -1,0 +1,8 @@
+USE PREVIOUS "units/Missile_types.txt"
+
+[TYPE] "Chemical" MODIFY
+  CanBeUsedAgainst "Armored_Division"
+  CanBeUsedAgainst "Artillery_Division"
+  AIHint Specific "Armored_Division" 8 //Chemical Weapon
+  AIHint Specific "Artillery_Division" 8 //Chemical Weapon
+[END]
