@@ -1,0 +1,9 @@
+USE PREVIOUS "AI/GroupsConquest.txt"
+
+Group CapitalBuilding
+  PlacementType CityControl self
+  "Capital_Building" Leader
+  
+
+
+END

@@ -1,5 +1,30 @@
 USE PREVIOUS "units/units.txt"
 
+[UNIT] "Capital_Building"
+  Tech "U_Capital_Building"
+  Movie "Units/Images/Icons/Ground/Capital_Building.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Capital_Building.midx"
+  Model "Units/Images/Ground/Capital_Building.fbx"
+  DrawSize 22
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 99999999
+  SelfDestructTime 9999999
+  Weapon "Capital_Buff" 20000 DefaultOff 
+    Radar "STD Vision" 
+  ProductionCost 8
+  MaxNumberOnMap 1
+   MaxNumberToOrder 3
+  AlwaysVisibleOnEnemyTerritory Yes
+
+  NoAutoDeploy Yes
+  DestroyOnFactionSurrender No
+  HiddenFromAllies No
+
 
 [UNIT] "Military_Outpost"
   Tech "U_Military_Outpost"
@@ -2657,8 +2682,8 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Ground_Mobile"
   AutoRepair 0.60
-  Speed 20
-  TurnSpeed 4 // in angles per second
+  Speed 60
+  TurnSpeed 5 // in angles per second
   Power 20
   Produces "Army_Factory"
   Produces "Bio_Factory"
@@ -2686,11 +2711,11 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
   Produces "Military_Outpost"
-  ProductionPlacementRadius 70
+  ProductionPlacementRadius 115
   SelfDestructTime 40
   AlwaysVisibleOnEnemyTerritory Yes
   CanCrossBorderDuringPeaceTime No
-  ProductionCost 12
+  ProductionCost 10
   
   ////Same bonuses as army divisions
   //Modifier "ECM_Bonus_1"
@@ -2766,8 +2791,22 @@ ImprovedBy "Army_Mech_Mk2"
 
 
 [UNIT] "VirtualCity" MODIFY
+  ImprovedBy InRange "Capital_Buff" Science 2
+  ImprovedBy InRange "Capital_Buff" Production 2
+  ImprovedBy InRange "Capital_Buff" Espionage 2
+
   Produces "Construction_Team"
   Produces "VIP"
-  ProductionPlacementRadius 60
+  ProductionPlacementRadius 75
+  Produces "Fixed_Coastal_Gun"
+  Produces "Military_Outpost"
+  Produces "Army_Base"
+  Produces "Airport"
+  Produces "Army_Factory"
+  Produces "Bio_Factory"
+  Produces "Navy_Factory"
+  Produces "Nuclear_Factory"
+  Produces "Vehicle_Factory"
+  Produces "Fixed_Factory"
 
 [END]

@@ -1,5 +1,10 @@
 USE PREVIOUS "lang/Eng/tech_t.lng"
 
+"U_Capital_Building_NAME" LANG "Capital Building"
+"U_Capital_Building_DESC" LANG "A nigh indestructible faction capital building. It provides that city with a 2x bonus to production, science, and espionage output regardless of the city's controller or if the original faction has surrendered."
+
+"Capital_Buff_NAME" LANG "Faction Capital Bonus"
+"Capital_Buff_DESC" LANG "As the capital of a faction, this city has an increased number of jobs across the board to thanks to tourism and government jobs"
 
 "U_Battlecruiser_NAME" LANG "Battlecruiser"
 "U_Battlecruiser_DESC" LANG "Battlecruisers are extremely heavily armed surface warship.
