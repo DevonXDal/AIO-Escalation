@@ -1,6 +1,6 @@
 ICBM MOD "JTO | Joint Task Overhaul"
 
-Version "1.0"
+Version "0.5"
 
 Description "[b]Highly advise turning off autodeploy when creating a game.
 
@@ -9,7 +9,7 @@ Description "[b]Highly advise turning off autodeploy when creating a game.
 Introducing "Joint Task Overhaul" ("JTO"), a mod by the community that adds units, techs, balancing changes, portraits, revised DEFCON and a lot more.
 All features this mod adds are designed to have as high quality as the base game.
 
-
+Want a single mod that almost every other player has, that has language files created for non-English speaking players, overhauls basically every area of the game, and massively increases how dynamic each game ends up playing out? This is the mod for you.
 
 [h2]Contributors[/h2]
 [list]
@@ -49,6 +49,7 @@ If you want to add features to this mod or change existing features you can help
     [*]Artillery Division
     [*]Construction Team
     [*]VIP
+    [*]Capital Building
 [/list]
 [h3]Changes[/h3]
 [list]
@@ -56,10 +57,16 @@ If you want to add features to this mod or change existing features you can help
     [*]Spy Planes can be equipped with weapons after unlocking a tech.
     [*]Added Helicopters to cruisers and destroyers.
     [*]Added some new models for existing units in certain tech eras.
-    [*]Combat engineneers can carry more units.
+    [*]Combat engineers can carry more units.
     [*]Placing of any unit got overhauled.
+    [*]DEFCON mod mechanics saw better integration. More changes to come.
+    [*]Construction teams become more expansive (15% cumulative) at lower levels of DEFCON.
+    [*]Many new leader portraits.
+    [*]Many new leader portrait slots are eagerly claimed but marked unused to allow other mods to integrate with this one with more ease.
+    [*]Certain leader slots are reserved (these are for new leaders to be added to JTO without conflicts to other mods).
+    [*]New capital building adds special objectives with their cities getting double their original output which can be claimed by other players.
 [/list]
 
 
 [b]We hope you enjoy![/b]"
-ChangeLog "Initial Release."
+ChangeLog "Second Release: New systems and a multitude of tweaks. Far better construction experience."

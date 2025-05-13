@@ -1,5 +1,10 @@
 USE PREVIOUS "lang/Eng/tech_t.lng"
 
+"U_Capital_Building_NAME" LANG "Capital Building"
+"U_Capital_Building_DESC" LANG "A nigh indestructible faction capital building. It provides that city with a 2x bonus to production, science, and espionage output regardless of the city's controller or if the original faction has surrendered."
+
+"Capital_Buff_NAME" LANG "Faction Capital Bonus"
+"Capital_Buff_DESC" LANG "As the capital of a faction, this city has an increased number of jobs across the board to thanks to tourism and government jobs"
 
 "U_Battlecruiser_NAME" LANG "Battlecruiser"
 "U_Battlecruiser_DESC" LANG "Battlecruisers are extremely heavily armed surface warship.
@@ -444,5 +449,42 @@ Commanding a division to attack a city (rather than just moving to it) will caus
 - Extremely vulnerable without an escort.
 - No offensive weapons."
 
+"M_DEFCON_5_DESC" LANG "DEFCON 5. Fade Out/Business as Usual.
+No effects on GDP or survivability.
+Best used when no threat is imminent or likely."
+  
+"M_DEFCON_4_DESC" LANG "DEFCON 4. Double Take/Slight Unease. 
+Production reduced to 95%
+Science and Espionage reduced to 90%.
+Armies cost 20% less to produce.
+Airplanes and Helicopters cost 20% less to produce.
+Ships cost 30% less to produce.
+Cities take slightly less damage.
+Best used during low-intensity conventional conflicts."
+  
+"M_DEFCON_3_DESC" LANG "DEFCON 3. Round House/Notable Unease.
+Science and Espionage reduced to 80%.
+Production reduced to 90%.
+Armies cost 50% less to produce.
+Army Bases, Air Bases, and Forward Operating Bases cost 45% less to produce.
+Cities take moderately less damage.
+Best used during medium or high-intensity conflicts with the potential for WMD usage."
+  
+"M_DEFCON_2_DESC" LANG "DEFCON 2. Fast Pace/Wartime Economy.
+Science and Espionage reduced to 50%.
+Production reduced to 70%.
+Army bases cost 65% less to produce.
+Armies, Combat Engineers, Resupply Ships, and Forward Operating Bases cost 75% less to produce.
+Midcourse and Terminal ABMs, SAM Structures, and Missile Silos cost 60% less to produce.
+Cities take significantly reduced damage.
+Best used during existentially threatening conflicts with a serious WMD threat."
+  
+"M_DEFCON_1_DESC" LANG "DEFCON 1. Cocked Pistol/Total War.
+Science and Espionage reduced to 20%.
+Production reduced to 45%.
+Armies, Security Checkpoints, and Nuclear Terrorist Trucks cost 90% less to produce.
+Army bases cost 80% less to produce.
+Cities take greatly reduced damage.
+Best used during total thermonuclear war scenarios where widespread WMD usage is imminent or in progress."
 
 END

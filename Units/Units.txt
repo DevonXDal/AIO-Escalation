@@ -1,5 +1,64 @@
 USE PREVIOUS "units/units.txt"
 
+  Modifier "DEFCON_4"
+  Modifier "DEFCON_3"
+  Modifier "DEFCON_2"
+  Modifier "DEFCON_1"
+ 
+
+// ImprovedBy "DEFCON_5" Set Modifier "DEFCON_5" 1.0
+// ImprovedBy "DEFCON_5" Production 1.0
+// ImprovedBy "DEFCON_5" Science 1.0
+// ImprovedBy "DEFCON_5" Espionage 1.0
+
+ 
+// ImprovedBy "DEFCON_4" Set Modifier "DEFCON_4" 1.0
+ImprovedBy "DEFCON_4" Production 0.96
+ImprovedBy "DEFCON_4" Science 0.92
+ImprovedBy "DEFCON_4" Espionage 0.92
+
+// ImprovedBy "DEFCON_3" Set Modifier "DEFCON_3" 1.0
+ImprovedBy "DEFCON_3"  Production 0.92
+ImprovedBy "DEFCON_3"  Science 0.84
+ImprovedBy "DEFCON_3" Espionage 0.84
+ 
+
+// ImprovedBy "DEFCON_2" Set Modifier "DEFCON_2" 1.0
+ImprovedBy "DEFCON_2" Production 0.84
+ImprovedBy "DEFCON_2" Science 0.68
+ImprovedBy "DEFCON_2" Espionage 0.68
+  
+ 
+// ImprovedBy "DEFCON_1" Set Modifier "DEFCON_1" 1.0
+ImprovedBy "DEFCON_1" Production 0.68
+ImprovedBy "DEFCON_1" Science 0.36
+ImprovedBy "DEFCON_1" Espionage 0.36
+
+[UNIT] "Capital_Building"
+  Tech "U_Capital_Building"
+  Movie "Units/Images/Icons/Ground/Capital_Building.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Capital_Building.midx"
+  Model "Units/Images/Ground/Capital_Building.fbx"
+  DrawSize 22
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 0.1
+  Type Ground
+  Class "UC_Building"
+
+  Power 99999999
+  SelfDestructTime 9999999
+  Weapon "Capital_Buff" 20000 DefaultOff 
+    Radar "STD Vision" 
+  ProductionCost 8
+  MaxNumberOnMap 1
+   MaxNumberToOrder 3
+  AlwaysVisibleOnEnemyTerritory Yes
+
+  NoAutoDeploy Yes
+  DestroyOnFactionSurrender No
+  HiddenFromAllies No
+
 
 [UNIT] "Military_Outpost"
   Tech "U_Military_Outpost"
@@ -2657,8 +2716,8 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Ground_Mobile"
   AutoRepair 0.60
-  Speed 20
-  TurnSpeed 4 // in angles per second
+  Speed 60
+  TurnSpeed 5 // in angles per second
   Power 20
   Produces "Army_Factory"
   Produces "Bio_Factory"
@@ -2686,11 +2745,11 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
   Produces "Military_Outpost"
-  ProductionPlacementRadius 70
+  ProductionPlacementRadius 115
   SelfDestructTime 40
   AlwaysVisibleOnEnemyTerritory Yes
   CanCrossBorderDuringPeaceTime No
-  ProductionCost 12
+  ProductionCost 10
   
   ////Same bonuses as army divisions
   //Modifier "ECM_Bonus_1"
@@ -2719,6 +2778,13 @@ ImprovedBy "Army_Mech_Mk2"
   ImprovedBy "Improved_Body_Armor" Power 1.15
   ImprovedBy "Advanced_Body_Armor" Power 1.15
   ImprovedBy "Experimental_Body_Armor" Power 1.15 
+
+  // Lower DEFCON makes them more expensive by 15% (cumulative)
+  ImprovedBy "DEFCON_4" ProductionCost 1.15
+  ImprovedBy "DEFCON_3" ProductionCost 1.30 
+  ImprovedBy "DEFCON_2" ProductionCost 1.45
+  ImprovedBy "DEFCON_1" ProductionCost 1.60 
+
 
 /////CBRN stuff/////
 
@@ -2760,14 +2826,148 @@ ImprovedBy "Army_Mech_Mk2"
 [UNIT] "LCAC" MODIFY
   CanCarryUnit "Construction_Team"
 
+// DEFCON_4
+[UNIT] "Fighter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+  
+[UNIT] "Attack" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Interceptor" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "High_Speed_Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "AWACS" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Naval AWACS" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spy_Plane" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Navy_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spec_Ops_Helicopter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Attack_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+  
+[UNIT] "Carrier" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Submarine" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSGN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSBN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Destroyer" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Cruiser" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Resupply_Ship" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Landing_Ship" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+// DEFCON_3
+
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Tactical_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Improvised_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Specialized_Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55 
+  
+// DEFCON_2
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+  
+[UNIT] "Resupply_Ship" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "Combat_Engineers" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "ABM_Site" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Terminal_ABM" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "ICBM_Launchpad" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Missile_Silo" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.35
+
+  
+// DEFCON_1
+[UNIT] "Security_Checkpoint" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+ 
+[UNIT] "Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+
+[UNIT] "Heavy_Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.2
+
 
 [UNIT] "Landing_Ship" MODIFY
   CanCarryUnit "Construction_Team"
 
 
 [UNIT] "VirtualCity" MODIFY
+  ImprovedBy InRange "Capital_Buff" Science 2
+  ImprovedBy InRange "Capital_Buff" Production 2
+  ImprovedBy InRange "Capital_Buff" Espionage 2
+
   Produces "Construction_Team"
   Produces "VIP"
-  ProductionPlacementRadius 60
+  ProductionPlacementRadius 75
+  Produces "Fixed_Coastal_Gun"
+  Produces "Military_Outpost"
+  Produces "Army_Base"
+  Produces "Airport"
+  Produces "Army_Factory"
+  Produces "Bio_Factory"
+  Produces "Navy_Factory"
+  Produces "Nuclear_Factory"
+  Produces "Vehicle_Factory"
+  Produces "Fixed_Factory"
 
 [END]

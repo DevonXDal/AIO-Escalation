@@ -1,5 +1,17 @@
 USE PREVIOUS "units/Missile_defs.txt"
 
+[MISSILE] "Capital_Buff"
+  Tech "Capital_Buff"
+    Type "Default"  
+  RequiresPreciseTargeting No
+  Icon "Units/Images/Missiles/Clipboard.png"
+  DrawWave
+  Explosion "std_torpedo"
+  CanBeLimited false
+  Range 100
+  Speed 1
+    HideRange No
+	Hidden No
 
 [MISSILE] "Anti Ship Ballistic Missile"
   Tech "M_Anti_Ship_Ballistic_Missile"
