@@ -1,5 +1,39 @@
 USE PREVIOUS "units/units.txt"
 
+  Modifier "DEFCON_4"
+  Modifier "DEFCON_3"
+  Modifier "DEFCON_2"
+  Modifier "DEFCON_1"
+ 
+
+// ImprovedBy "DEFCON_5" Set Modifier "DEFCON_5" 1.0
+// ImprovedBy "DEFCON_5" Production 1.0
+// ImprovedBy "DEFCON_5" Science 1.0
+// ImprovedBy "DEFCON_5" Espionage 1.0
+
+ 
+// ImprovedBy "DEFCON_4" Set Modifier "DEFCON_4" 1.0
+ImprovedBy "DEFCON_4" Production 0.96
+ImprovedBy "DEFCON_4" Science 0.92
+ImprovedBy "DEFCON_4" Espionage 0.92
+
+// ImprovedBy "DEFCON_3" Set Modifier "DEFCON_3" 1.0
+ImprovedBy "DEFCON_3"  Production 0.92
+ImprovedBy "DEFCON_3"  Science 0.84
+ImprovedBy "DEFCON_3" Espionage 0.84
+ 
+
+// ImprovedBy "DEFCON_2" Set Modifier "DEFCON_2" 1.0
+ImprovedBy "DEFCON_2" Production 0.84
+ImprovedBy "DEFCON_2" Science 0.68
+ImprovedBy "DEFCON_2" Espionage 0.68
+  
+ 
+// ImprovedBy "DEFCON_1" Set Modifier "DEFCON_1" 1.0
+ImprovedBy "DEFCON_1" Production 0.68
+ImprovedBy "DEFCON_1" Science 0.36
+ImprovedBy "DEFCON_1" Espionage 0.36
+
 [UNIT] "Capital_Building"
   Tech "U_Capital_Building"
   Movie "Units/Images/Icons/Ground/Capital_Building.midx"
@@ -2745,6 +2779,13 @@ ImprovedBy "Army_Mech_Mk2"
   ImprovedBy "Advanced_Body_Armor" Power 1.15
   ImprovedBy "Experimental_Body_Armor" Power 1.15 
 
+  // Lower DEFCON makes them more expensive by 15% (cumulative)
+  ImprovedBy "DEFCON_4" ProductionCost 1.15
+  ImprovedBy "DEFCON_3" ProductionCost 1.30 
+  ImprovedBy "DEFCON_2" ProductionCost 1.45
+  ImprovedBy "DEFCON_1" ProductionCost 1.60 
+
+
 /////CBRN stuff/////
 
  Modifier "CBRN_Defence_0"
@@ -2784,6 +2825,126 @@ ImprovedBy "Army_Mech_Mk2"
 
 [UNIT] "LCAC" MODIFY
   CanCarryUnit "Construction_Team"
+
+// DEFCON_4
+[UNIT] "Fighter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+  
+[UNIT] "Attack" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Interceptor" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "High_Speed_Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "AWACS" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Naval AWACS" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spy_Plane" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Navy_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spec_Ops_Helicopter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Attack_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+  
+[UNIT] "Carrier" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Submarine" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSGN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSBN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Destroyer" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Cruiser" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Resupply_Ship" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Landing_Ship" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+// DEFCON_3
+
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Tactical_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Improvised_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Specialized_Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55 
+  
+// DEFCON_2
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+  
+[UNIT] "Resupply_Ship" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "Combat_Engineers" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "ABM_Site" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Terminal_ABM" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "ICBM_Launchpad" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Missile_Silo" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.35
+
+  
+// DEFCON_1
+[UNIT] "Security_Checkpoint" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+ 
+[UNIT] "Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+
+[UNIT] "Heavy_Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.2
 
 
 [UNIT] "Landing_Ship" MODIFY
