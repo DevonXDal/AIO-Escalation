@@ -17,6 +17,7 @@ All features this mod adds are designed to have as high quality as the base game
     [*]Combat
     [*]Schrodinger's Devon
     [*]Honk
+    [*]Bzand
 [/list]
 
 [h2]How to help[/h2]
