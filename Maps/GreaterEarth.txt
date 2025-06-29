@@ -162,6 +162,7 @@ OwnershipMap "Maps/EarthRRUltraV3.Virtual/V7_default.vec"
   Player "North America" Color "1188FF" Name "Blue" Portrait Index 15 Achievement ACH_AMERICAN_PSYCHO 
     ModelPrefix "NA"
     Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/North America.txt"
+  Player "Central America" Color "FF9911" Name "Orange" Portrait Index 24 Achievement ACH_DAY_OF_THE_DEAD 
     ModelPrefix "CA"
     Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Central America.txt"
   Player "South America" Color "77DD00" Name "Lime" Portrait Index 16 Achievement ACH_WELCOME_TO_THE_JUNGLE 
