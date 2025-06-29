@@ -1,1 +1,1 @@
-DefaultMap "MAPS/GreaterEarth.txt"
+DefaultMap "Maps/GreaterEarth.txt"

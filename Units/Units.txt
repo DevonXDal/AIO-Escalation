@@ -2752,8 +2752,8 @@ ImprovedBy "Army_Mech_Mk2"
   Type Ground
   Class "UC_Ground_Mobile"
   AutoRepair 0.60
-  Speed 20
-  TurnSpeed 4 // in angles per second
+  Speed 60
+  TurnSpeed 8 // in angles per second
   Power 20
   Produces "Army_Factory"
   Produces "Bio_Factory"
@@ -2781,12 +2781,16 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
   Produces "Military_Outpost"
-  ProductionPlacementRadius 70
+  ProductionPlacementRadius 100
   SelfDestructTime 40
   AlwaysVisibleOnEnemyTerritory Yes
   CanCrossBorderDuringPeaceTime No
-  ProductionCost 12
-  
+  ProductionCost 8
+  //ImprovedBy "DEFCON_4" ProductionCost 1.15
+  //ImprovedBy "DEFCON_3" ProductionCost 1.30 
+  //ImprovedBy "DEFCON_2" ProductionCost 1.45
+  //ImprovedBy "DEFCON_1" ProductionCost 1.60
+
   ////Same bonuses as army divisions
   //Modifier "ECM_Bonus_1"
   //Modifier "ECM_Bonus_2"
@@ -2800,10 +2804,10 @@ ImprovedBy "Army_Mech_Mk2"
   ProducedByAnotherUnit true
   TargetInPlanner Yes
   
-  ImprovedBy "Army_Mech_Mk2" Set Speed 40
-  ImprovedBy "Army_Mech_Mk3" Set Speed 45
-  ImprovedBy "Army_Mech_Mk4" Set Speed 50
-  ImprovedBy "Army_Mech_Mk5" Set Speed 60
+  ImprovedBy "Army_Mech_Mk2" Set Speed 70
+  ImprovedBy "Army_Mech_Mk3" Set Speed 80
+  ImprovedBy "Army_Mech_Mk4" Set Speed 90
+  ImprovedBy "Army_Mech_Mk5" Set Speed 100
   ImprovedBy "Army_Mech_Mk2" Power 1.05
   ImprovedBy "Army_Mech_Mk3" Power 1.05
   ImprovedBy "Army_Mech_Mk4" Power 1.05
@@ -2837,7 +2841,7 @@ ImprovedBy "Army_Mech_Mk2"
   CanAccessGlobalStorage No  
 
 	Modifier "BM_Accuracy_Damage_Penalty" 
-  
+
 
 [UNIT] "Intelligence_Center" MODIFY
   Produces "Heavy_Bomb_Truck"
@@ -2864,5 +2868,126 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Construction_Team"
   Produces "VIP"
   ProductionPlacementRadius 60
+
+
+// DEFCON_4
+[UNIT] "Fighter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Attack" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Interceptor" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "High_Speed_Bomber" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "AWACS" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Naval AWACS" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spy_Plane" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Navy_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Spec_Ops_Helicopter" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+
+[UNIT] "Attack_Helicopter" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.8
+  
+[UNIT] "Carrier" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Submarine" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSGN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "SSBN" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Destroyer" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+[UNIT] "Cruiser" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Resupply_Ship" MODIFY 
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+  
+[UNIT] "Landing_Ship" MODIFY
+  ImprovedBy "DEFCON_4" ProductionCost 0.7
+
+// DEFCON_3
+
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Tactical_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Improvised_Airbase" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Specialized_Airport" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.55
+
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_3" ProductionCost 0.55 
+  
+// DEFCON_2
+[UNIT] "Forward_Operating_Base" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+  
+[UNIT] "Resupply_Ship" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "Combat_Engineers" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.25
+
+[UNIT] "ABM_Site" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Terminal_ABM" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "ICBM_Launchpad" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+
+[UNIT] "Missile_Silo" MODIFY 
+  ImprovedBy "DEFCON_2" ProductionCost 0.4
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.35
+
+  
+// DEFCON_1
+[UNIT] "Security_Checkpoint" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+ 
+[UNIT] "Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+
+[UNIT] "Heavy_Bomb_Truck" MODIFY 
+  ImprovedBy "DEFCON_1" ProductionCost 0.1
+  
+[UNIT] "Army_Base" MODIFY 
+  ImprovedBy "DEFCON_3" ProductionCost 0.2
 
 [END]

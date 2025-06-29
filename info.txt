@@ -45,7 +45,7 @@ If you want to add features to this mod or change existing features you can help
     [*]Vehicle Factory
     [*]Nuclear Factory
     [*]Fixed Factory
-    [*]Infantry Division
+    [*]Mechanized Infantry Division
     [*]Armored Division
     [*]Artillery Division
     [*]Construction Team
@@ -60,6 +60,8 @@ If you want to add features to this mod or change existing features you can help
     [*]Added some new models for existing units in certain tech eras.
     [*]Combat engineneers can carry more units.
     [*]Placing of any unit got overhauled.
+    [*]DEFCON mod mechanics saw better integration. More changes to come.
+    [*]Construction teams become more expensive (15% cumulative) at lower levels of DEFCON.
 [/list]
 
 

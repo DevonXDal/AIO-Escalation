@@ -97,14 +97,14 @@ Default AvailableUnits
   ut "Fighter" 10
   ut "Attack" 10
   ut "Bomber" 5
-  ut "Construction_Team" 8
-  ///Spare aircraft, hopefully makes players realize they can stockpile them
+  ut "Construction_Team" 9
+  //Spare aircraft, hopefully makes players realize they can stockpile them
   ut "Army_Base" 5
   ut "Army_Factory" 2
   ut "Vehicle_Factory" 3
   ut "Fixed_Factory" 5
-  ut "Army_Division" 10
-  ut "Armored_Division" 5
+  ut "Army_Division" 5
+  ut "Armored_Division" 4
   ut "Artillery_Division" 4
   ut "Airport" 1
   ut "Tactical_Airbase" 2
@@ -159,16 +159,35 @@ OwnershipMap "Maps/EarthRRUltraV3.Virtual/V7_default.vec"
   Ownership "Maps/EarthRRUltraV3.Virtual/V7_split.vec" // territories of each country
   Default "Maps/EarthRRUltraV3.Virtual/V7_default.txt" // default assignment of countries to regions, as saved in the OwnershipMap file
 
-  Player "North America" Color "1188FF" Name "Blue" Portrait Index 15
-  Player "Central America" Color "FF9911" Name "Orange" Portrait Index 24
-  Player "South America" Color "77DD00" Name "Lime" Portrait Index 16
-  Player "Europe" Color "118002" Name "Green" Portrait Index 23
-  Player "Russia" Color "FF0011" Name "Red" Portrait Index 17
-  Player "East Asia" Color "FFFF0AA0" Name "Yellow" Portrait Index 20
-  Player "Asia Pacific" Color "55FFCC" Name "Turquoise" Portrait Index 21
-  Player "Middle East-North Africa" Color "772200" Name "Brown" Portrait Index 18
-  Player "Central/South Asia" Color "993399" Name "Magenta" Portrait Index 19
-  Player "Sub-Saharan Africa" Color "3D2DE5" Name "Indigo" Portrait Index 22
+  Player "North America" Color "1188FF" Name "Blue" Portrait Index 15 Achievement ACH_AMERICAN_PSYCHO 
+    ModelPrefix "NA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/North America.txt"
+    ModelPrefix "CA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Central America.txt"
+  Player "South America" Color "77DD00" Name "Lime" Portrait Index 16 Achievement ACH_WELCOME_TO_THE_JUNGLE 
+    ModelPrefix "SA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/South America.txt"
+  Player "Europe" Color "118002" Name "Green" Portrait Index 23 Achievement ACH_CRUSADER 
+    ModelPrefix "EU"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Europe.txt"
+  Player "Russia" Color "FF0011" Name "Red" Portrait Index 17 Achievement ACH_RUSSIAN_ROULETTE 
+    ModelPrefix "RU"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Russia.txt"
+  Player "East Asia" Color "FFFF0AA0" Name "Yellow" Portrait Index 20 Achievement ACH_GENGHIS_KHAN 
+    ModelPrefix "EA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/East Asia.txt"
+  Player "Asia Pacific" Color "55FFCC" Name "Turquoise" Portrait Index 21 Achievement ACH_DEVILS_ISLAND 
+    ModelPrefix "AP"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Asia Pacific.txt"
+  Player "Middle East-North Africa" Color "772200" Name "Brown" Portrait Index 18 Achievement ACH_FACE_IN_THE_SAND 
+    ModelPrefix "MENA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Middle East-North Africa.txt"
+  Player "Central/South Asia" Color "993399" Name "Magenta" Portrait Index 19 Achievement ACH_EYE_OF_THE_TIGER 
+    ModelPrefix "CSA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Central-South Asia.txt"
+  Player "Sub-Saharan Africa" Color "3D2DE5" Name "Indigo" Portrait Index 22 Achievement ACH_ELEPHANT_MAN 
+    ModelPrefix "SSA"
+    Events FromFile "Maps/EarthRRUltraV3.Virtual/Events/Sub-Saharan Africa.txt"
 
 /*
 STEP 4 CITIES CSV - 
