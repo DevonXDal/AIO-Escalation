@@ -287,9 +287,81 @@ USE PREVIOUS "tech.txt"
   Name "U_Military_Outpost_NAME"
   Description "U_Military_Outpost_DESC"
 
- [TECHNOLOGY] "M_Land_Force_ARMY" MODIFY
+[TECHNOLOGY] "M_Land_Force_ARMY" MODIFY
  Name "M_Land_Force_ARMY_NAME"
  Description "M_Land_Force_ARMY_DESC" 
+
+[TECHNOLOGY] "ABM_Mk2" MODIFY
+  LeadsTo "T_Extended_Range_ABM"
+
+[TECHNOLOGY] "Launchpad_ICBM" MODIFY
+  LeadsTo "T_Extended_Range_ABM"
+  
+[TECHNOLOGY] "T_Extended_Range_ABM"
+  Name "T_Extended_Range_ABM_NAME"
+  Description "T_Extended_Range_ABM_DESC"
+  Image "Images/Science/ERABM.png"
+  Points 60
+  LeadsTo "M_Extended_Range_ABM"
+  TechLevel 5
+  Type "Air and Missile Defence"
+  NoAutoUnlockTillLevel 7
+
+[TECHNOLOGY] "M_Extended_Range_ABM"
+  Name "M_Extended_Range_ABM_NAME"
+  Description "M_Extended_Range_ABM_DESC"
+
+[TECHNOLOGY] "ABM_Modifier"
+  Name "ABM_Mk2_NAME"
+  Description "ABM_Mk2_DESC"
+
+[TECHNOLOGY] "M_Intermediate_Phase_ABM"
+  Name "M_Intermediate_Phase_ABM_NAME"
+  Description "M_Intermediate_Phase_ABM_DESC"
+
+[TECHNOLOGY] "Tac_Missile_Defence" MODIFY
+  LeadsTo "IPABM_Buffer"
+
+[TECHNOLOGY] "IPABM_Buffer"
+  Name "T_Intermediate_Phase_ABM_NAME"
+  Description "T_Intermediate_Phase_ABM_DESC"
+  LeadsTo "T_Intermediate_Phase_ABM"
+
+[TECHNOLOGY] "T_Intermediate_Phase_ABM"
+  Name "T_Intermediate_Phase_ABM_NAME"
+  Description "T_Intermediate_Phase_ABM_DESC"
+  Image "Images/Science/Intermediate_Phase_ABM.png"
+  Points 40
+  LeadsTo "M_Intermediate_Phase_ABM"
+  TechLevel 5
+  Type "Air and Missile Defence"
+  NoAutoUnlockTillLevel 6
+
+[TECHNOLOGY] "Surface_to_air_missile" MODIFY
+  LeadsTo "T_Strategic_Anti_Missile_Complex"
+
+[TECHNOLOGY] "SAM_Mk2" MODIFY
+  LeadsTo "SAMC_Buffer"
+
+[TECHNOLOGY] "SAMC_Buffer"
+  Name "T_Strategic_Anti_Missile_Complex_NAME"
+  Description "T_Strategic_Anti_Missile_Complex_DESC"
+  LeadsTo "T_Strategic_Anti_Missile_Complex"
+
+[TECHNOLOGY] "T_Strategic_Anti_Missile_Complex"
+  Name "T_Strategic_Anti_Missile_Complex_NAME"
+  Description "T_Strategic_Anti_Missile_Complex_DESC"
+  Image "Images/Science/Strategic_Anti_Missile_Complex.png"
+  Points 50
+  LeadsTo "U_Strategic_Anti_Missile_Complex"
+  TechLevel 4
+  Type "Air and Missile Defence"
+  NoAutoUnlockTillLevel 6
+
+[TECHNOLOGY] "U_Strategic_Anti_Missile_Complex"
+  Name "U_Strategic_Anti_Missile_Complex_NAME"
+  Description "U_Strategic_Anti_Missile_Complex_DESC"
+
 
 
 

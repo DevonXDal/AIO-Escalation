@@ -482,4 +482,26 @@ Army bases cost 80% less to produce.
 Cities take greatly reduced damage.
 Best used during total thermonuclear war scenarios where widespread WMD usage is imminent or in progress."
 
+"M_Intermediate_Phase_ABM_NAME" LANG "Intermediate Phase ABM"
+"M_Intermediate_Phase_ABM_DESC" LANG "Intermediate Phase ABM"
+
+
+"T_Intermediate_Phase_ABM_NAME" LANG "Intermediate Phase ABM"
+"T_Intermediate_Phase_ABM_DESC" LANG "The gap between terminal and midcourse interception phases has long presented a critical vulnerability in ballistic missile defense. As warheads complete their midcourse flight and begin their final descent, they enter a brief intermediate phase where they are still outside the atmosphere but have begun their terminal trajectory adjustments. This phase offers a unique interception window where targets are more predictable than during midcourse flight yet still accessible before atmospheric entry complicates tracking and engagement. Intermediate phase ABMs, sometimes called ´late midcourse´ or ´early terminal´ interceptors, are specifically designed to exploit this narrow engagement envelope. These systems require sophisticated trajectory prediction algorithms to anticipate the transition from ballistic to terminal flight paths, along with high-acceleration boosters capable of rapidly reaching targets that are already well into their descent phase. The intermediate phase represents the last opportunity for clean interceptions before atmospheric effects and terminal maneuvering complicate defensive engagement.
+Unlocks Intermediate Phase ABMs."
+
+"T_Strategic_Anti_Missile_Complex_NAME" LANG "High Capacity Air Defence"
+"T_Strategic_Anti_Missile_Complex_DESC" LANG "As aerial threats have evolved to include massive saturation attacks with hundreds of simultaneous targets, traditional air defense systems have reached their operational limits. High-capacity air defense systems represent a paradigm shift from individual missile interceptors to comprehensive area denial networks capable of engaging multiple threat vectors simultaneously. These systems integrate advanced multi-target tracking algorithms and automated reload mechanisms to maintain continuous defensive coverage even under sustained assault. The development of modular launcher arrays and networked command systems allows for scalable defensive postures that can adapt to coordinated cruise missile attacks, ballistic missile salvos, or mixed aerial threats.
+Unlocks Strategic Anti Missile Complex."
+
+
+"U_Strategic_Anti_Missile_Complex_NAME" LANG "Strategic Anti Missile Complex"
+"U_Strategic_Anti_Missile_Complex_DESC" LANG "As aerial threats have evolved to include massive saturation attacks with hundreds of simultaneous targets, traditional air defense systems have reached their operational limits. High-capacity air defense systems represent a paradigm shift from individual missile interceptors to comprehensive area denial networks capable of engaging multiple threat vectors simultaneously. These systems integrate advanced multi-target tracking algorithms and automated reload mechanisms to maintain continuous defensive coverage even under sustained assault. The development of modular launcher arrays and networked command systems allows for scalable defensive postures that can adapt to coordinated cruise missile attacks, ballistic missile salvos, or mixed aerial threats.
+Unlocks Strategic Anti Missile Complex."
+
+"T_Extended_Range_ABM_NAME" LANG "Extended Range ABM" 
+"T_Extended_Range_ABM_DESC" LANG "a" 
+
+"M_Extended_Range_ABM_NAME" LANG "Extended Range ABM"
+"M_Extended_Range_ABM_DESC" LANG "a"
 END

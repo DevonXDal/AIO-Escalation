@@ -6,7 +6,7 @@ Description "
 
 [h1]JTO[/h1]
 
-Introducing "Joint Task Overhaul" (JTO), a mod by the community that completely changes how the game is played. Consider a standard RTS where all deployments of any kind are sourced from another unit/building. Now you will have to strategically place your industrial factories in order to grow your nation!
+Introducing ´Joint Task Overhaul´ (JTO), a mod by the community that completely changes how the game is played. Consider a standard RTS where all deployments of any kind are sourced from another unit/building. Now you will have to strategically place your industrial factories in order to grow your nation!
 All features this mod adds are designed to have as high quality as the base game.
 
 [b]NOTE: THIS IS A FIRST RELEASE. AI IS CURRENTLY NOT SUPPORTED. MOD WILL ONLY RUN FOR PVP UNTIL NEXT UPDATE.[/b]
@@ -22,6 +22,9 @@ All features this mod adds are designed to have as high quality as the base game
 
 [h2]How to help[/h2]
 If you want to add features to this mod or change existing features you can help develop this mod [url=github.com/DevonXDal/AIO-Escalation]here[/url].
+
+[h2]Videos[/h2]
+https://youtu.be/bho0ekDgXdE?si=1MOcY6Bz-a8Cyagr
 
 [h2]Features[/h2]
 

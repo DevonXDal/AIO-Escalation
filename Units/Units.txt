@@ -1,5 +1,55 @@
 USE PREVIOUS "units/units.txt"
 
+[UNIT] "Strategic_Anti_Missile_Complex"
+  Tech "U_Strategic_Anti_Missile_Complex"
+  Movie "Units/Images/Ground/Midlevel/Strategic_Anti_Missile_Complex.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/Strategic_Anti_Missile_Complex.midx"
+  Model "Units/Images/Ground/Strategic_Anti_Missile_Complex.fbx"
+  Icon "Units/Images/Icons/Ground/Strategic_Anti_Missile_Complex.png"    
+  DrawSize 23
+  AbstractDrawSize 30
+  FixedRotationAngle true
+  Size 1.0
+  Sound 141 Volume 0.6
+  Type Ground
+  Power 10
+  SelfDestructTime 20
+  AttackDelay 0.1
+
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage Principal DefaultOff
+  Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage DefaultOff
+  Weapon "SAM" 20000 Launch 4 Time 40 AutoEngage
+  Weapon "SAM MD" 20000 Launch 4 Time 40 AutoEngage
+  Weapon "Intermediate_Phase_ABM" 20000 Launch 6 Time 30 AutoEngage
+  
+  Radar "STD Vision"
+  Radar "Fixed Long Wave"
+  Radar "Fixed Short Wave"
+  Radar "Quantum Radar Strong"
+    CheckTargeting BY "EW Jammer" Message Lock 2841 NoLock 2841
+  ProductionCost 35.0
+
+  ImprovedBy "SAM_Mk2" Modify Weapon "SAM" Set Launch 6
+  ImprovedBy "SAM_Mk2" Modify Weapon "SAM MD" Set Launch 6
+  ImprovedBy "SAM_Mk2" Modify Weapon "SAM" Set Time 15
+  ImprovedBy "SAM_Mk2" Modify Weapon "SAM MD" Set Time 15
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Launch 8
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Launch 8
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Time 7
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Time 7
+ 
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 8
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Time 20
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 12
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Time 15
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Launch 16
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Time 10
+
+
+
+	Modifier "BM_Accuracy_Damage_Penalty" 
+  Modifier "EMP_Defence_Mod_1"
+  Modifier "EMP_Defence_Invulnerable"	
 
 [UNIT] "Military_Outpost"
   Tech "U_Military_Outpost"
@@ -1072,6 +1122,9 @@ ImprovedBy "Army_Mech_Mk2"
   Modifier "BM_Accuracy_Damage_Penalty" 
 
   Modifier "Terminal_ABM_No_Target_Decoy_Modifier"	
+  Modifier "ABM_Mk2_Modifier"
+  Modifier "ABM_Mk3_Modifier"
+  Modifier "ABM_Mk4_Modifier"
   Modifier "Terminal_BM_Defence_Mk2_Modifier"
   Modifier "Terminal_BM_Defence_Mk3_Modifier"  
 
@@ -1310,23 +1363,23 @@ ImprovedBy "Army_Mech_Mk2"
   ProductionCost 15
   DestructionMessage None
   Config "Unarmed" Default OnlyFull
-    Weapon "Body Armor" 1
+    Weapon "Body Armor" 1 Principal
 	  Weapon "Optics" 1
   Config "Pistol" OnlyFull
-    Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff
+    Weapon "Pistol" 17 Launch 1 Time 5 DefaultOff Principal
     Weapon "Body Armor" 1
 	  Weapon "Optics" 1
   Config "Manpad" OnlyFull
-    Weapon "MANPAD" 3 Launch 1 Time 150 DefaultOff
+    Weapon "MANPAD" 3 Launch 1 Time 150 DefaultOff Principal
     Weapon "Body Armor" 1
 	  Weapon "Optics" 1
   Config "Air Defense" OnlyFull  
-    Weapon "Light SAM" 1 Launch 1 Time 350 DefaultOff
+    Weapon "Light SAM" 1 Launch 1 Time 350 DefaultOff Principal
     Weapon "Light SAM MD" 1 Launch 1 Time 350 DefaultOff
     Weapon "Body Armor" 1
 	  Weapon "Optics" 1
   Config "Land Attack" OnlyFull
-    Weapon "SSM" 1 Launch 1 Time 500 DefaultOff
+    Weapon "SSM" 1 Launch 1 Time 500 DefaultOff Principal
     Weapon "Body Armor" 1
 	  Weapon "Optics" 1
 
@@ -1826,7 +1879,53 @@ ImprovedBy "Army_Mech_Mk2"
     Set Power 65
   }
 
-
+[UNIT] "ABM_Site" MODIFY
+  Modifier "ABM_Modifier" value 1.30
+  Modifier "ABM_Mk2_Modifier" value 1.30
+  Modifier "ABM_Mk3_Modifier" value 1.25
+  Modifier "ABM_Mk4_Modifier" value 1.20
+[UNIT] "Terminal_ABM" MODIFY
+  Modifier "ABM_Modifier" value 1.00
+  Modifier "Terminal_BM_Defence_Mk2_Modifier" value 1.30
+  Modifier "Terminal_BM_Defence_Mk3_Modifier" value 1.30
+[UNIT] "Destroyer" MODIFY
+  Modifier "ABM_Modifier" value 1.20
+  Modifier "Terminal_BM_Defence_Mk2_Modifier" value 1.30
+  Modifier "Terminal_BM_Defence_Mk3_Modifier" value 1.30
+[UNIT] "Cruiser" MODIFY
+  Modifier "ABM_Modifier" value 1.40
+  Modifier "Terminal_BM_Defence_Mk2_Modifier" value 1.30
+  Modifier "Terminal_BM_Defence_Mk3_Modifier" value 1.30
+[UNIT] "Battlecruiser" MODIFY
+  Modifier "ABM_Modifier" value 1.50
+  Modifier "ABM_Mk2_Modifier" value 1.20
+  Modifier "ABM_Mk3_Modifier" value 1.20
+  Modifier "ABM_Mk4_Modifier" value 1.20
+  Modifier "Terminal_BM_Defence_Mk2_Modifier" value 1.20
+  Modifier "Terminal_BM_Defence_Mk3_Modifier" value 1.20
+[UNIT] "Arsenal_Ship" MODIFY
+  Modifier "ABM_Modifier" value 1.50
+  Modifier "ABM_Mk2_Modifier" value 1.20
+  Modifier "ABM_Mk3_Modifier" value 1.20
+  Modifier "ABM_Mk4_Modifier" value 1.20
+  Modifier "Terminal_BM_Defence_Mk2_Modifier" value 1.20
+  Modifier "Terminal_BM_Defence_Mk3_Modifier" value 1.20
+[UNIT] "Strategic_Anti_Missile_Complex" MODIFY
+  Modifier "SAM_Mk2" value 1.1
+  Modifier "SAM_Mk3" value 1.1
+  Modifier "SAM_Mk4" value 1.1
+  Modifier "ABM_Modifier" value 0.6
+  Modifier "ABM_Mk2_Modifier" value 1.15
+  Modifier "ABM_Mk3_Modifier" value 1.15
+  Modifier "ABM_Mk4_Modifier" value 1.15
+[UNIT] "SAM_site" MODIFY
+  Modifier "SAM_Mk2" value 1.1
+  Modifier "SAM_Mk3" value 1.1
+  Modifier "SAM_Mk4" value 1.1
+  Modifier "ABM_Modifier" value 0.4
+  Modifier "ABM_Mk2_Modifier" value 1.15
+  Modifier "ABM_Mk3_Modifier" value 1.15
+  Modifier "ABM_Mk4_Modifier" value 1.15
 
 [UNIT] "ABM_Site" MODIFY
   HangarSpaceRequired 1
@@ -1835,6 +1934,28 @@ ImprovedBy "Army_Mech_Mk2"
 [UNIT] "Over_Horizon_radar" MODIFY
   HangarSpaceRequired 1
   ReportAsHosted Yes
+
+[UNIT] "ICBM_Launchpad" MODIFY
+  Config "Extended Extended ABM"
+    ImprovedBy "anti_ballistic_missile"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 1300 AutoEngage
+    ImprovedBy "ABM_Mk2"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 1100 AutoEngage
+    ImprovedBy "ABM_Mk3"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 900 AutoEngage
+    ImprovedBy "ABM_Mk4"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 800 AutoEngage
+
+[UNIT] "Missile_Silo" MODIFY
+  Config "Extended Extended ABM"
+    ImprovedBy "anti_ballistic_missile"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 1300 AutoEngage
+    ImprovedBy "ABM_Mk2"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 1100 AutoEngage
+    ImprovedBy "ABM_Mk3"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 900 AutoEngage
+    ImprovedBy "ABM_Mk4"
+      Weapon "Extended_Range_ABM" 1 Launch 1 Time 800 AutoEngage
 
 [UNIT] "Fixed_Coastal_Gun" MODIFY
   HangarSpaceRequired 1
@@ -1856,6 +1977,22 @@ ImprovedBy "Army_Mech_Mk2"
   ReportAsHosted Yes
 
 [UNIT] "SAM_site" MODIFY
+  delete Config "Default"
+  Config "Default" Default
+    Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+    Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+    Weapon "Intermediate_Phase_ABM" 20000 Launch 2 Time 70 AutoEngage
+    
+[UNIT] "SAM_site" MODIFY
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 4
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Time 50
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 6
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Time 40
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Launch 8
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Time 30
+
+
+
   ImprovedBy "SAM_Mk3"
   { Movie "Units/Images/Ground/midlevel/Fixed_SAM_Site_3.midx" Icon "Units/Images/Icons/Ground/Fixed_SAM_Site_3.png"
 	Movie Model "Units/Images/Ground/Fixed SAM Site 3.midx"}
@@ -2002,7 +2139,7 @@ ImprovedBy "Army_Mech_Mk2"
   CanCarryUnit "Naval_Monitoring_Station"
   HangarMaxLoad 2
   CanAccessUnitStockpile No
-
+  CanAccessGlobalStorage No
 [UNIT] "Carrier" MODIFY
   Speed 40
   TurnSpeed 5
@@ -2516,6 +2653,7 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Missile_Container"
   Produces "Fixed_LW_radar"
   Produces "SAM_site"
+  Produces "ABM_Site"
   Produces "Fixed_Coastal_Gun"
   ProductionPlacementRadius 100
   SelfDestructTime 30
@@ -2578,6 +2716,7 @@ ImprovedBy "Army_Mech_Mk2"
   Produces "Space_Operations_Center"
   Produces "Satellite_Relay_Station"
   Produces "Military_Outpost"
+  Produces "Strategic_Anti_Missile_Complex"
   ProductionPlacementRadius 100
   SelfDestructTime 40
   AlwaysVisibleOnEnemyTerritory Yes
@@ -2836,6 +2975,9 @@ ImprovedBy "Army_Mech_Mk2"
 [UNIT] "Intelligence_Center" MODIFY
   ProducedByAnotherUnit true
   NoAutoDeploy
+[UNIT] "Strategic_Anti_Missile_Complex" MODIFY
+  ProducedByAnotherUnit true
+  NoAutoDeploy
 [UNIT] "Missile_Silo" MODIFY
   ProducedByAnotherUnit true
   NoAutoDeploy
@@ -2960,6 +3102,9 @@ ImprovedBy "Army_Mech_Mk2"
   ProducedByAnotherUnit true
   NoAutoDeploy
 [UNIT] "Mobile_ICBM" MODIFY
+  ProducedByAnotherUnit true
+  NoAutoDeploy
+[UNIT] "ABM_Site" MODIFY
   ProducedByAnotherUnit true
   NoAutoDeploy
 [UNIT] "Terminal_ABM" MODIFY
