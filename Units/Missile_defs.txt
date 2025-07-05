@@ -71,16 +71,16 @@ USE PREVIOUS "units/Missile_defs.txt"
   Model "Units/Images/Projectiles/Model/ICBM_Heavy.MIDX"
   Sound 69 Volume 1.25
   DrawSize 14
-  Explosion "std_bomb_small"
+  Explosion "Big_Conventional"
   ProductionCost 2
   Range 12500
   MaxElevation 15000
-  MinRange 4000
+  MinRange 2500
   LeadGuidance 1.0
   CanRetarget Yes
   IndependentTargeting true
   CanBeLimited false
-  Speed 9000
+  Speed 10000
   Precision 0.02
   ProductionCost 1.5
   Class "UC_Non_Nuclear_Weapons"

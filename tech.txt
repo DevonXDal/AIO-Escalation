@@ -294,9 +294,9 @@ USE PREVIOUS "tech.txt"
 [TECHNOLOGY] "ABM_Mk2" MODIFY
   LeadsTo "T_Extended_Range_ABM"
 
-[TECHNOLOGY] "Launchpad_ICBM" MODIFY
+[TECHNOLOGY] "Launchpad_ICBM_Buffer" MODIFY
   LeadsTo "T_Extended_Range_ABM"
-  
+
 [TECHNOLOGY] "T_Extended_Range_ABM"
   Name "T_Extended_Range_ABM_NAME"
   Description "T_Extended_Range_ABM_DESC"

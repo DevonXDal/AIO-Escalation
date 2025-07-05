@@ -26,18 +26,21 @@ USE PREVIOUS "units/units.txt"
   Radar "Fixed Long Wave"
   Radar "Fixed Short Wave"
   Radar "Quantum Radar Strong"
-    CheckTargeting BY "EW Jammer" Message Lock 2841 NoLock 2841
-  ProductionCost 35.0
+  Radar "Naval_Over_Horizon"
+  CheckTargeting BY "EW Jammer" Message Lock 2841 NoLock 2841
+  ProductionCost 25.0
 
   ImprovedBy "SAM_Mk2" Modify Weapon "SAM" Set Launch 6
   ImprovedBy "SAM_Mk2" Modify Weapon "SAM MD" Set Launch 6
   ImprovedBy "SAM_Mk2" Modify Weapon "SAM" Set Time 15
   ImprovedBy "SAM_Mk2" Modify Weapon "SAM MD" Set Time 15
-  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Launch 8
-  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Launch 8
-  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Time 7
-  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Time 7
- 
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Launch 6
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Launch 6
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM" Set Time 10
+  ImprovedBy "SAM_Mk3" Modify Weapon "SAM MD" Set Time 10
+  ImprovedBy "SAM_Mk4" Modify Weapon "SAM" Set Launch 8
+  ImprovedBy "SAM_Mk4" Modify Weapon "SAM MD" Set Launch 8
+
   ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 8
   ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Time 20
   ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 12
@@ -1984,12 +1987,27 @@ ImprovedBy "Army_Mech_Mk2"
     Weapon "Intermediate_Phase_ABM" 20000 Launch 2 Time 70 AutoEngage
     
 [UNIT] "SAM_site" MODIFY
-  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 4
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 3
   ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Time 50
-  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 6
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 4
   ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Time 40
-  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Launch 8
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Launch 5
   ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Time 30
+
+
+[UNIT] "MOBILE_SAM" MODIFY
+  Reset Weapons
+  Weapon "SAM" 20000 Launch 1 Time 70 AutoEngage
+  Weapon "SAM MD" 20000 Launch 1 Time 70 AutoEngage
+  Weapon "Intermediate_Phase_ABM" 20000 Launch 2 Time 80 AutoEngage
+    
+[UNIT] "MOBILE_SAM" MODIFY
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Launch 3
+  ImprovedBy "SAM_Mk2" Modify Weapon "Intermediate_Phase_ABM" Set Time 60
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Launch 4
+  ImprovedBy "SAM_Mk3" Modify Weapon "Intermediate_Phase_ABM" Set Time 50
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Launch 5
+  ImprovedBy "SAM_Mk4" Modify Weapon "Intermediate_Phase_ABM" Set Time 40
 
 
 
